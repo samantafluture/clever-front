@@ -50,6 +50,38 @@
   width: 100%;
 }
 
+.nav__menu a:hover {
+  border-left: 1px solid var(--hover);
+}
+
+.menu__number {
+  display: flex;
+  flex-direction: row;
+  justify-self: left;
+  align-items: center;
+  width: 100%;
+}
+
+.menu__number div {
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.menu__number span {
+  background-color: var(--hover);
+  color: var(--bg-light);
+  text-align: center;
+  border: 1px solid var(--hover);
+  border-radius: 40%;
+  padding: 0.25rem;
+  font-weight: 400;
+  font-size: 0.85rem;
+  width: 20%;
+  cursor: pointer;
+  margin-right: 0;
+}
+
 /* user */
 
 .sidebar__user {
