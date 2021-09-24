@@ -1,0 +1,80 @@
+/* general */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  max-width: 20%;
+  padding: 1rem;
+  border-right: 1px solid var(--border-light);
+}
+
+.sidebar a {
+  color: var(--color-light);
+}
+
+.sidebar a:hover {
+  color: var(--hover);
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar i {
+  margin-right: 0.75rem;
+}
+
+/* logo */
+
+.nav__logo {
+  width: 100%;
+}
+
+/* menu */
+
+.nav__menu {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.nav__menu a {
+  align-self: flex-start;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* user */
+
+.sidebar__user {
+  align-self: flex-end;
+  justify-self: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar__user a {
+  align-self: flex-start;
+  padding: 1rem;
+  width: 100%;
+}
+
+.user__profile {
+  display: flex;
+  align-items: center;
+}
+
+.user__photo {
+  align-self: flex-start;
+  border-radius: 50%;
+  margin: 0 0.75rem 0 0;
+  padding: 0;
+  width: 32px;
+}

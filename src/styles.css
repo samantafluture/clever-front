@@ -2,10 +2,47 @@
 
 :root {
   --font-rubik: 'Rubik', sans-serif;
+
+  --bg-light: #ffffff;
+  --color-light: #24292f;
+  --border-light: #d0d7de;
+  --title-light: #1e69da;
+  --subtitle-light: #7d8995;
+  --btn-light: #f6f8fa;
+  --btn-hover-light: #edf0f2;
+
+  --bg-dark: #22272e;
+  --color-dark: #adbac7;
+  --border-dark: #444c56;
+  --title-dark: #539bf5;
+  --subtitle-dark: #768390;
+  --btn-dark: #373e47;
+  --btn-font-dark: #adbac7;
+  --btn-hover-dark: #404852;
+
+  --hover: #3754DB;
+  --alert-green: #77c97b;
+  --alert-red: #F26966;;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
+  background-color: var(--bg-light);
+  color: var(--color-light);
   font-family: var(--font-rubik);
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*
