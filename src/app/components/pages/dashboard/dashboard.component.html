@@ -3,48 +3,41 @@
   <app-sidebar></app-sidebar>
 </section>
 <main>
-  <section class="projects">
-    <app-card
-      cardTitle="Campanha de Google Ads"
-      cardDescription="Campanha de lançamento com palavras-chave específicas"
-    ></app-card>
-    <app-card
-      cardTitle="Campanha de Google Ads"
-      cardDescription="Campanha de lançamento com palavras-chave específicas"
-    ></app-card>
-    <app-card
-      cardTitle="Campanha de Google Ads"
-      cardDescription="Campanha de lançamento com palavras-chave específicas"
-    ></app-card>
-    <app-card
-      cardTitle="Campanha de Google Ads"
-      cardDescription="Campanha de lançamento com palavras-chave específicas"
-    ></app-card>
-    <app-card
-      cardTitle="Campanha de Google Ads"
-      cardDescription="Campanha de lançamento com palavras-chave específicas"
-    ></app-card>
-    <app-card
-      cardTitle="Campanha de Google Ads"
-      cardDescription="Campanha de lançamento com palavras-chave específicas"
-    ></app-card>
-  </section>
-  <button><i class="fas fa-chevron-down"></i>Ver mais</button>
+  <app-card-grid>
+    <app-card-item
+      cardTitle="Título do Projeto"
+      cardDescription="Descrição rápida do projeto ou informações de destaque"
+    ></app-card-item>
+    <app-card-item
+      cardTitle="Título do Projeto"
+      cardDescription="Descrição rápida do projeto ou informações de destaque"
+    ></app-card-item>
+    <app-card-item
+      cardTitle="Título do Projeto"
+      cardDescription="Descrição rápida do projeto ou informações de destaque"
+    ></app-card-item>
+  </app-card-grid>
+  <app-btn-no-border btnTitle="Ver Mais"></app-btn-no-border>
   <section class="summary">
     <app-divider dividerTitle="Resumo"></app-divider>
-    <div class="summary__charts">
-      <app-card
-        cardTitle="Campanha de Google Ads"
-        cardDescription="Campanha de lançamento com palavras-chave específicas"
-      ></app-card>
-      <app-card
-        cardTitle="Campanha de Google Ads"
-        cardDescription="Campanha de lançamento com palavras-chave específicas"
-      ></app-card>
-      <app-card
-        cardTitle="Campanha de Google Ads"
-        cardDescription="Campanha de lançamento com palavras-chave específicas"
-      ></app-card>
-    </div>
+    <app-card-grid>
+      <app-card-charts
+        cardTitle="Produtividade no Mês"
+        cardDescription="Semanas de Outubro de 2021"
+      >
+        <app-bars></app-bars>
+      </app-card-charts>
+      <app-card-charts
+        cardTitle="Progresso da Semana"
+        cardDescription="Entre os dias 04-10 de Outubro"
+      >
+        <app-area></app-area>
+      </app-card-charts>
+      <app-card-tasks
+        cardTitle="Tarefas do Dia"
+        cardDescription="Entregas para 08 de Outubro"
+      >
+      </app-card-tasks>
+    </app-card-grid>
   </section>
 </main>

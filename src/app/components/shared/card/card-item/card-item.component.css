@@ -1,26 +1,21 @@
-.card {
-  border: 1px solid var(--border-light);
-  border-radius: 6px;
-  cursor: pointer;
-  width: 330px;
-  height: 200px;
-}
-
-.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
-}
-
-.card__info {
+.card__titles {
   display: flex;
   flex-direction: column;
   text-align: left;
   padding: 1rem;
 }
 
-.card__info h3 {
+.card__titles h3 {
   text-align: left;
   margin-left: 0;
   margin-bottom: 0.5rem;
+}
+
+.card__titles p {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  color: var(--subtitle-light);
 }
 
 .card__progress {
@@ -48,23 +43,8 @@
   padding: 1rem;
 }
 
-.card__details button {
+.card__details app-btn-border {
   margin-left: 0;
-  background-color: var(--btn-bg-light);
-  color: var(--btn-color-light);
-  font-size: 0.75rem;
-  letter-spacing: 0.5px;
-  font-weight: bold;
-  line-height: 1rem;
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.card__details button:hover {
-  background-color: var(--btn-hover-bg-light);
-  color: var(--btn-hover-color-light);
 }
 
 .card__details img {

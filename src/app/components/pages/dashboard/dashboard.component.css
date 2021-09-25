@@ -1,7 +1,9 @@
 .sidebar {
- float: left;
- width: 20%;
- position: fixed;
+  float: left;
+  width: 20%;
+  position: fixed;
+  background-color: var(--bg-light);
+  z-index: 2;
 }
 
 main {
@@ -11,43 +13,9 @@ main {
   width: 80%;
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  padding: 0 1rem;
-  margin-top: 0;
-}
-
-button {
-  margin: 0;
-  background-color: transparent;
-  font-size: 0.75rem;
-  letter-spacing: 0.5px;
-  font-weight: bold;
-  line-height: 1rem;
-  border: none;
-  cursor: pointer;
-  padding: 1.5rem;
-}
-
-button:hover {
-  color: var(--hover);
-}
-
-button i {
-  margin-right: 0.75rem;
-}
-
 .summary {
   margin-left: 0;
   border-top: 1px solid var(--border-light);
   width: 100%;
-}
-
-.summary__charts {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 1.5rem 2rem 1rem;
 }

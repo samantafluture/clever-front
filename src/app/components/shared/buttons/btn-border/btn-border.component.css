@@ -1,0 +1,18 @@
+button {
+  background-color: var(--btn-bg-light);
+  color: var(--btn-color-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  line-height: 1rem;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg-light);
+  color: var(--btn-hover-color-light);
+}

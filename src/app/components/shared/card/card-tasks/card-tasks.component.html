@@ -1,0 +1,21 @@
+<app-card-wrapper>
+  <div class="card__titles">
+    <h3>{{ cardTitle }}</h3>
+    <p>{{ cardDescription }}</p>
+  </div>
+  <div class="card__task">
+    <!-- <ng-content></ng-content> -->
+    <app-task-item
+      taskTitle="Título da Tarefa"
+      projectTask="Projeto ao qual a tarefa pertence"
+    ></app-task-item>
+    <app-task-item
+      taskTitle="Título da Tarefa"
+      projectTask="Projeto ao qual a tarefa pertence"
+    ></app-task-item>
+    <app-task-item
+      taskTitle="Título da Tarefa"
+      projectTask="Projeto ao qual a tarefa pertence"
+    ></app-task-item>
+  </div>
+</app-card-wrapper>

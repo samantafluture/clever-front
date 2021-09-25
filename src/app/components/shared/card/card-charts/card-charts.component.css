@@ -1,0 +1,27 @@
+.card__titles {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+
+.card__titles h3 {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card__titles p {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  color: var(--subtitle-light);
+}
+
+.card__chart {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.card__btn {
+  padding: 0 1rem 1rem 1rem;
+}

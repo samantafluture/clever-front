@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#chart-bars {
+  height: 200px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+th {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--subtitle-light);
+}
+
+td {
+  border-radius: 6px;
+}

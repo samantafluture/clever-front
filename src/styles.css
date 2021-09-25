@@ -25,7 +25,8 @@
 
   --hover: #3754DB;
   --alert-green: #77c97b;
-  --alert-red: #F26966;;
+  --alert-red: #F26966;
+  --alert-yellow: #ffdc5a;
 }
 
 * {
