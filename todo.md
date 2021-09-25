@@ -7,7 +7,7 @@ TODO
 
 # components/shared
 
-- sidebar
+- [x] sidebar
   - logo
   - menu navegação
   - menu settings

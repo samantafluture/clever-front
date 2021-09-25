@@ -1,11 +1,9 @@
-/* general sidebar */
-
 .sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  max-width: 20%;
+  /* max-width: 20%; */
   padding: 1rem;
   border-right: 1px solid var(--border-light);
 }
@@ -28,14 +26,10 @@
   margin-right: 0.75rem;
 }
 
-/* logo */
-
 .nav__logo {
   width: 100%;
   margin-left: 0.5rem;
 }
-
-/* nav menu */
 
 .nav__menu {
   display: flex;
@@ -82,8 +76,6 @@
   cursor: pointer;
   margin-right: 0;
 }
-
-/* user */
 
 .sidebar__user {
   align-self: flex-end;
