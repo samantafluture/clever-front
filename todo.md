@@ -13,11 +13,11 @@ TODO
   - menu settings
   - menu perfil
 
-- header
+- [x] header
   - título da página
   - botão 
 
-- card de projeto
+- [x] card de projeto
   - card
   - título e descrição
   - barra de progresso
@@ -26,23 +26,23 @@ TODO
 
 # páginas & components
 
-1. home / dashboard
-- sidebar:
-  - logo
-  - menu navegação
-  - menu settings
-  - menu perfil
-- header
-  - nome da página
-  - botão "adicionar projeto"
-- lista de projetos (cards) com botão "ver mais"
-- linha de divisão
-- área de resumo com 3 cards de relatórios
+- [x] home / dashboard 
+  - sidebar:
+    - logo
+    - menu navegação
+    - menu settings
+    - menu perfil
+  - header
+    - nome da página
+    - botão "adicionar projeto"
+  - lista de projetos (cards) com botão "ver mais"
+  - linha de divisão
+  - área de resumo com 3 cards de relatórios
 
-2. novo projeto
-- sidebar (comum)
-- header (comum, muda título e botão)
-- formulário
+[ ] novo projeto
+  - sidebar (comum)
+  - header (comum, muda título e botão)
+  - formulário
 
 3. projeto
 - sidebar (comum)

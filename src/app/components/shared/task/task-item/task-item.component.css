@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* border-bottom: 1px solid var(--border-light); */
   margin: 0 1rem;
   padding: 1rem 0;
 }
