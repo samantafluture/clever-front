@@ -11,8 +11,11 @@ app-header {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
   float: right;
   width: 80%;
+}
+
+.form {
+  margin: 0;
+  padding: 0 2rem 2rem 2rem;
 }

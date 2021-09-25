@@ -1,65 +1,67 @@
 <form #projectForm="ngForm">
-  <fieldset>
-    <input
-      [(ngModel)]="project.title"
-      #title="ngModel"
-      type="text"
-      placeholder="Título do projeto"
-      id="title"
-      name="title"
-      required
-      minlength="3"
-    />
-    <div class="alert" [hidden]="title.valid || title.pristine">
-      Título do projeto é obrigatório e deve ter pelo menos 3 caracteres
-    </div>
-    <textarea
-      [(ngModel)]="project.description"
-      #description="ngModel"
-      type="text"
-      placeholder="Descrição do projeto"
-      id="description"
-      name="description"
-      rows="3"
-    ></textarea>
-    <input
-      [(ngModel)]="project.date"
-      #date="ngModel"
-      type="date"
-      placeholder="Data de término"
-      id="date"
-      name="date"
-      required
-    />
-    <div class="alert" [hidden]="date.valid || date.pristine">
-      Data de término é obrigatória
-    </div>
-    <div class="field-group">
-      <div class="field-element">
-        <input
-          [(ngModel)]="project.members"
-          type="search"
-          placeholder="Adicionar membros"
-          id="members"
-          name="members"
-        />
+  <div class="fieldset">
+    <div class="form-group form-infos">
+      <input
+        [(ngModel)]="project.title"
+        #title="ngModel"
+        type="text"
+        placeholder="Título do projeto"
+        id="title"
+        name="title"
+        required
+        minlength="3"
+      />
+      <div class="alert" [hidden]="title.valid || title.pristine">
+        Título do projeto é obrigatório e deve ter pelo menos 3 caracteres
+      </div>
+      <textarea
+        [(ngModel)]="project.description"
+        #description="ngModel"
+        type="text"
+        placeholder="Descrição do projeto"
+        id="description"
+        name="description"
+        rows="5"
+      ></textarea>
+      <input
+        [(ngModel)]="project.date"
+        #date="ngModel"
+        type="date"
+        placeholder="Data de término"
+        id="date"
+        name="date"
+        required
+      />
+      <div class="alert" [hidden]="date.valid || date.pristine">
+        Data de término é obrigatória
       </div>
     </div>
-    <div class="field-message">
-      <span class="alert"
-        ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
-        obrigatórios</span
-      >
+    <div class="form-group form-members">
+      <input
+        [(ngModel)]="project.members"
+        type="search"
+        placeholder="Adicionar membros"
+        id="members"
+        name="members"
+      />
     </div>
-    <div class="form-btn">
-      <button class="btn-cancel" (click)="cancel()">Cancelar</button>
-      <button
-        class="btn-submit"
-        type="submit"
-        [disabled]="!projectForm.form.valid"
-      >
-        Criar Projeto
-      </button>
+    <div class="form-group">
+      <div class="form-message">
+        <span class="alert"
+          ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
+          obrigatórios</span
+        >
+      </div>
+      <div class="form-btn">
+        <button class="btn-cancel" (click)="cancel()">Cancelar</button>
+        <button
+          class="btn-submit"
+          type="submit"
+          [disabled]="!projectForm.form.valid"
+        >
+          Criar Projeto
+        </button>
+      </div>
     </div>
-  </fieldset>
+  </div>
 </form>
