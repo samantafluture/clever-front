@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
-  
+
 :root {
   --font-rubik: 'Rubik', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
@@ -9,8 +9,10 @@
   --border-light: #d0d7de;
   --title-light: #1e69da;
   --subtitle-light: #7d8995;
-  --btn-light: #f6f8fa;
-  --btn-hover-light: #edf0f2;
+  --btn-bg-light: #e4ecf7;
+  --btn-color-light: #101225;
+  --btn-hover-bg-light: #1e69da;
+  --btn-hover-color-light: #ffffff;
 
   --bg-dark: #22272e;
   --color-dark: #adbac7;

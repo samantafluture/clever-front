@@ -9,6 +9,9 @@ export class HeaderComponent implements OnInit {
   @Input()
   pageTitle: string = '';
 
+  @Input()
+  btnTitle: string = '';
+
   constructor() { }
 
   ngOnInit(): void {

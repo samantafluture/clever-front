@@ -68,7 +68,7 @@
   color: var(--bg-light);
   text-align: center;
   border: 1px solid var(--hover);
-  border-radius: 40%;
+  border-radius: 64px;
   padding: 0.25rem;
   font-weight: 400;
   font-size: 0.85rem;
