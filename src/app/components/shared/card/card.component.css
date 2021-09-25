@@ -1,9 +1,13 @@
 .card {
   border: 1px solid var(--border-light);
   border-radius: 6px;
-
+  cursor: pointer;
   width: 350px;
   height: 200px;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
 }
 
 .card__info {
