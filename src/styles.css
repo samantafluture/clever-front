@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
-
+  
 :root {
   --font-rubik: 'Rubik', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
 
   --bg-light: #ffffff;
   --color-light: #24292f;
@@ -44,74 +45,3 @@ body {
 a {
   text-decoration: none;
 }
-
-/*
-
-:root {
-  --color-bg: #fafafb;
-  --color-type: #2f2f33;
-  --color-primary: #0162ff;
-  --color-seconday: #1153bf;
-  --alert-green: #77c97b;
-  --alert-red: #F26966;;
-  --medium-grey: rgb(201, 201, 201);
-  --dark-grey: rgb(152, 152, 152);
-  --white: #fff;
-  --color-loader-transp: rgba(255, 255, 255, 0.5);
-  --color-loader-white: rgba(255, 255, 255, 1);
-
-  --font-primary: "Poppins", sans-serif;
-  --font-size-body: 1rem;
-  --font-size-header: 0.875rem;
-  --font-size-btns: 0.85rem;
-  --font-size-logo: 1.125rem;
-
-  --border-radius-general: 5px;
-  --transition: background-color 0.8s ease;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-html {
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  background-color: var(--color-bg);
-  font-family: var(--font-primary);
-  font-size: var(--font-size-body);
-  color: var(--color-type);
-}
-
-a {
-  text-decoration: none;
-}
-
-.emphasis {
-  color: var(--color-primary);
-}
-
-:root {
-  --bg-light: #ffffff;
-  --color-light: #24292f;
-  --border-light: #d0d7de;
-  --title-light: #1e69da;
-  --subtitle-light: #7d8995;
-  --hover-light: #ff87ab;
-  --btn-light: #f6f8fa;
-  --btn-hover-light: #edf0f2;
-
-  --bg-dark: #22272e;
-  --color-dark: #adbac7;
-  --border-dark: #444c56;
-  --title-dark: #539bf5;
-  --subtitle-dark: #768390;
-  --btn-dark: #373e47;
-  --btn-font-dark: #adbac7;
-  --btn-hover-dark: #404852;
-}
-
-*/

@@ -1,4 +1,4 @@
-/* general */
+/* general sidebar */
 
 .sidebar {
   display: flex;
@@ -35,7 +35,7 @@
   margin-left: 0.5rem;
 }
 
-/* menu */
+/* nav menu */
 
 .nav__menu {
   display: flex;
@@ -110,4 +110,9 @@
   margin: 0 0.75rem 0 0;
   padding: 0;
   width: 32px;
+}
+
+.fa-sign-out-alt {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
