@@ -15,6 +15,7 @@ import { BarsComponent } from './card/graphics/charts/bars/bars.component';
 import { AreaComponent } from './card/graphics/charts/area/area.component';
 import { TaskItemComponent } from './task/task-item/task-item.component';
 import { CardTasksComponent } from './card/card-tasks/card-tasks.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CardTasksComponent } from './card/card-tasks/card-tasks.component';
     AreaComponent,
     TaskItemComponent,
     CardTasksComponent,
+    FormComponent,
   ],
   imports: [CommonModule, AppRoutingModule],
   exports: [

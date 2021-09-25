@@ -15,7 +15,7 @@ header h1 {
   margin-left: 0;
 }
 
-header button {
+header a {
   background-color: var(--btn-bg-light);
   color: var(--btn-color-light);
   font-size: 0.85rem;
@@ -29,7 +29,7 @@ header button {
   cursor: pointer;
 }
 
-header button:hover {
+header a:hover {
   background-color: var(--btn-hover-bg-light);
   color: var(--btn-hover-color-light);
 }
