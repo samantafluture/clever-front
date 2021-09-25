@@ -1,0 +1,68 @@
+.card {
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+
+  width: 350px;
+  height: 200px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+
+.card__info h3 {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card__progress {
+  height: 10px;
+  background-color: var(--border-light);
+  border-radius: 6px;
+  position: relative;
+  margin: 0.5rem 1rem;
+}
+
+.card__progress div {
+  height: 10px;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  background-color: var(--alert-green);
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card__details button {
+  margin-left: 0;
+  background-color: var(--btn-bg-light);
+  color: var(--btn-color-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  line-height: 1rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card__details button:hover {
+  background-color: var(--btn-hover-bg-light);
+  color: var(--btn-hover-color-light);
+}
+
+.card__details img {
+  margin-right: 0;
+}

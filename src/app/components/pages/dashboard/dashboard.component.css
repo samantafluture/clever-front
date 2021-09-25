@@ -3,3 +3,8 @@
  width: 20%;
  position: fixed;
 }
+
+.projects {
+  float: right;
+  width: 80%;
+}
