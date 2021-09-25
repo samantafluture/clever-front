@@ -16,6 +16,7 @@ import { AreaComponent } from './card/graphics/charts/area/area.component';
 import { TaskItemComponent } from './task/task-item/task-item.component';
 import { CardTasksComponent } from './card/card-tasks/card-tasks.component';
 import { FormComponent } from './form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { FormComponent } from './form/form.component';
     CardTasksComponent,
     FormComponent,
   ],
-  imports: [CommonModule, AppRoutingModule],
+  imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [
     SidebarComponent,
     LogoComponent,
@@ -50,7 +51,8 @@ import { FormComponent } from './form/form.component';
     BarsComponent,
     AreaComponent,
     TaskItemComponent,
-    CardTasksComponent
+    CardTasksComponent,
+    FormComponent
   ],
 })
 export class SharedModule {}

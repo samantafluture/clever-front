@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
+  @Input() btnTitle: string = '';
+  @Input() project!: any;
 
-  constructor() { }
+  constructor(private location: Location) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  cancel() {
+    this.location.back();
+    return false;
   }
-
 }

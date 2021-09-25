@@ -1,7 +1,15 @@
-<app-header pageTitle="Novo Projeto" btnTitle="Cancelar" [routerLink]="['/']"></app-header>
+<app-header
+  pageTitle="Novo Projeto"
+  btnTitle="Cancelar"
+  [routerLink]="['/']"
+></app-header>
 <section class="sidebar">
   <app-sidebar></app-sidebar>
 </section>
-<main>
-  Formulário
+<main class="form">
+  <app-form
+    (submit)="add(project)"
+    [project]="project"
+    btnTitle="Criar Projeto"
+  ></app-form>
 </main>
