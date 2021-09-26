@@ -17,6 +17,7 @@ import { TaskItemComponent } from './task/task-item/task-item.component';
 import { CardTasksComponent } from './card/card-tasks/card-tasks.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardSprintComponent } from './card/card-sprint/card-sprint.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TaskItemComponent,
     CardTasksComponent,
     FormComponent,
+    CardSprintComponent,
   ],
   imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [
@@ -52,7 +54,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AreaComponent,
     TaskItemComponent,
     CardTasksComponent,
-    FormComponent
+    FormComponent,
+    CardSprintComponent
   ],
 })
 export class SharedModule {}
