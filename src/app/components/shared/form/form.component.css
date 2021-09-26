@@ -28,11 +28,10 @@ input {
   width: 100%;
   font-size: 1rem;
   line-height: 1em;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1.5rem;
   border-radius: 6px;
   border: none;
   background-color: var(--input-bg-light);
-  margin-top: 5px;
   font-family: var(--font-rubik);
 }
 
@@ -45,7 +44,7 @@ textarea {
   width: 100%;
   font-size: 1rem;
   line-height: 1em;
-  margin: 1.5rem 0 1.5rem;
+  margin: 0.5rem 0 1.5rem;
   border: none;
   border-radius: 6px;
   background-color: var(--input-bg-light);
@@ -78,8 +77,77 @@ textarea:focus {
 }
 
 .fieldset__members {
-  margin: 0;
+  margin: 0rem;
   margin-left: 2rem;
+}
+
+.members__search {
+  display: flex;
+  position: relative;
+}
+
+.members__search span i {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 2;
+  font-size: 1.2rem;
+}
+
+.members__selected {
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+}
+
+.members__selected h3 {
+  margin-bottom: 1.5rem;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+}
+
+.member {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.member:last-of-type {
+  margin-bottom: 0;
+}
+
+.member img {
+  align-self: flex-start;
+  border-radius: 50%;
+  padding: 0;
+  width: 32px;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.member p {
+  text-align: left;
+  color: var(--subtitle-light);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.member span {
+  margin-right: 0;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.member span:hover {
+  color: var(--border-light);
 }
 
 .members__check {
@@ -144,81 +212,12 @@ textarea:focus {
   transform: rotate(45deg);
 }
 
-.members__search {
-  display: flex;
-  position: relative;
-}
-
-.members__search span i {
-  position: absolute;
-  top: 28px;
-  right: 20px;
-  z-index: 2;
-  font-size: 1.2rem;
-}
-
-.members__selected {
-  margin-top: 1rem;
-  padding: 1.5rem;
-  border: 1px solid var(--border-light);
-  border-radius: 6px;
-}
-
-.members__selected h3 {
-  margin-bottom: 1.5rem;
-}
-
-.members {
-  display: flex;
-  flex-direction: column;
-}
-
-.member {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 0;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.member:last-of-type {
-  margin-bottom: 0;
-}
-
-.member img {
-  align-self: flex-start;
-  border-radius: 50%;
-  padding: 0;
-  width: 32px;
-  margin-right: 0.5rem;
-  margin-left: 0;
-}
-
-.member p {
-  text-align: left;
-  color: var(--subtitle-light);
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.member span {
-  margin-right: 0;
-  align-self: center;
-  justify-self: flex-end;
-}
-
-.member span:hover {
-  color: var(--border-light);
-}
-
 .fieldset__btns {
   margin: 0;
 }
 
 .form-btn {
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   display: flex;
   align-items: left;
   justify-content: flex-start;
@@ -273,3 +272,4 @@ button {
 i {
   cursor: pointer;
 }
+

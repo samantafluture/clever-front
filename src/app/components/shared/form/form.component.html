@@ -1,6 +1,7 @@
 <form #projectForm="ngForm">
   <div class="fieldset">
     <div class="fieldset__infos">
+      <label for="title">Título</label>
       <input
         [(ngModel)]="project.title"
         #title="ngModel"
@@ -14,15 +15,17 @@
       <div class="alert" [hidden]="title.valid || title.pristine">
         Título do projeto é obrigatório e deve ter pelo menos 3 caracteres
       </div>
+      <label for="description">Descrição</label>
       <textarea
         [(ngModel)]="project.description"
         #description="ngModel"
         type="text"
-        placeholder="Descrição do projeto"
+        placeholder="Breve descrição do projeto"
         id="description"
         name="description"
         rows="6"
       ></textarea>
+      <label for="date">Data de entrega</label>
       <input
         [(ngModel)]="project.date"
         #date="ngModel"
@@ -33,7 +36,7 @@
         required
       />
       <div class="alert" [hidden]="date.valid || date.pristine">
-        Data de término é obrigatória
+        Data de entrega é obrigatória
       </div>
       <div class="form-message">
         <span class="alert"
@@ -43,12 +46,14 @@
       </div>
     </div>
     <div class="fieldset__members">
+      <label for="members">Membros do projeto</label>
       <div class="members__search">
+
         <span><i class="fas fa-search"></i></span>
         <input
           [(ngModel)]="project.members"
           type="search"
-          placeholder="Adicionar membros"
+          placeholder="Busque por membros para adicionar"
           id="members"
           name="members"
         />
