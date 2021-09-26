@@ -1,9 +1,37 @@
 TODO
 
-- [x] organizar componentes
-- [x] separar componentes mais comuns para começar
-- [ ] criar a parter visual primeiro (html, css); depois a lógica
+# pages
+
+- [ ] projeto
+  - sidebar (comum)
+  - header (comum, muda título e botão)
+  - descrição
+  - membros
+  - kanban view com cards dentro
+
+- [ ] nova etapa
+  - sidebar (comum)
+  - header (comum, muda título e botão)
+  - formulário (comum)
+
+- [ ] visualização
+  - calendário
+  - timeline
+
+# components
+
+- [ ] kanban board (projeto page)
+- [ ] particularidades do form de novo etapa
+- [ ] calendar
+- [ ] timeline
+
+# geral
+
 - [ ] mobile responsive css para os componentes
+
+---
+
+DONE
 
 # components/shared
 
@@ -39,26 +67,12 @@ TODO
   - linha de divisão
   - área de resumo com 3 cards de relatórios
 
-[ ] novo projeto
+- [x] novo projeto
   - sidebar (comum)
   - header (comum, muda título e botão)
   - formulário
 
-3. projeto
-- sidebar (comum)
-- header (comum, muda título e botão)
-- descrição
-- membros
-- kanban view com cards dentro
 
-4. nova etapa
-- sidebar (comum)
-- header (comum, muda título e botão)
-- formulário
-
-5. visualização
-- calendário
-- timeline
 
 
 
