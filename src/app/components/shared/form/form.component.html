@@ -1,42 +1,48 @@
 <form #projectForm="ngForm">
   <div class="fieldset">
     <div class="fieldset__infos">
-      <label for="title">Título</label>
-      <input
-        [(ngModel)]="project.title"
-        #title="ngModel"
-        type="text"
-        placeholder="Título do projeto"
-        id="title"
-        name="title"
-        required
-        minlength="3"
-      />
-      <div class="alert" [hidden]="title.valid || title.pristine">
-        Título do projeto é obrigatório e deve ter pelo menos 3 caracteres
+      <div class="info">
+        <label for="title">Título</label>
+        <input
+          [(ngModel)]="project.title"
+          #title="ngModel"
+          type="text"
+          placeholder="Título do projeto"
+          id="title"
+          name="title"
+          required
+          minlength="3"
+        />
+        <div class="alert" [hidden]="title.valid || title.pristine">
+          Título é obrigatório e deve ter pelo menos 3 caracteres
+        </div>
       </div>
-      <label for="description">Descrição</label>
-      <textarea
-        [(ngModel)]="project.description"
-        #description="ngModel"
-        type="text"
-        placeholder="Breve descrição do projeto"
-        id="description"
-        name="description"
-        rows="6"
-      ></textarea>
-      <label for="date">Data de entrega</label>
-      <input
-        [(ngModel)]="project.date"
-        #date="ngModel"
-        type="date"
-        placeholder="Data de término"
-        id="date"
-        name="date"
-        required
-      />
-      <div class="alert" [hidden]="date.valid || date.pristine">
-        Data de entrega é obrigatória
+      <div class="info">
+        <label for="description">Descrição</label>
+        <textarea
+          [(ngModel)]="project.description"
+          #description="ngModel"
+          type="text"
+          placeholder="Breve descrição do projeto"
+          id="description"
+          name="description"
+          rows="4"
+        ></textarea>
+      </div>
+      <div class="info">
+        <label for="date">Data de entrega</label>
+        <input
+          [(ngModel)]="project.date"
+          #date="ngModel"
+          type="date"
+          placeholder="Data de término"
+          id="date"
+          name="date"
+          required
+        />
+        <div class="alert" [hidden]="date.valid || date.pristine">
+          Data de entrega é obrigatória
+        </div>
       </div>
       <div class="form-message">
         <span class="alert"
@@ -48,7 +54,6 @@
     <div class="fieldset__members">
       <label for="members">Membros do projeto</label>
       <div class="members__search">
-
         <span><i class="fas fa-search"></i></span>
         <input
           [(ngModel)]="project.members"

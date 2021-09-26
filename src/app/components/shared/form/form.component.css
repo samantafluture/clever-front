@@ -19,6 +19,14 @@ form {
   border-right: 1px solid var(--border-light);
 }
 
+.fieldset__infos .info {
+  margin-top: 1.5rem;
+}
+
+.fieldset__infos .info:first-of-type {
+  margin-top: 0;
+}
+
 input {
   display: block;
   width: 100%;
@@ -28,7 +36,7 @@ input {
   width: 100%;
   font-size: 1rem;
   line-height: 1em;
-  margin: 0.5rem 0 1.5rem;
+  margin: 0.5rem 0 0rem;
   border-radius: 6px;
   border: none;
   background-color: var(--input-bg-light);
@@ -95,7 +103,7 @@ textarea:focus {
 }
 
 .members__selected {
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   padding: 1rem 1.5rem 1.5rem 1.5rem;
   border: 1px solid var(--border-light);
   border-radius: 6px;
@@ -267,6 +275,8 @@ button {
 
 .alert {
   color: var(--alert-red);
+  margin: 0;
+  padding-top: 0.5rem;
 }
 
 i {
