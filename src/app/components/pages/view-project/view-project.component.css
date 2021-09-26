@@ -15,7 +15,7 @@ main {
   width: 80%;
 }
 
-.kanban-boards {
+.project__boards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
@@ -67,10 +67,6 @@ main {
   background-color: var(--alert-green);
 }
 
-i {
-  margin-right: 0.5rem;
-}
-
 button {
   margin: 0;
   padding-top: 1rem;
@@ -97,4 +93,34 @@ button:hover {
 
 .fa-plus-circle:hover {
   opacity: 0.8;
+}
+
+.project__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 2rem 2rem;
+  color: var(--subtitle-light);
+}
+
+.info {
+  margin: 0;
+}
+
+.info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.info--desc {
+  max-width: 50%;
+}
+
+.info--lead img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 0;
+}
+
+.info i {
+  margin-right: 0.5rem
 }
