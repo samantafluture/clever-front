@@ -7,9 +7,11 @@ import { DashboardComponent } from './components/pages/dashboard/dashboard.compo
 import { SharedModule } from './components/shared/shared.module';
 import { CreateProjectComponent } from './components/pages/create-project/create-project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListProjectsComponent } from './components/pages/list-projects/list-projects.component';
+import { ViewProjectComponent } from './components/pages/view-project/view-project.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, CreateProjectComponent],
+  declarations: [AppComponent, DashboardComponent, CreateProjectComponent, ListProjectsComponent, ViewProjectComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

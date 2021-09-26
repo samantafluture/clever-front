@@ -1,6 +1,20 @@
 TODO
 
-# pages
+# refactor
+
+- [ ] **card de tarefas do dia**
+  - clicar em check verdaeiro e não um hover de botão
+
+- [ ] **form criar novo projeto**
+  - autocomplete de busca de membros
+    https://www.npmjs.com/package/angular-ng-autocomplete
+  - adicionar membro no card embaixo 
+
+---
+
+TODO
+
+# criação de páginas & componentes
 
 - [ ] projeto
   - sidebar (comum)
@@ -72,7 +86,12 @@ DONE
   - header (comum, muda título e botão)
   - formulário
 
+# refactor
 
+- [x] página projetos
+  - igual ao dashboard
+  - porém botão "voltar"
+  - e não colocar resumo, apenas todos os projetos
 
 
 

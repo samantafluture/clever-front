@@ -27,5 +27,11 @@ export class CreateProjectComponent implements OnInit {
     return false;
   }
 
-  add(project: any): void {}
+  add(project: any): void {
+    console.log(project);
+    this.router.navigateByUrl("projeto");
+    // const urlSlug = this.project.title;
+    // const urlString = urlSlug.toString();
+    // this.router.navigateByUrl(urlString);
+  }
 }
