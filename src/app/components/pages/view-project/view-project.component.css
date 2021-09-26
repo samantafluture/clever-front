@@ -15,3 +15,42 @@ main {
   width: 80%;
 }
 
+.kanban-boards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  min-height: 80vh;
+  margin: 0 1.75rem 1.75rem;
+
+}
+
+.board {
+  height: 100%;
+  width: 100%;
+  min-height: 540px;
+  padding: 1rem;
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: 0.5rem;
+}
+
+.board:first-of-type {
+  margin-left: 0;
+}
+
+.board--todo {
+  background-color: var(--alert-red);
+
+}
+
+.board--doing {
+  background-color: var(--alert-yellow);
+}
+
+.board--done {
+  background-color: var(--alert-green);
+}

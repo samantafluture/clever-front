@@ -9,6 +9,7 @@ import { CreateProjectComponent } from './components/pages/create-project/create
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListProjectsComponent } from './components/pages/list-projects/list-projects.component';
 import { ViewProjectComponent } from './components/pages/view-project/view-project.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, CreateProjectComponent, ListProjectsComponent, ViewProjectComponent],
@@ -19,6 +20,7 @@ import { ViewProjectComponent } from './components/pages/view-project/view-proje
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent],

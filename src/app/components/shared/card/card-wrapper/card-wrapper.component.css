@@ -2,8 +2,9 @@
   border: 1px solid var(--border-light);
   border-radius: 6px;
   cursor: pointer;
-  width: 330px;
+  min-width: 300px;
   min-height: 210px;
+  background-color: var(--bg-light);
 }
 
 .card:hover {
