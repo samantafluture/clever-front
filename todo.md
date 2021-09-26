@@ -1,47 +1,39 @@
-TODO
+TODO [ 04 a 07 de out ] [ angular, js ]
 
 # refactor
 
+- [ ] **drag and drop nos sprint cards**
+  - usar drag and drop material ui para movimentar os cards no kanban
+
 - [ ] **card de tarefas do dia**
-  - clicar em check verdaeiro e não um hover de botão
+  - clicar em check verdadeiro e não um hover de botão
 
 - [ ] **form criar novo projeto**
   - autocomplete de busca de membros
     https://www.npmjs.com/package/angular-ng-autocomplete
   - adicionar membro no card embaixo 
 
+- [ ] mobile responsive css para os componentes
+
 ---
 
-TODO
+TODO [ 27 de set a 01 de out ] [ html, css ]
 
 # criação de páginas & componentes
 
-- [ ] projeto
+- [ ] criar nova etapa/sprint
   - sidebar (comum)
   - header (comum, muda título e botão)
-  - descrição
-  - membros
-  - kanban view com cards dentro
+  - formulário (comum com extras)
 
-- [ ] nova etapa
-  - sidebar (comum)
-  - header (comum, muda título e botão)
-  - formulário (comum)
+- [ ] visualizar etapa/sprint
+    - sidebar (comum)
+    - header (comum, muda título e botão)
+    - similar ao kanban porém to do's list
 
-- [ ] visualização
-  - calendário
-  - timeline
-
-# components
-
-- [ ] kanban board (projeto page)
-- [ ] particularidades do form de novo etapa
-- [ ] calendar
-- [ ] timeline
-
-# geral
-
-- [ ] mobile responsive css para os componentes
+- [ ] visualização com 2 abas
+  - [ ] calendário
+  - [ ] timeline
 
 ---
 
@@ -85,6 +77,13 @@ DONE
   - sidebar (comum)
   - header (comum, muda título e botão)
   - formulário
+
+- [x] projeto
+  - sidebar (comum)
+  - header (comum, muda título e botão)
+  - descrição
+  - membros
+  - kanban view com cards dentro
 
 # refactor
 
