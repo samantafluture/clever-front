@@ -27,7 +27,9 @@
       ></app-card-item>
     </a>
   </app-card-grid>
-  <app-btn-no-border btnTitle="Ver Mais"></app-btn-no-border>
+  <a [routerLink]="['/projetos']" class="btn">
+    <app-btn-no-border btnTitle="Ver Mais"></app-btn-no-border>
+  </a>
   <section class="summary">
     <app-divider dividerTitle="Resumo"></app-divider>
     <app-card-grid>

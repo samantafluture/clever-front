@@ -47,6 +47,14 @@
   margin-left: 0;
 }
 
+.card__details span {
+  margin-left: 0;
+}
+
 .card__details img {
   margin-right: 0;
+}
+
+i {
+  margin-right: 0.5rem
 }
