@@ -18,4 +18,5 @@ main {
 .form {
   margin: 0;
   padding: 0 2rem 2rem 2rem;
+  height: 100%;
 }

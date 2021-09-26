@@ -1,6 +1,6 @@
 <form #projectForm="ngForm">
   <div class="fieldset">
-    <div class="form-group form-infos">
+    <div class="fieldset__infos">
       <input
         [(ngModel)]="project.title"
         #title="ngModel"
@@ -21,7 +21,7 @@
         placeholder="Descrição do projeto"
         id="description"
         name="description"
-        rows="5"
+        rows="6"
       ></textarea>
       <input
         [(ngModel)]="project.date"
@@ -35,23 +35,51 @@
       <div class="alert" [hidden]="date.valid || date.pristine">
         Data de término é obrigatória
       </div>
-    </div>
-    <div class="form-group form-members">
-      <input
-        [(ngModel)]="project.members"
-        type="search"
-        placeholder="Adicionar membros"
-        id="members"
-        name="members"
-      />
-    </div>
-    <div class="form-group">
       <div class="form-message">
         <span class="alert"
           ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
           obrigatórios</span
         >
       </div>
+    </div>
+    <div class="fieldset__members">
+      <div class="members__search">
+        <span><i class="fas fa-search"></i></span>
+        <input
+          [(ngModel)]="project.members"
+          type="search"
+          placeholder="Adicionar membros"
+          id="members"
+          name="members"
+        />
+      </div>
+      <div class="members__selected">
+        <h3>Equipe</h3>
+        <div class="members">
+          <div class="member">
+            <img src="https://github.com/samantafluture.png" />
+            <p>Nome do membro da equipe</p>
+            <span><i class="fas fa-times"></i></span>
+          </div>
+          <div class="member">
+            <img src="https://github.com/samantafluture.png" />
+            <p>Nome do membro da equipe</p>
+            <span><i class="fas fa-times"></i></span>
+          </div>
+          <div class="member">
+            <img src="https://github.com/samantafluture.png" />
+            <p>Nome do membro da equipe</p>
+            <span><i class="fas fa-times"></i></span>
+          </div>
+        </div>
+      </div>
+      <label class="members__check"
+        >Sou responsável por este projeto
+        <input type="checkbox" checked="checked" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="fieldset__btns">
       <div class="form-btn">
         <button class="btn-cancel" (click)="cancel()">Cancelar</button>
         <button
