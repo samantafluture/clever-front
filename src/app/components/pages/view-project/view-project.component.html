@@ -1,6 +1,6 @@
 <app-header
   pageTitle="Título do Projeto"
-  btnTitle="Voltar"
+  btnTitle="Criar Sprint"
   [routerLink]="['/']"
 ></app-header>
 <section class="sidebar">
@@ -9,6 +9,10 @@
 <main>
   <section class="kanban-boards">
     <div class="board board--todo">
+      <div class="board__header">
+        <h3>A Fazer</h3>
+        <a href="#"><i class="fas fa-plus-circle"></i></a>
+      </div>
       <app-card-item
         cardTitle="Título do Sprint"
         cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
@@ -19,6 +23,10 @@
       ></app-card-item>
     </div>
     <div class="board board--doing">
+      <div class="board__header">
+        <h3>Fazendo</h3>
+        <a href="#"><i class="fas fa-plus-circle"></i></a>
+      </div>
       <app-card-item
         cardTitle="Título do Sprint"
         cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
@@ -33,6 +41,10 @@
       ></app-card-item>
     </div>
     <div class="board board--done">
+      <div class="board__header">
+        <h3>Feito</h3>
+        <a href="#"><i class="fas fa-plus-circle"></i></a>
+      </div>
       <app-card-item
         cardTitle="Título do Sprint"
         cardDescription="Descrição rápida desta fase do projeto e informações de destaque"

@@ -7,61 +7,67 @@
   <app-sidebar></app-sidebar>
 </section>
 <main>
-  <app-card-grid>
-    <a [routerLink]="['/projeto']">
-      <app-card-item
-        cardTitle="Título do Projeto"
-        cardDescription="Descrição rápida do projeto ou informações de destaque"
-      ></app-card-item>
-    </a>
-    <a [routerLink]="['/projeto']">
-      <app-card-item
-        cardTitle="Título do Projeto"
-        cardDescription="Descrição rápida do projeto ou informações de destaque"
-      ></app-card-item>
-    </a>
-    <a [routerLink]="['/projeto']">
-      <app-card-item
-        cardTitle="Título do Projeto"
-        cardDescription="Descrição rápida do projeto ou informações de destaque"
-      ></app-card-item>
-    </a>
-  </app-card-grid>
+  <section class="projects">
+    <app-card-grid>
+      <a [routerLink]="['/projeto']">
+        <app-card-item
+          cardTitle="Título do Projeto"
+          cardDescription="Descrição rápida do projeto ou informações de destaque"
+        ></app-card-item>
+      </a>
+      <a [routerLink]="['/projeto']">
+        <app-card-item
+          cardTitle="Título do Projeto"
+          cardDescription="Descrição rápida do projeto ou informações de destaque"
+        ></app-card-item>
+      </a>
+      <a [routerLink]="['/projeto']">
+        <app-card-item
+          cardTitle="Título do Projeto"
+          cardDescription="Descrição rápida do projeto ou informações de destaque"
+        ></app-card-item>
+      </a>
+    </app-card-grid>
+  </section>
   <a [routerLink]="['/projetos']" class="btn">
-    <app-btn-no-border btnTitle="Ver Mais"></app-btn-no-border>
+    <app-btn-no-border btnTitle="Ver Mais"
+      ><i class="fas fa-chevron-down"></i
+    ></app-btn-no-border>
   </a>
   <section class="summary">
     <app-divider dividerTitle="Resumo"></app-divider>
-    <app-card-grid>
-      <app-card-charts
-        cardTitle="Produtividade no Mês"
-        cardDescription="Semanas de Outubro de 2021"
-      >
-        <app-bars></app-bars>
-      </app-card-charts>
-      <app-card-charts
-        cardTitle="Progresso da Semana"
-        cardDescription="Entre os dias 04-10 de Outubro"
-      >
-        <app-area></app-area>
-      </app-card-charts>
-      <app-card-tasks
-        cardTitle="Tarefas do Dia"
-        cardDescription="Entregas para 08 de Outubro"
-      >
-        <app-task-item
-          taskTitle="Título da Tarefa"
-          projectTask="Projeto ao qual a tarefa pertence"
-        ></app-task-item>
-        <app-task-item
-          taskTitle="Título da Tarefa"
-          projectTask="Projeto ao qual a tarefa pertence"
-        ></app-task-item>
-        <app-task-item
-          taskTitle="Título da Tarefa"
-          projectTask="Projeto ao qual a tarefa pertence"
-        ></app-task-item>
-      </app-card-tasks>
-    </app-card-grid>
+    <div class="summary__charts">
+      <app-card-grid>
+        <app-card-charts
+          cardTitle="Produtividade no Mês"
+          cardDescription="Semanas de Outubro de 2021"
+        >
+          <app-bars></app-bars>
+        </app-card-charts>
+        <app-card-charts
+          cardTitle="Progresso da Semana"
+          cardDescription="Entre os dias 04-10 de Outubro"
+        >
+          <app-area></app-area>
+        </app-card-charts>
+        <app-card-tasks
+          cardTitle="Tarefas do Dia"
+          cardDescription="Entregas para 08 de Outubro"
+        >
+          <app-task-item
+            taskTitle="Título da Tarefa"
+            projectTask="Projeto ao qual a tarefa pertence"
+          ></app-task-item>
+          <app-task-item
+            taskTitle="Título da Tarefa"
+            projectTask="Projeto ao qual a tarefa pertence"
+          ></app-task-item>
+          <app-task-item
+            taskTitle="Título da Tarefa"
+            projectTask="Projeto ao qual a tarefa pertence"
+          ></app-task-item>
+        </app-card-tasks>
+      </app-card-grid>
+    </div>
   </section>
 </main>
