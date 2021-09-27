@@ -222,7 +222,7 @@ textarea:focus {
 }
 
 .fieldset__btns {
-  margin: 0;
+  margin: 0 0 2rem 0;
 }
 
 .form-btn {

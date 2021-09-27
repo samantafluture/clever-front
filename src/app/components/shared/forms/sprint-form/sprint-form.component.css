@@ -108,6 +108,19 @@ textarea:focus {
   color: var(--subtitle-light);
 }
 
+.members__search {
+  display: flex;
+  position: relative;
+}
+
+.members__search span i {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 2;
+  font-size: 1.2rem;
+}
+
 .members {
   display: flex;
   flex-direction: column;
@@ -216,7 +229,7 @@ textarea:focus {
 }
 
 .fieldset__btns {
-  margin: 0;
+  margin: 0 0 2rem 0;
 }
 
 .form-btn {
