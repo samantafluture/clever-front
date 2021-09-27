@@ -11,9 +11,10 @@ import { ListProjectsComponent } from './components/pages/list-projects/list-pro
 import { ViewProjectComponent } from './components/pages/view-project/view-project.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CreateSprintComponent } from './components/pages/create-sprint/create-sprint.component';
+import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, CreateProjectComponent, ListProjectsComponent, ViewProjectComponent, CreateSprintComponent],
+  declarations: [AppComponent, DashboardComponent, CreateProjectComponent, ListProjectsComponent, ViewProjectComponent, CreateSprintComponent, ViewSprintComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

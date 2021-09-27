@@ -1,3 +1,4 @@
+import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 import { CreateSprintComponent } from './components/pages/create-sprint/create-sprint.component';
 import { ViewProjectComponent } from './components/pages/view-project/view-project.component';
 import { CreateProjectComponent } from './components/pages/create-project/create-project.component';
@@ -9,28 +10,32 @@ import { ListProjectsComponent } from './components/pages/list-projects/list-pro
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
     path: 'novo-projeto',
-    component: CreateProjectComponent
+    component: CreateProjectComponent,
   },
   {
     path: 'projetos',
-    component: ListProjectsComponent
+    component: ListProjectsComponent,
   },
   {
     path: 'projeto',
-    component: ViewProjectComponent
+    component: ViewProjectComponent,
   },
   {
     path: 'novo-sprint',
-    component: CreateSprintComponent
-  }
+    component: CreateSprintComponent,
+  },
+  {
+    path: 'sprint',
+    component: ViewSprintComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

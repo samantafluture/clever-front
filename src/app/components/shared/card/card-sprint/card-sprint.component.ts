@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-sprint',
@@ -12,9 +13,13 @@ export class CardSprintComponent implements OnInit {
   @Input()
   cardDescription: string = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  view(): void {
+    this.router.navigateByUrl("sprint");
   }
 
 }

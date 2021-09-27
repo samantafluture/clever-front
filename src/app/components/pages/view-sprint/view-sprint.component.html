@@ -1,0 +1,38 @@
+<app-header
+  pageTitle="Título do Sprint"
+  btnTitle="Criar Sprint"
+  [routerLink]="['/novo-sprint']"
+></app-header>
+<section class="sidebar">
+  <app-sidebar></app-sidebar>
+</section>
+<main>
+  <section class="sprint__info">
+    <div class="info info--desc">
+      <h4><i class="fas fa-info-circle"></i>Descrição</h4>
+      <p>
+        Breve descrição do sprint contendo: informações importantes e/ou de
+        destaque, bem como objeto e necessidades.
+      </p>
+    </div>
+    <div class="info info--members">
+      <h4><i class="fas fa-exclamation-circle"></i>Pendente</h4>
+      <p>4 Tarefas</p>
+    </div>
+    <div class="info info--lead">
+      <h4><i class="fas fa-check-circle"></i>Realizado</h4>
+      <p>3 Tarefas</p>
+    </div>
+    <div class="info info--date">
+      <h4><i class="fas fa-calendar"></i>Prazo</h4>
+      <p>12 de Outubro de 2021</p>
+    </div>
+  </section>
+  <section class="tasks__list">
+    <app-divider dividerTitle="Tarefas do Sprint"></app-divider>
+    <app-task-item
+      taskTitle="Título da Tarefa"
+      projectTask="Projeto ao qual a tarefa pertence"
+    ></app-task-item>
+  </section>
+</main>
