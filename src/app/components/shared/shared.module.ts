@@ -11,13 +11,14 @@ import { CardGridComponent } from './card/card-grid/card-grid.component';
 import { CardWrapperComponent } from './card/card-wrapper/card-wrapper.component';
 import { BtnBorderComponent } from './buttons/btn-border/btn-border.component';
 import { CardChartsComponent } from './card/card-charts/card-charts.component';
-import { BarsComponent } from './card/graphics/charts/bars/bars.component';
-import { AreaComponent } from './card/graphics/charts/area/area.component';
+import { BarsComponent } from './graphics/charts/bars/bars.component';
+import { AreaComponent } from './graphics/charts/area/area.component';
 import { TaskItemComponent } from './task/task-item/task-item.component';
 import { CardTasksComponent } from './card/card-tasks/card-tasks.component';
-import { FormComponent } from './form/form.component';
+import { ProjectFormComponent } from './forms/project-form/project-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardSprintComponent } from './card/card-sprint/card-sprint.component';
+import { SprintFormComponent } from './forms/sprint-form/sprint-form.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +36,9 @@ import { CardSprintComponent } from './card/card-sprint/card-sprint.component';
     AreaComponent,
     TaskItemComponent,
     CardTasksComponent,
-    FormComponent,
+    ProjectFormComponent,
     CardSprintComponent,
+    SprintFormComponent,
   ],
   imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [
@@ -54,8 +56,9 @@ import { CardSprintComponent } from './card/card-sprint/card-sprint.component';
     AreaComponent,
     TaskItemComponent,
     CardTasksComponent,
-    FormComponent,
-    CardSprintComponent
+    ProjectFormComponent,
+    CardSprintComponent,
+    SprintFormComponent
   ],
 })
 export class SharedModule {}

@@ -1,3 +1,4 @@
+import { CreateSprintComponent } from './components/pages/create-sprint/create-sprint.component';
 import { ViewProjectComponent } from './components/pages/view-project/view-project.component';
 import { CreateProjectComponent } from './components/pages/create-project/create-project.component';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'projeto',
     component: ViewProjectComponent
+  },
+  {
+    path: 'novo-sprint',
+    component: CreateSprintComponent
   }
 ];
 

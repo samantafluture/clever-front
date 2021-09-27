@@ -1,0 +1,74 @@
+<form #sprintForm="ngForm">
+  <div class="fieldset">
+    <div class="fieldset__infos">
+      <div class="info">
+        <label for="title">Título</label>
+        <input
+          [(ngModel)]="sprint.title"
+          #title="ngModel"
+          type="text"
+          placeholder="Título do sprint"
+          id="title"
+          name="title"
+          required
+          minlength="3"
+        />
+        <div class="alert" [hidden]="title.valid || title.pristine">
+          Título é obrigatório e deve ter pelo menos 3 caracteres
+        </div>
+      </div>
+      <div class="info">
+        <label for="description">Descrição</label>
+        <textarea
+          [(ngModel)]="sprint.description"
+          #description="ngModel"
+          type="text"
+          placeholder="Breve descrição do sprint"
+          id="description"
+          name="description"
+          rows="4"
+        ></textarea>
+      </div>
+      <div class="info">
+        <label for="date">Prazo do sprint</label>
+        <input
+          [(ngModel)]="sprint.date"
+          #date="ngModel"
+          type="date"
+          placeholder="Prazo do sprint"
+          id="date"
+          name="date"
+          required
+        />
+        <div class="alert" [hidden]="date.valid || date.pristine">
+          Prazo do sprint é obrigatório
+        </div>
+      </div>
+      <div class="form-message">
+        <span class="alert"
+          ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
+          obrigatórios</span
+        >
+      </div>
+    </div>
+    <div class="fieldset__tasks">
+      <div class="tasks__list">
+        <h3>Tarefas do sprint</h3>
+          <p>Ainda não há tarefas.</p>
+          <p>Você poderá adicionar posteriormente.</p>
+      </div>
+    </div>
+    <div class="fieldset__btns">
+      <div class="form-btn">
+        <button class="btn-cancel" (click)="cancel()">Cancelar</button>
+        <button
+          class="btn-submit"
+          type="submit"
+          [disabled]="!sprintForm.form.valid"
+        >
+          {{ btnTitle }}
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

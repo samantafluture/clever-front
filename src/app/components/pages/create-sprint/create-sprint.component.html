@@ -1,0 +1,15 @@
+<app-header
+  pageTitle="Novo Sprint"
+  btnTitle="Voltar"
+  [routerLink]="['/projeto']"
+></app-header>
+<section class="sidebar">
+  <app-sidebar></app-sidebar>
+</section>
+<main class="form">
+  <app-sprint-form
+    (submit)="add(sprint)"
+    [sprint]="sprint"
+    btnTitle="Criar Sprint"
+  ></app-sprint-form>
+</main>

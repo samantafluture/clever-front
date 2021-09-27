@@ -1,7 +1,7 @@
 <app-header
   pageTitle="Título do Projeto"
   btnTitle="Criar Sprint"
-  [routerLink]="['/']"
+  [routerLink]="['/novo-sprint']"
 ></app-header>
 <section class="sidebar">
   <app-sidebar></app-sidebar>
@@ -32,7 +32,7 @@
     <div class="board board--todo">
       <div class="board__header">
         <h3>A Fazer</h3>
-        <a href="#"><i class="fas fa-plus-circle"></i></a>
+        <a [routerLink]="['/novo-sprint']"><i class="fas fa-plus-circle"></i></a>
       </div>
       <app-card-sprint
         cardTitle="Título do Sprint"
