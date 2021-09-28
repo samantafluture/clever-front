@@ -21,15 +21,10 @@ TODO [ 27 de set a 01 de out ] [ html, css ]
 
 # criação de páginas & componentes
 
-- [ ] criar nova etapa/sprint
+- [ ] criar nova tarefa (dentro do sprint)
   - sidebar (comum)
   - header (comum, muda título e botão)
   - formulário (comum com extras)
-
-- [ ] visualizar etapa/sprint
-    - sidebar (comum)
-    - header (comum, muda título e botão)
-    - similar ao kanban porém to do's list
 
 - [ ] visualização com 2 abas
   - [ ] calendário

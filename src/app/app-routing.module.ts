@@ -1,3 +1,4 @@
+import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
 import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 import { CreateSprintComponent } from './components/pages/create-sprint/create-sprint.component';
 import { ViewProjectComponent } from './components/pages/view-project/view-project.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
     path: 'sprint',
     component: ViewSprintComponent,
   },
+  {
+    path: 'nova-tarefa',
+    component: CreateTaskComponent
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,15 @@
+<app-header
+  pageTitle="Nova Tarefa"
+  btnTitle="Voltar"
+  [routerLink]="['/sprint']"
+></app-header>
+<section class="sidebar">
+  <app-sidebar></app-sidebar>
+</section>
+<main class="form">
+  <app-task-form
+    (submit)="add(task)"
+    [task]="task"
+    btnTitle="Criar Tarefa"
+  ></app-task-form>
+</main>
