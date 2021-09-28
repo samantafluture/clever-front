@@ -124,3 +124,26 @@ button:hover {
 .info i {
   margin-right: 0.5rem
 }
+
+main .actions {
+  margin: 0 1.5rem;
+  position: absolute;
+  top: 3.5%;
+  right: 12%;
+}
+
+.actions > a {
+  color: var(--subtitle-light);
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  padding-left: 0.75rem;
+}
+
+.actions i {
+  margin-right: 0.25rem;
+}
+
+.actions a:hover {
+  color: var(--hover);
+}

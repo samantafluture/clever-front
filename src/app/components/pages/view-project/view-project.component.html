@@ -2,11 +2,17 @@
   pageTitle="Título do Projeto"
   btnTitle="Criar Sprint"
   [routerLink]="['/novo-sprint']"
-></app-header>
+>
+</app-header>
 <section class="sidebar">
   <app-sidebar></app-sidebar>
 </section>
 <main>
+  <div class="actions">
+    <a><i class="fas fa-pencil-alt"></i>Editar</a>  
+    <a><i class="fas fa-archive"></i>Arquivar</a> 
+    <a><i class="fas fa-trash"></i>Excluir</a> 
+  </div>
   <section class="project__info">
     <div class="info info--desc">
       <h4><i class="fas fa-info-circle"></i>Descrição</h4>
