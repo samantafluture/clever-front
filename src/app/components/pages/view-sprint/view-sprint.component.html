@@ -1,7 +1,7 @@
 <app-header
   pageTitle="Título do Sprint"
-  btnTitle="Criar Sprint"
-  [routerLink]="['/novo-sprint']"
+  btnTitle="Voltar"
+  [routerLink]="['/projeto']"
 ></app-header>
 <section class="sidebar">
   <app-sidebar></app-sidebar>
@@ -9,7 +9,7 @@
 <main>
   <div class="actions">
     <a><i class="fas fa-pencil-alt"></i>Editar</a>
-    <a><i class="fas fa-archive"></i>Arquivar</a>
+    <!-- <a><i class="fas fa-archive"></i>Arquivar</a> -->
     <a><i class="fas fa-trash"></i>Excluir</a>
   </div>
   <section class="sprint__info">
@@ -34,10 +34,11 @@
     </div>
   </section>
   <section class="tasks__list">
-    <app-divider dividerTitle="Tarefas do Sprint"></app-divider>
-    <app-task-item
-      taskTitle="Título da Tarefa"
-      projectTask="Projeto ao qual a tarefa pertence"
-    ></app-task-item>
+    <div class="tasks__header">
+      <app-divider dividerTitle="Tarefas do Sprint"></app-divider>
+    <app-btn-border btnTitle="Criar Tarefa"></app-btn-border>
+    </div>
+    <app-task-list
+    ></app-task-list>
   </section>
 </main>
