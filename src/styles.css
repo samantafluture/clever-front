@@ -51,3 +51,11 @@ a {
   text-decoration: none;
   color: var(--color-light);
 }
+
+.charts-css.area tbody tr td:nth-of-type(10n+3)::before {
+  background-color: var(--alert-green);
+}
+
+.charts-css.area tbody tr td:nth-of-type(10n+2)::before {
+  background-color: var(--alert-yellow);
+}
