@@ -1,19 +1,54 @@
-<div class="task">
+<div class="task task--urgent">
   <div class="task__main">
     <input type="checkbox" name="" id="" />
-    <h3>Título de uma primeira tareda deste sprint</h3>
-    <div class="task__urgency">
+    <h3>Título da primeira tarefa deste sprint</h3>
+    <!-- <div class="task__urgency">
       <span><i class="fas fa-exclamation-triangle"></i></span>
-      <!-- <p>Urgente</p> -->
-    </div>
+      <p>Urgente</p>
+    </div> -->
   </div>
   <div class="task__info">
     <div class="task__details">
+      <div class="task__urgency">
+        <span><i class="fas fa-exclamation-triangle"></i></span>
+        <p>Urgente</p>
+      </div>
       <div class="task__member">
         <img class="member" src="https://github.com/samantafluture.png" />
+        <p>S. F.</p>
       </div>
       <div class="task__date">
-        <span><i class="fas fa-stopwatch"></i></span>
+        <span><i class="fas fa-calendar"></i></span>
+        <p>25/10</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a><i class="fas fa-pencil-alt"></i></a>
+      <a><i class="fas fa-trash"></i></a>
+    </div>
+  </div>
+</div>
+<div class="task task--urgent">
+  <div class="task__main">
+    <input type="checkbox" name="" id="" />
+    <h3>Título da segunda tarefa deste sprint</h3>
+    <!-- <div class="task__urgency">
+      <span><i class="fas fa-exclamation-triangle"></i></span>
+      <p>Urgente</p>
+    </div> -->
+  </div>
+  <div class="task__info">
+    <div class="task__details">
+      <div class="task__urgency">
+        <span><i class="fas fa-exclamation-triangle"></i></span>
+        <p>Urgente</p>
+      </div>
+      <div class="task__member">
+        <img class="member" src="https://github.com/samantafluture.png" />
+        <p>S. F.</p>
+      </div>
+      <div class="task__date">
+        <span><i class="fas fa-calendar"></i></span>
         <p>25/10</p>
       </div>
     </div>
@@ -26,48 +61,22 @@
 <div class="task">
   <div class="task__main">
     <input type="checkbox" />
-    <h3>Outra tarefa a ser realizada</h3>
-    <div class="task__urgency">
-      <span><i class="fas fa-exclamation-triangle"></i></span>
-      <!-- <p>Urgente</p> -->
-    </div>
+    <h3>Outra tarefa a ser realizada porém não tão urgente</h3>
   </div>
   <div class="task__info">
     <div class="task__details">
-      <div class="task__member">
-        <img class="member" src="https://github.com/samantafluture.png" />
-        <!-- <p>Nome</p> -->
-      </div>
-      <div class="task__date">
-        <span><i class="fas fa-stopwatch"></i></span>
-        <p>25/10</p>
-      </div>
-    </div>
-    <div class="actions">
-      <a><i class="fas fa-pencil-alt"></i></a>
-      <a><i class="fas fa-trash"></i></a>
-    </div>
-  </div>
-</div>
-<div class="task">
-  <div class="task__main">
-    <input type="checkbox" />
-    <h3>Outra tarefa a ser realizada</h3>
-  </div>
-  <div class="task__info">
-    <div class="task__details">
-      <div class="task__member">
-        <img class="member" src="https://github.com/samantafluture.png" />
-        <!-- <p>Nome</p> -->
-      </div>
-      <div class="task__date">
-        <span><i class="fas fa-stopwatch"></i></span>
-        <p>25/10</p>
-      </div>
       <!-- <div class="task__urgency">
         <span><i class="fas fa-exclamation-triangle"></i></span>
         <p>Urgente</p>
       </div> -->
+      <div class="task__member">
+        <img class="member" src="https://github.com/samantafluture.png" />
+        <p>S. F.</p>
+      </div>
+      <div class="task__date">
+        <span><i class="fas fa-calendar"></i></span>
+        <p>25/10</p>
+      </div>
     </div>
     <div class="actions">
       <a><i class="fas fa-pencil-alt"></i></a>
@@ -75,25 +84,25 @@
     </div>
   </div>
 </div>
-<div class="task">
+<div class="task task--done">
   <div class="task__main">
-    <input type="checkbox" />
-    <h3>Outra tarefa a ser realizada</h3>
+    <input type="checkbox" checked />
+    <h3>Tarefa realizada simplificada deste sprint</h3>
   </div>
   <div class="task__info">
     <div class="task__details">
-      <div class="task__member">
-        <img class="member" src="https://github.com/samantafluture.png" />
-        <!-- <p>Nome</p> -->
-      </div>
-      <div class="task__date">
-        <span><i class="fas fa-stopwatch"></i></span>
-        <p>25/10</p>
-      </div>
       <!-- <div class="task__urgency">
         <span><i class="fas fa-exclamation-triangle"></i></span>
         <p>Urgente</p>
       </div> -->
+      <div class="task__member">
+        <img class="member" src="https://github.com/samantafluture.png" />
+        <p>S. F.</p>
+      </div>
+      <div class="task__date">
+        <span><i class="fas fa-calendar"></i></span>
+        <p>25/10</p>
+      </div>
     </div>
     <div class="actions">
       <a><i class="fas fa-pencil-alt"></i></a>
@@ -101,3 +110,56 @@
     </div>
   </div>
 </div>
+<div class="task task--done">
+  <div class="task__main">
+    <input type="checkbox" checked />
+    <h3>Uma tarefa realizada deste sprint</h3>
+  </div>
+  <div class="task__info">
+    <div class="task__details">
+      <!-- <div class="task__urgency">
+        <span><i class="fas fa-exclamation-triangle"></i></span>
+        <p>Urgente</p>
+      </div> -->
+      <div class="task__member">
+        <img class="member" src="https://github.com/samantafluture.png" />
+        <p>S. F.</p>
+      </div>
+      <div class="task__date">
+        <span><i class="fas fa-calendar"></i></span>
+        <p>25/10</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a><i class="fas fa-pencil-alt"></i></a>
+      <a><i class="fas fa-trash"></i></a>
+    </div>
+  </div>
+</div>
+<div class="task task--done">
+  <div class="task__main">
+    <input type="checkbox" checked />
+    <h3>Mais uma tarefa checked deste sprint</h3>
+  </div>
+  <div class="task__info">
+    <div class="task__details">
+      <!-- <div class="task__urgency">
+        <span><i class="fas fa-exclamation-triangle"></i></span>
+        <p>Urgente</p>
+      </div> -->
+      <div class="task__member">
+        <img class="member" src="https://github.com/samantafluture.png" />
+        <p>S. F.</p>
+      </div>
+      <div class="task__date">
+        <span><i class="fas fa-calendar"></i></span>
+        <p>25/10</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a><i class="fas fa-pencil-alt"></i></a>
+      <a><i class="fas fa-trash"></i></a>
+    </div>
+  </div>
+</div>
+

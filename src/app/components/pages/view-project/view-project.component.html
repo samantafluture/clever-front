@@ -53,7 +53,7 @@
     <div class="board board--doing">
       <div class="board__header">
         <h3>Fazendo</h3>
-        <a href="#"><i class="fas fa-plus-circle"></i></a>
+        <a [routerLink]="['/novo-sprint']"><i class="fas fa-plus-circle"></i></a>
       </div>
       <app-card-sprint
         cardTitle="Título do Sprint"
@@ -71,7 +71,7 @@
     <div class="board board--done">
       <div class="board__header">
         <h3>Feito</h3>
-        <a href="#"><i class="fas fa-plus-circle"></i></a>
+        <a [routerLink]="['/novo-sprint']"><i class="fas fa-plus-circle"></i></a>
       </div>
       <app-card-sprint
         cardTitle="Título do Sprint"

@@ -28,6 +28,7 @@
   --alert-green: #77c97b;
   --alert-red: #F26966;
   --alert-yellow: #ffdc5a;
+  --urgent-red: #f2686648;
 }
 
 * {

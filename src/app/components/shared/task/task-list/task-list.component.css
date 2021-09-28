@@ -7,6 +7,24 @@
   border: 1px solid var(--border-light);
   padding: 1rem 0;
   margin: 0rem 2rem 1rem;
+  cursor: pointer;
+}
+
+.task:hover {
+  box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
+}
+
+.task--done {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.task--done h3 {
+  text-decoration: line-through;
+}
+
+.task--done:hover {
+  box-shadow: none;
 }
 
 .task__main {
@@ -29,7 +47,7 @@
 .task__main h3 {
   text-align: left;
   margin-left: 0;
-  align-self: flex-start;
+  align-self: center;
   justify-self: flex-start;
   flex-grow: 2;
 }
@@ -60,17 +78,23 @@
   margin: 0 0.5rem;
 }
 
+.task__member p {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
 .member {
   align-self: flex-start;
   border-radius: 50%;
   padding: 0;
-  width: 32px;
+  width: 22px;
 }
 
 .task__date {
   display: flex;
   flex-direction: column;
   align-self: center;
+  color: var(--subtitle-light);
 }
 
 .task__date span i {
@@ -79,6 +103,7 @@
 
 .task__date p {
   font-size: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 .task__urgency {
@@ -90,6 +115,7 @@
 
 .task__urgency p {
   font-size: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 .actions {

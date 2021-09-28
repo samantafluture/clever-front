@@ -19,7 +19,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin: 0 2rem 2rem;
+  margin: 0 2rem 1rem;
   color: var(--subtitle-light);
 }
 
@@ -35,9 +35,12 @@ main {
   max-width: 50%;
 }
 
-.info--lead img {
-  width: 35px;
-  border-radius: 50%;
+.info--todo {
+  color: var(--alert-red);
+}
+
+.info--done {
+  color: var(--alert-green);
   margin-right: 0;
 }
 
@@ -46,7 +49,7 @@ main {
 }
 
 .tasks__list {
-  border-top: 1px solid var(--border-light);
+  /* border-top: 1px solid var(--border-light); */
   margin: 0;
 }
 
@@ -54,7 +57,7 @@ main .actions {
   margin: 0 1.5rem;
   position: absolute;
   top: 3.5%;
-  left: 40%
+  left: 36.5%
   /* right: 12%; */
 }
 
@@ -88,4 +91,8 @@ main .actions {
 
 .tasks__header app-divider {
   margin-left: 0;
+}
+
+.tasks__list {
+  margin-bottom: 2rem;
 }
