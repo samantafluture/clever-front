@@ -21,6 +21,7 @@ import { CardSprintComponent } from './card/card-sprint/card-sprint.component';
 import { SprintFormComponent } from './forms/sprint-form/sprint-form.component';
 import { TaskListComponent } from './task/task-list/task-list.component';
 import { TaskFormComponent } from './forms/task-form/task-form.component';
+import { CalendarComponent } from './graphics/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { TaskFormComponent } from './forms/task-form/task-form.component';
     SprintFormComponent,
     TaskListComponent,
     TaskFormComponent,
+    CalendarComponent,
   ],
   imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [
@@ -65,6 +67,7 @@ import { TaskFormComponent } from './forms/task-form/task-form.component';
     SprintFormComponent,
     TaskListComponent,
     TaskFormComponent,
+    CalendarComponent
   ],
 })
 export class SharedModule {}

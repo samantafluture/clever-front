@@ -1,0 +1,82 @@
+table{
+  margin: 0.6rem 1rem;
+	border: 1px solid var(--border-light);
+  border-radius: 6px;
+	padding: 0.5rem;
+  width: 90%;
+}
+
+table,th,tr {
+	text-align: center;
+	vertical-align: middle;
+}
+
+table thead th{
+	font-weight: 600;
+}
+
+table tbody td{
+	height: 2rem;
+}
+
+a{
+	text-decoration: none;
+}
+
+tbody a{
+	display: block;
+	height: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+}
+
+
+tbody a:hover{
+	color: var(--hover);
+  border-radius: 40%;
+}
+
+.null{
+	color: var(--subtitle-light);
+}
+
+.selected {
+	background: var(--hover);
+  border-radius: 40%;
+}
+
+.selected a{
+	color: white;
+}
+
+.selected a:hover{
+	color: white;
+}
+
+.selected--alert {
+  background-color: var(--alert-red);
+  border-radius: 40%;
+}
+
+.selected--alert a{
+	color: white;
+}
+
+.selected--alert a:hover {
+	color: white;
+}
+
+.selected--done {
+  background-color: var(--alert-green);
+  border-radius: 40%;
+}
+
+.selected--done a{
+	color: white;
+}
+
+.selected--done a:hover {
+	color: white;
+}
