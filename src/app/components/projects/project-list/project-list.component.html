@@ -1,0 +1,13 @@
+<p *ngIf="!projects.length">Não há projetos cadastrados.</p>
+
+<app-card-grid>
+  <div *ngFor="let project of projects">
+    <a routerLink="/project/{{ project.id }}">
+      <app-project
+        [title]="project.title"
+        [description]="project.description"
+        [dueDate]="project.dueDate"
+      ></app-project>
+    </a>
+  </div>
+</app-card-grid>

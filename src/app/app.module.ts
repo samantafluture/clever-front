@@ -1,3 +1,4 @@
+import { ProjectsModule } from './components/projects/projects.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,11 +14,11 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CreateSprintComponent } from './components/pages/create-sprint/create-sprint.component';
 import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { DataProjectService } from './services/in-memory/data-project.service';
-import { DataSprintService } from './services/in-memory/data-sprint.service';
-import { DataTaskService } from './services/in-memory/data-task.service';
-import { DataUserService } from './services/in-memory/data-user.service';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { DataProjectService } from './services/data-project.service';
+// import { DataSprintService } from './services/in-memory/data-sprint.service';
+// import { DataTaskService } from './services/in-memory/data-task.service';
+// import { DataUserService } from './services/in-memory/data-user.service';
 
 @NgModule({
   declarations: [
@@ -38,12 +39,14 @@ import { DataUserService } from './services/in-memory/data-user.service';
     FormsModule,
     ReactiveFormsModule,
     DragDropModule,
-    HttpClientInMemoryWebApiModule.forRoot(DataProjectService),
-    HttpClientInMemoryWebApiModule.forRoot(DataSprintService),
-    HttpClientInMemoryWebApiModule.forRoot(DataTaskService),
-    HttpClientInMemoryWebApiModule.forRoot(DataUserService)
+    // HttpClientInMemoryWebApiModule.forRoot(DataProjectService),
+    // HttpClientInMemoryWebApiModule.forRoot(DataSprintService),
+    // HttpClientInMemoryWebApiModule.forRoot(DataTaskService),
+    // HttpClientInMemoryWebApiModule.forRoot(DataUserService),
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [AppRoutingModule]
 })
 export class AppModule {}

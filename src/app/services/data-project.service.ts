@@ -1,4 +1,4 @@
-import { Status } from './../../enums/status';
+import { Status } from '../enums/status';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 

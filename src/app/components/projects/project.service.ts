@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { Project, Projects } from '../interfaces/project';
+import { Projects, Project } from 'src/app/interfaces/project';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({
