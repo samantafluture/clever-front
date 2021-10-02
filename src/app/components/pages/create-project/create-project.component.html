@@ -1,15 +1,18 @@
-<app-header
-  pageTitle="Novo Projeto"
-  btnTitle="Voltar"
-  [routerLink]="['/']"
-></app-header>
-<section class="sidebar">
+<header>
+  <app-header
+    pageTitle="Novo Projeto"
+    btnTitle="Voltar"
+    [routerLink]="['/']"
+  ></app-header>
+</header>
+
+<aside>
   <app-sidebar></app-sidebar>
-</section>
+</aside>
+
 <main class="form">
   <app-project-form
-    (submit)="add(project)"
+    (submit)="create(project)"
     [project]="project"
-    btnTitle="Criar Projeto"
   ></app-project-form>
 </main>

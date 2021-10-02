@@ -5,7 +5,8 @@ form {
   padding: 0;
 }
 
-.fieldset {
+fieldset {
+  border: none;
   margin: 0;
   padding: 0;
   display: grid;
@@ -246,6 +247,16 @@ button {
   border-radius: 8px;
   cursor: pointer;
   margin-left: 1rem;
+}
+
+button:disabled {
+  background-color: var(--subtitle-light);
+  cursor: default;
+}
+
+button:disabled:hover {
+  background-color: var(--subtitle-light);
+  cursor: default;
 }
 
 .btn-submit,

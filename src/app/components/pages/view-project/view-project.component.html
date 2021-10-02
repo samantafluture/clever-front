@@ -1,24 +1,29 @@
-<app-header
-  pageTitle="Título do Projeto"
-  btnTitle="Criar Sprint"
-  [routerLink]="['/novo-sprint']"
->
-</app-header>
-<section class="sidebar">
+<header>
+  <app-header
+    pageTitle="Título do Projeto"
+    btnTitle="Criar Sprint"
+    [routerLink]="['/novo-sprint']"
+  >
+  </app-header>
+</header>
+
+<aside>
   <app-sidebar></app-sidebar>
-</section>
+</aside>
+
 <main>
+
   <div class="actions">
     <a><i class="fas fa-pencil-alt"></i>Editar</a>
-    <!-- <a><i class="fas fa-archive"></i>Arquivar</a>  -->
     <a><i class="fas fa-trash"></i>Excluir</a>
   </div>
+
   <section class="project__info">
     <div class="info info--desc">
       <h4><i class="fas fa-info-circle"></i>Descrição</h4>
       <p>
-        Breve descrição do projeto contendo: informações importantes e/ou de destaque, bem
-        como objeto e tipo de projeto.
+        Breve descrição do projeto contendo: informações importantes e/ou de
+        destaque, bem como objeto e tipo de projeto.
       </p>
     </div>
     <div class="info info--members">
@@ -34,11 +39,14 @@
       <p>12 de Outubro de 2021</p>
     </div>
   </section>
+
   <section class="project__boards">
     <div class="board board--todo">
       <div class="board__header">
         <h3>A Fazer</h3>
-        <a [routerLink]="['/novo-sprint']"><i class="fas fa-plus-circle"></i></a>
+        <a [routerLink]="['/novo-sprint']"
+          ><i class="fas fa-plus-circle"></i
+        ></a>
       </div>
       <app-card-sprint
         cardTitle="Título do Sprint"
@@ -53,7 +61,9 @@
     <div class="board board--doing">
       <div class="board__header">
         <h3>Fazendo</h3>
-        <a [routerLink]="['/novo-sprint']"><i class="fas fa-plus-circle"></i></a>
+        <a [routerLink]="['/novo-sprint']"
+          ><i class="fas fa-plus-circle"></i
+        ></a>
       </div>
       <app-card-sprint
         cardTitle="Título do Sprint"
@@ -71,7 +81,9 @@
     <div class="board board--done">
       <div class="board__header">
         <h3>Feito</h3>
-        <a [routerLink]="['/novo-sprint']"><i class="fas fa-plus-circle"></i></a>
+        <a [routerLink]="['/novo-sprint']"
+          ><i class="fas fa-plus-circle"></i
+        ></a>
       </div>
       <app-card-sprint
         cardTitle="Título do Sprint"
@@ -79,4 +91,5 @@
       ></app-card-sprint>
     </div>
   </section>
+  
 </main>

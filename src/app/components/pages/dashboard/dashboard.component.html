@@ -12,7 +12,9 @@
 
 <main>
   <section class="projects">
-    <app-project-list></app-project-list>
+    <app-project-list
+      [showAll]="false"
+    ></app-project-list>
   </section>
 
   <a [routerLink]="['/projetos']" class="btn">

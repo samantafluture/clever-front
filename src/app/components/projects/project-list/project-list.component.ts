@@ -1,5 +1,5 @@
 import { Project } from './../../../interfaces/project';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { ProjectService } from 'src/app/services/project.service';
 })
 export class ProjectListComponent implements OnInit {
   projects: Project[] = [];
+  @Input() showAll = true;
 
   constructor(private projectService: ProjectService) {}
 

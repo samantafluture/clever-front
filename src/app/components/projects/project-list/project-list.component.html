@@ -1,7 +1,7 @@
 <p *ngIf="!projects.length">Não há projetos cadastrados.</p>
 
 <app-card-grid>
-  <div *ngFor="let project of projects">
+  <div *ngFor="let project of (showAll ? projects : projects.slice(0,3))">
     <a routerLink="/project/{{ project.id }}">
       <app-project
         [title]="project.title"
@@ -11,4 +11,3 @@
     </a>
   </div>
 </app-card-grid>
-  
