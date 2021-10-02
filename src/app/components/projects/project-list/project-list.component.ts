@@ -1,6 +1,8 @@
 import { Project } from './../../../interfaces/project';
 import { Component, Input, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
+import { map } from 'rxjs/operators';
+import { sortByDueDate } from 'src/app/utils/filter-project';
 
 @Component({
   selector: 'app-project-list',
@@ -11,15 +13,16 @@ export class ProjectListComponent implements OnInit {
   projects: Project[] = [];
   @Input() showAll = true;
 
+  allProjects$ = this.projectService.getProjects();
+  sortedProjects$ = this.allProjects$.pipe(
+    map((projects) =>
+      projects.sort((projectA, projectB) => sortByDueDate(projectA, projectB))
+    )
+  );
+
   constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
-    this.getProjects();
-  }
-
-  getProjects(): void {
-    this.projectService
-      .getProjects()
-      .subscribe((projects) => (this.projects = projects));
+    this.sortedProjects$;
   }
 }

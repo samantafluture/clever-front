@@ -1,6 +1,4 @@
-<p *ngIf="!projects.length">Não há projetos cadastrados.</p>
-
-<app-card-grid>
+<app-card-grid *ngIf="sortedProjects$ | async as projects; else empty">
   <div *ngFor="let project of (showAll ? projects : projects.slice(0,3))">
     <a routerLink="/project/{{ project.id }}">
       <app-project
@@ -11,3 +9,7 @@
     </a>
   </div>
 </app-card-grid>
+
+<ng-template #empty>
+  <p>Não há projetos cadastrados.</p>
+</ng-template>
