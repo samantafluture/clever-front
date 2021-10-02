@@ -1,5 +1,4 @@
 import { Members } from './member';
-import { Status } from './../enums/status';
 import { Manager } from "./manager";
 import { Sprints } from "./sprint";
 

@@ -7,9 +7,14 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataProjectService } from './data-project.service';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
-  declarations: [ProjectComponent, ProjectListComponent],
+  declarations: [
+    ProjectComponent,
+    ProjectListComponent,
+    ProjectDetailComponent,
+  ],
   imports: [
     CommonModule,
     SharedModule,
@@ -17,6 +22,6 @@ import { DataProjectService } from './data-project.service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(DataProjectService),
   ],
-  exports: [ProjectComponent, ProjectListComponent],
+  exports: [ProjectComponent, ProjectListComponent, ProjectDetailComponent],
 })
 export class ProjectsModule {}

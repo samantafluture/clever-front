@@ -10,7 +10,7 @@ import { catchError } from 'rxjs/operators';
 export class ProjectService {
   constructor(private http: HttpClient) {}
 
-  private projectsUrl = 'api/projects/';
+  private projectsUrl = 'api/projects';
 
   getProjects(): Observable<Projects> {
     return this.http.get<Projects>(this.projectsUrl).pipe(
@@ -23,12 +23,7 @@ export class ProjectService {
 
   getProjectById(id: number): Observable<Project> {
     const url = `${this.projectsUrl}/${id}`;
-    return this.http.get<Project>(url).pipe(
-      catchError((error: HttpErrorResponse) => {
-        console.error(error);
-        return throwError(error);
-      })
-    );
+    return this.http.get<Project>(url);
   }
 
   createProject(project: Project): Observable<Project> {

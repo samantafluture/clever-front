@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input()
-  pageTitle: string = '';
+  pageTitle: string | undefined;
 
   @Input()
   btnTitle: string = '';

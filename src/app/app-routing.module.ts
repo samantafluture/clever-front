@@ -22,9 +22,13 @@ const routes: Routes = [
     component: ListProjectsComponent,
   },
   {
-    path: 'projeto',
+    path: 'projeto/:id',
     component: ViewProjectComponent,
   },
+  // {
+  //   path: 'projeto',
+  //   component: ViewProjectComponent,
+  // },
   {
     path: 'novo-sprint',
     component: CreateSprintComponent,
