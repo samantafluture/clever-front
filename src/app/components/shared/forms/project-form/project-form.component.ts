@@ -9,6 +9,7 @@ import { Location } from '@angular/common';
 export class ProjectFormComponent implements OnInit {
   @Input() btnTitle: string = '';
   @Input() project!: any;
+  submitted = false;
 
   constructor(private location: Location) {}
 
@@ -18,4 +19,6 @@ export class ProjectFormComponent implements OnInit {
     this.location.back();
     return false;
   }
+
+  onSubmit() { this.submitted = true; }
 }
