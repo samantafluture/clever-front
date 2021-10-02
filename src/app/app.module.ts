@@ -15,7 +15,16 @@ import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.
 import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, CreateProjectComponent, ListProjectsComponent, ViewProjectComponent, CreateSprintComponent, ViewSprintComponent, CreateTaskComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    CreateProjectComponent,
+    ListProjectsComponent,
+    ViewProjectComponent,
+    CreateSprintComponent,
+    ViewSprintComponent,
+    CreateTaskComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,7 +32,7 @@ import { CreateTaskComponent } from './components/pages/create-task/create-task.
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
