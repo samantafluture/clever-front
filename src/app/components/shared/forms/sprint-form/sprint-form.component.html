@@ -68,6 +68,16 @@
         </select>
         <span><i class="fas fa-chevron-down"></i></span>
       </div>
+      <div class="select__status" *ngIf="allProjects$ | async as projects">
+        Projeto
+        <select name="project" id="project" [(ngModel)]="sprint.project">
+          <option value="" disabled>Projeto a qual pertence</option>
+          <option *ngFor="let project of projects" [ngValue]="project">
+            {{ project.title }}
+          </option>
+        </select>
+        <span><i class="fas fa-chevron-down"></i></span>
+      </div>
       <div class="tasks__list">
         <h3>Tarefas do sprint</h3>
         <p>Ainda não há tarefas.</p>

@@ -14,8 +14,8 @@
   margin-bottom: 0.5rem;
 }
 
-.info--desc {
-  max-width: 50%;
+.info--desc, .info--proj {
+  max-width: 25%;
 }
 
 .info--todo {

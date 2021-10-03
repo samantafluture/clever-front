@@ -11,6 +11,7 @@ export class SprintDetailComponent implements OnInit {
   @Input() description!: string;
   @Input() dueDate!: Date;
   @Input() status!: Status;
+  @Input() projectName?: string;
 
   constructor() { }
 

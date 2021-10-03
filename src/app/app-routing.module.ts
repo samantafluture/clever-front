@@ -32,7 +32,7 @@ const routes: Routes = [
     component: EditProjectComponent,
   },
   {
-    path: 'novo-sprint',
+    path: 'projeto/:id/novo-sprint',
     component: CreateSprintComponent,
   },
   {

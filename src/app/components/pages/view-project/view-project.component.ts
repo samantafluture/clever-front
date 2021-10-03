@@ -34,7 +34,6 @@ export class ViewProjectComponent implements OnInit {
   }
 
   newSprint() {
-    this.router.navigateByUrl('novo-sprint');
+    this.router.navigate(['/projeto/' + this.id + '/novo-sprint/']);
   }
-
 }
