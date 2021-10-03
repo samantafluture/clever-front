@@ -1,0 +1,32 @@
+.sprint__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 2rem 1rem;
+  color: var(--subtitle-light);
+}
+
+.info {
+  margin: 0;
+}
+
+.info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.info--desc {
+  max-width: 50%;
+}
+
+.info--todo {
+  color: var(--alert-red);
+}
+
+.info--done {
+  color: var(--alert-green);
+  margin-right: 0;
+}
+
+.info i {
+  margin-right: 0.5rem
+}

@@ -7,9 +7,10 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from '../../services/in-memory-data.service';
 import { SprintListComponent } from './sprint-list/sprint-list.component';
+import { SprintDetailComponent } from './sprint-detail/sprint-detail.component';
 
 @NgModule({
-  declarations: [SprintComponent, SprintListComponent],
+  declarations: [SprintComponent, SprintListComponent, SprintDetailComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -17,6 +18,6 @@ import { SprintListComponent } from './sprint-list/sprint-list.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
-  exports: [SprintComponent, SprintListComponent],
+  exports: [SprintComponent, SprintListComponent, SprintDetailComponent],
 })
 export class SprintsModule {}
