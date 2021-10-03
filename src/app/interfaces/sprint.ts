@@ -8,7 +8,7 @@ export interface Sprint {
   description: string,
   status: Status,
   tasks?: Tasks,
-  project: Project,
+  project?: Project,
   dueDate: Date,
   createdAt: Date,
   updatedAt?: Date

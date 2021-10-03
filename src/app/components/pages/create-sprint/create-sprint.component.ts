@@ -1,5 +1,7 @@
+import { Sprint } from 'src/app/interfaces/sprint';
+import { Status } from 'src/app/enums/status';
+import { SprintService } from './../../sprints/sprint.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -11,23 +13,44 @@ export class CreateSprintComponent implements OnInit {
   sprint!: any;
   Date!: Date;
 
-  constructor(private router: Router, private location: Location) {
+  constructor(
+    private location: Location,
+    private sprintService: SprintService
+  ) {
     this.sprint = {
       title: '',
       description: '',
-      date: this.Date,
+      status: Status.TO_DO,
+      dueDate: this.Date,
+      createdAt: this.Date,
     };
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sprint = {
+      title: '',
+      description: '',
+      status: Status.TO_DO,
+      dueDate: this.Date,
+      createdAt: this.Date,
+    };
+  }
 
   cancel() {
     this.location.back();
     return false;
   }
 
-  add(sprint: any): void {
-    console.log(sprint);
-    this.router.navigateByUrl('projeto');
+  create(sprint: Sprint): void {
+    this.sprintService.createSprint(sprint).subscribe(
+      () => {
+        console.log('Sprint created!', sprint);
+        this.location.back();
+      },
+      (error) => {
+        console.log(error);
+        this.location.back();
+      }
+    );
   }
 }

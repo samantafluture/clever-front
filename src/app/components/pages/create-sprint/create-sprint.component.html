@@ -1,14 +1,18 @@
-<app-header
-  pageTitle="Novo Sprint"
-  btnTitle="Voltar"
-  (clickEvent)="cancel()"
-></app-header>
-<section class="sidebar">
+<header>
+  <app-header
+    pageTitle="Novo Sprint"
+    btnTitle="Voltar"
+    (clickEvent)="cancel()"
+  ></app-header>
+</header>
+
+<aside>
   <app-sidebar></app-sidebar>
-</section>
+</aside>
+
 <main class="form">
   <app-sprint-form
-    (submit)="add(sprint)"
+    (submit)="create(sprint)"
     [sprint]="sprint"
     btnTitle="Criar Sprint"
   ></app-sprint-form>
