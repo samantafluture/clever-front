@@ -1,1 +1,63 @@
+.card {
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  cursor: pointer;
+  width: 300px;
+  min-height: 210px;
+  background-color: var(--bg-light);
+}
 
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
+}
+
+.card__titles {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+
+.card__titles h3 {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card__titles p {
+  text-align: left;
+  margin-left: 0;
+  color: var(--subtitle-light);
+}
+
+.card__tasks {
+  margin: 0.5rem 1rem;
+}
+
+.card__tasks p:first-of-type {
+  color: var(--alert-red);
+  margin-bottom: 0.5rem;
+}
+
+.card__tasks p:last-of-type {
+  color: var(--alert-green);
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.card__details app-btn-border {
+  margin-right: 0;
+}
+
+.card__details span {
+  margin-left: 0;
+}
+
+i {
+  margin-right: 0.5rem
+}
