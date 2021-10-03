@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { ListProjectsComponent } from './components/pages/list-projects/list-projects.component';
+import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'sprint/:id',
     component: ViewSprintComponent,
+  },
+  {
+    path: 'sprint/:id/editar',
+    component: EditSprintComponent,
   },
   {
     path: 'nova-tarefa',
