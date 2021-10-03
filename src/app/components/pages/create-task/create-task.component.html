@@ -1,7 +1,7 @@
 <app-header
   pageTitle="Nova Tarefa"
   btnTitle="Voltar"
-  [routerLink]="['/sprint']"
+  (clickEvent)="cancel()"
 ></app-header>
 <section class="sidebar">
   <app-sidebar></app-sidebar>

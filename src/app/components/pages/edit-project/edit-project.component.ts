@@ -11,7 +11,6 @@ import { ProjectService } from '../../projects/project.service';
   styleUrls: ['./edit-project.component.css'],
 })
 export class EditProjectComponent implements OnInit {
-  // project!: Project;
   Date!: Date;
   id!: number;
   project$!: Observable<Project>;
@@ -21,11 +20,6 @@ export class EditProjectComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private projectService: ProjectService
   ) {
-    // this.project = {
-    //   title: '',
-    //   description: '',
-    //   dueDate: this.Date,
-    // };
   }
 
   ngOnInit(): void {

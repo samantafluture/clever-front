@@ -2,7 +2,7 @@
   <app-header
     [pageTitle]="project.title"
     btnTitle="Criar Sprint"
-    [routerLink]="['/novo-sprint']"
+    (clickEvent)="newSprint()"
   >
   </app-header>
 
@@ -12,7 +12,9 @@
 
   <main>
     <div class="actions">
-      <a [routerLink]="['/projeto/' + project.id + '/editar/']"><i class="fas fa-pencil-alt"></i>Editar</a>
+      <a [routerLink]="['/projeto/' + project.id + '/editar/']"
+        ><i class="fas fa-pencil-alt"></i>Editar</a
+      >
       <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
     </div>
 
@@ -22,56 +24,9 @@
       [dueDate]="project.dueDate"
     ></app-project-detail>
 
-    <section class="project__boards">
-      <div class="board board--todo">
-        <div class="board__header">
-          <h3>A Fazer</h3>
-          <a [routerLink]="['/novo-sprint']"
-            ><i class="fas fa-plus-circle"></i
-          ></a>
-        </div>
-        <app-card-sprint
-          cardTitle="Título do Sprint"
-          cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
-          cdkDrag
-        ></app-card-sprint>
-        <app-card-sprint
-          cardTitle="Título do Sprint"
-          cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
-        ></app-card-sprint>
-      </div>
-      <div class="board board--doing">
-        <div class="board__header">
-          <h3>Fazendo</h3>
-          <a [routerLink]="['/novo-sprint']"
-            ><i class="fas fa-plus-circle"></i
-          ></a>
-        </div>
-        <app-card-sprint
-          cardTitle="Título do Sprint"
-          cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
-        ></app-card-sprint>
-        <app-card-sprint
-          cardTitle="Título do Sprint"
-          cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
-        ></app-card-sprint>
-        <app-card-sprint
-          cardTitle="Título do Sprint"
-          cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
-        ></app-card-sprint>
-      </div>
-      <div class="board board--done">
-        <div class="board__header">
-          <h3>Feito</h3>
-          <a [routerLink]="['/novo-sprint']"
-            ><i class="fas fa-plus-circle"></i
-          ></a>
-        </div>
-        <app-card-sprint
-          cardTitle="Título do Sprint"
-          cardDescription="Descrição rápida desta fase do projeto e informações de destaque"
-        ></app-card-sprint>
-      </div>
-    </section>
+    <app-sprint-list
+      [projectId]="project.id"
+      (clickEvent)="newSprint()"
+    ></app-sprint-list>
   </main>
 </div>

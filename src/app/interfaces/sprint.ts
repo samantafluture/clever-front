@@ -3,12 +3,12 @@ import { Project } from './project';
 import { Tasks } from "./task";
 
 export interface Sprint {
-  id: number,
+  id?: number,
   title: string,
   description: string,
   status: Status,
   tasks?: Tasks,
-  project: Project,
+  project?: Project,
   dueDate: Date,
   createdAt: Date,
   updatedAt?: Date

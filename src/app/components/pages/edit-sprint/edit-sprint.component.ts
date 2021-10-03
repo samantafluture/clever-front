@@ -1,34 +1,30 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Location } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Sprint } from 'src/app/interfaces/sprint';
 import { SprintService } from '../../sprints/sprint.service';
+import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-view-sprint',
-  templateUrl: './view-sprint.component.html',
-  styleUrls: ['./view-sprint.component.css'],
+  selector: 'app-edit-sprint',
+  templateUrl: './edit-sprint.component.html',
+  styleUrls: ['./edit-sprint.component.css']
 })
-export class ViewSprintComponent implements OnInit {
-  @Input() task!: any;
+export class EditSprintComponent implements OnInit {
+  Date!: Date;
   id!: number;
   sprint$!: Observable<Sprint>;
 
   constructor(
-    private router: Router,
     private location: Location,
     private activatedRoute: ActivatedRoute,
     private sprintService: SprintService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params.id;
     this.sprint$ = this.sprintService.getSprintById(this.id);
-  }
-
-  create(task: any) {
-    this.router.navigateByUrl('nova-tarefa');
+    console.log(this.id, this.sprint$);
   }
 
   cancel() {
@@ -36,12 +32,16 @@ export class ViewSprintComponent implements OnInit {
     return false;
   }
 
-  remove() {
-    this.sprintService.deleteSprint(this.id).subscribe(
+  edit(sprint: Sprint): void {
+    this.sprintService.editSprint(sprint, this.id).subscribe(
       () => {
+        console.log('Sprint updated');
         this.location.back();
       },
-      (error) => console.log(error)
+      (error) => {
+        console.log(error);
+        this.location.back();
+      }
     );
   }
 }

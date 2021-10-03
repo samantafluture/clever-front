@@ -27,7 +27,13 @@
           id="description"
           name="description"
           rows="4"
+          required
+          minlength="3"
+          maxlength="300"
         ></textarea>
+        <div class="alert" [hidden]="description.valid || description.pristine">
+          Descrição é obrigatória e deve ter no máximo 300 caracteres
+        </div>
       </div>
       <div class="info">
         <label for="date">Data de entrega</label>

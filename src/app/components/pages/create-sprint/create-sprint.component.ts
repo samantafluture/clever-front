@@ -1,6 +1,11 @@
+import { Sprint } from 'src/app/interfaces/sprint';
+import { Status } from 'src/app/enums/status';
+import { SprintService } from './../../sprints/sprint.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { Project } from 'src/app/interfaces/project';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from '../../projects/project.service';
 
 @Component({
   selector: 'app-create-sprint',
@@ -10,24 +15,56 @@ import { Location } from '@angular/common';
 export class CreateSprintComponent implements OnInit {
   sprint!: any;
   Date!: Date;
+  project!: Project;
 
-  constructor(private router: Router, private location: Location) {
+  constructor(
+    private location: Location,
+    private sprintService: SprintService,
+    private projectService: ProjectService,
+    private activatedRoute: ActivatedRoute
+  ) {
     this.sprint = {
       title: '',
       description: '',
-      date: this.Date,
+      status: Status.TO_DO,
+      project: this.project,
+      dueDate: this.Date,
+      createdAt: this.Date,
     };
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.projectService
+      .getProjectById(id)
+      .subscribe((project) => (this.project = project));
+
+    this.sprint = {
+      title: '',
+      description: '',
+      status: Status.TO_DO,
+      project: this.project,
+      dueDate: this.Date,
+      createdAt: this.Date,
+    };
+    console.log(id, this.project);
+  }
 
   cancel() {
     this.location.back();
     return false;
   }
 
-  add(sprint: any): void {
-    console.log(sprint);
-    this.router.navigateByUrl('projeto');
+  create(sprint: Sprint): void {
+    this.sprintService.createSprint(sprint).subscribe(
+      () => {
+        console.log('Sprint created!', sprint);
+        this.location.back();
+      },
+      (error) => {
+        console.log(error);
+        this.location.back();
+      }
+    );
   }
 }

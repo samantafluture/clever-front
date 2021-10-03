@@ -27,12 +27,18 @@
           id="description"
           name="description"
           rows="4"
+          minlength="3"
+          maxlength="300"
+          required
         ></textarea>
+        <div class="alert" [hidden]="description.valid || description.pristine">
+          Descrição é obrigatória e deve ter no máximo 300 caracteres
+        </div>
       </div>
       <div class="info">
         <label for="date">Prazo do sprint</label>
         <input
-          [(ngModel)]="sprint.date"
+          [(ngModel)]="sprint.dueDate"
           #date="ngModel"
           type="date"
           placeholder="Prazo do sprint"
@@ -52,10 +58,30 @@
       </div>
     </div>
     <div class="fieldset__tasks">
+      <div class="select__status">
+        Status
+        <select name="status" id="status" [(ngModel)]="sprint.status">
+          <option value="" disabled>Status do Sprint</option>
+          <option *ngFor="let s of status" [ngValue]="s">
+            {{ s }}
+          </option>
+        </select>
+        <span><i class="fas fa-chevron-down"></i></span>
+      </div>
+      <div class="select__status" *ngIf="allProjects$ | async as projects">
+        Projeto
+        <select name="project" id="project" [(ngModel)]="sprint.project">
+          <option value="" disabled>Projeto a qual pertence</option>
+          <option *ngFor="let project of projects" [ngValue]="project">
+            {{ project.title }}
+          </option>
+        </select>
+        <span><i class="fas fa-chevron-down"></i></span>
+      </div>
       <div class="tasks__list">
         <h3>Tarefas do sprint</h3>
-          <p>Ainda não há tarefas.</p>
-          <p>Você poderá adicionar posteriormente.</p>
+        <p>Ainda não há tarefas.</p>
+        <p>Você poderá adicionar posteriormente.</p>
       </div>
     </div>
     <div class="fieldset__btns">

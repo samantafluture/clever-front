@@ -38,13 +38,6 @@ export class ProjectService {
   editProject(project: Project, id: number): Observable<any> {
     const url = `${this.projectsUrl}/${id}`;
     return this.http.put<Project>(url, project);
-
-    // return this.http.put(this.projectsUrl, project).pipe(
-    //   catchError((error: HttpErrorResponse) => {
-    //     console.error(error);
-    //     return throwError(error);
-    //   })
-    // );
   }
 
   deleteProject(id: number): Observable<Project> {

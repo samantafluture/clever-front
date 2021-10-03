@@ -15,58 +15,6 @@ main {
   width: 80%;
 }
 
-.project__boards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  min-height: 80vh;
-  margin: 0 1.75rem 1.75rem;
-}
-
-.board {
-  height: 100%;
-  width: 100%;
-  min-height: 540px;
-  padding: 1rem;
-  border-radius: 6px;
-  display: grid;
-  grid-template-rows: 20px min-content;
-  gap: 1rem;
-}
-
-.board__header {
-  display: flex;
-  margin: 0;
-  justify-content: space-between;
-}
-
-.board h3 {
-  color: var(--bg-light);
-  text-align: left;
-  margin-left: 0;
-}
-
-.board a {
-  margin-right: 0;
-}
-
-.board:first-of-type {
-  margin-left: 0;
-}
-
-.board--todo {
-  background-color: var(--alert-red);
-
-}
-
-.board--doing {
-  background-color: var(--alert-yellow);
-}
-
-.board--done {
-  background-color: var(--alert-green);
-}
-
 button {
   margin: 0;
   padding-top: 1rem;
@@ -84,7 +32,6 @@ button {
 button:hover {
   color: var(--hover);
 }
-
 
 main .actions {
   margin: 0 1.5rem;
