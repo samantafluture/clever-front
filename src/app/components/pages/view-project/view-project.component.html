@@ -25,6 +25,7 @@
     ></app-project-detail>
 
     <app-sprint-list
+      [projectId]="project.id"
       (clickEvent)="newSprint()"
     ></app-sprint-list>
   </main>

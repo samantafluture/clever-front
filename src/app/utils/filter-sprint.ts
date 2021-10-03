@@ -28,3 +28,10 @@ export function isDone(sprint: Sprint) {
   const done = sprint.status === Status.DONE ? true : false;
   return done;
 }
+
+export function filterByProject(sprint: Sprint, projectId: any) {
+  const project = sprint.project?.id === projectId ? true : false;
+  return project;
+}
+
+
