@@ -16,6 +16,7 @@ import { CreateSprintComponent } from './components/pages/create-sprint/create-s
 import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
 import { EditProjectComponent } from './components/pages/edit-project/edit-project.component';
+import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { EditProjectComponent } from './components/pages/edit-project/edit-proje
     ViewSprintComponent,
     CreateTaskComponent,
     EditProjectComponent,
+    EditSprintComponent,
   ],
   imports: [
     BrowserModule,

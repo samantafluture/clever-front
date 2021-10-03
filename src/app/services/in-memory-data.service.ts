@@ -34,8 +34,8 @@ export class InMemoryDataService implements InMemoryDbService {
     const sprints = [
       {
         id: 1,
-        title: 'Sprint Teste 1',
-        description: 'Descrição do Sprint Teste 1',
+        title: 'Criar novo Manual e Identidade de Marca',
+        description: 'Incluir designs, tipografia, aplicações e logos',
         status: Status.TO_DO,
         project: 1,
         dueDate: "2021-10-10",
@@ -43,8 +43,8 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 2,
-        title: 'Sprint Teste 2',
-        description: 'Descrição do Sprint Teste 2',
+        title: 'Desenvolver integração com boleto',
+        description: 'Deve conter rotas, documentação e possibilitar filtros',
         status: Status.IN_PROGRESS,
         project: 1,
         dueDate: "2021-10-24",
@@ -52,8 +52,8 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 3,
-        title: 'Sprint Teste 3',
-        description: 'Descrição do Sprint Teste 3',
+        title: 'Atualizar dashboard com métricas de serviços',
+        description: 'A nova área do dashboard deve conter dados atualizados',
         status: Status.DONE,
         project: 1,
         dueDate: "2021-11-14",

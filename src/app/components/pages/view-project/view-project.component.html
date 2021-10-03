@@ -12,7 +12,9 @@
 
   <main>
     <div class="actions">
-      <a [routerLink]="['/projeto/' + project.id + '/editar/']"><i class="fas fa-pencil-alt"></i>Editar</a>
+      <a [routerLink]="['/projeto/' + project.id + '/editar/']"
+        ><i class="fas fa-pencil-alt"></i>Editar</a
+      >
       <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
     </div>
 
@@ -22,37 +24,6 @@
       [dueDate]="project.dueDate"
     ></app-project-detail>
 
-    <!-- <section class="project__boards">
-      <div class="board board--todo">
-        <div class="board__header">
-          <h3>A Fazer</h3>
-          <a [routerLink]="['/novo-sprint']"
-            ><i class="fas fa-plus-circle"></i
-          ></a>
-        </div>
-        <app-sprint></app-sprint>
-      </div>
-      <div class="board board--doing">
-        <div class="board__header">
-          <h3>Fazendo</h3>
-          <a [routerLink]="['/novo-sprint']"
-            ><i class="fas fa-plus-circle"></i
-          ></a>
-        </div>
-        <app-sprint></app-sprint>
-      </div>
-      <div class="board board--done">
-        <div class="board__header">
-          <h3>Feito</h3>
-          <a [routerLink]="['/novo-sprint']"
-            ><i class="fas fa-plus-circle"></i
-          ></a>
-        </div>
-        <app-sprint></app-sprint>
-      </div>
-    </section> -->
-
     <app-sprint-list></app-sprint-list>
-
   </main>
 </div>
