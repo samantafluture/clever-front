@@ -1,7 +1,7 @@
 <section class="project__boards">
   <div
     class="board board--todo"
-    *ngIf="allSprints$ | async as sprints; else empty"
+    *ngIf="toDoSprints$ | async as sprints; else empty"
   >
     <div class="board__header">
       <h3>A Fazer</h3>
