@@ -1,3 +1,4 @@
+import { SprintsModule } from './components/sprints/sprints.module';
 import { ProjectsModule } from './components/projects/projects.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,11 +16,6 @@ import { CreateSprintComponent } from './components/pages/create-sprint/create-s
 import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
 import { EditProjectComponent } from './components/pages/edit-project/edit-project.component';
-// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { DataProjectService } from './services/data-project.service';
-// import { DataSprintService } from './services/in-memory/data-sprint.service';
-// import { DataTaskService } from './services/in-memory/data-task.service';
-// import { DataUserService } from './services/in-memory/data-user.service';
 
 @NgModule({
   declarations: [
@@ -41,11 +37,8 @@ import { EditProjectComponent } from './components/pages/edit-project/edit-proje
     FormsModule,
     ReactiveFormsModule,
     DragDropModule,
-    // HttpClientInMemoryWebApiModule.forRoot(DataProjectService),
-    // HttpClientInMemoryWebApiModule.forRoot(DataSprintService),
-    // HttpClientInMemoryWebApiModule.forRoot(DataTaskService),
-    // HttpClientInMemoryWebApiModule.forRoot(DataUserService),
-    ProjectsModule
+    ProjectsModule,
+    SprintsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
