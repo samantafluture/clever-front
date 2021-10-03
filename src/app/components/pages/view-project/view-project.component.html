@@ -24,6 +24,8 @@
       [dueDate]="project.dueDate"
     ></app-project-detail>
 
-    <app-sprint-list></app-sprint-list>
+    <app-sprint-list
+      (clickEvent)="newSprint()"
+    ></app-sprint-list>
   </main>
 </div>

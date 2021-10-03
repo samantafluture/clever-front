@@ -52,4 +52,10 @@
 
 .fa-plus-circle {
   color: var(--bg-light);
+  cursor: pointer;
+}
+
+.fa-plus-circle:hover {
+  color: var(--hover);
+  cursor: pointer;
 }

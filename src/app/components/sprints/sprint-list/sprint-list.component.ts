@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Sprint } from 'src/app/interfaces/sprint';
 import { isDone, isInProgress, isToDo, sortByDueDate } from 'src/app/utils/filter-sprint';
@@ -10,6 +10,7 @@ import { SprintService } from '../sprint.service';
   styleUrls: ['./sprint-list.component.css'],
 })
 export class SprintListComponent implements OnInit {
+  @Output() clickEvent = new EventEmitter<any>();
   sprints: Sprint[] = [];
 
   allSprints$ = this.sprintService.getSprints().pipe(
@@ -33,5 +34,9 @@ export class SprintListComponent implements OnInit {
     this.toDoSprints$;
     this.inProgressSprints$;
     this.isDoneSprints$;
+  }
+
+  click() {
+    this.clickEvent.emit();
   }
 }

@@ -5,7 +5,7 @@
   >
     <div class="board__header">
       <h3>A Fazer</h3>
-      <a [routerLink]="['/novo-sprint']"><i class="fas fa-plus-circle"></i></a>
+      <a (click)="click()"><i class="fas fa-plus-circle"></i></a>
     </div>
     <div class="board__body" *ngFor="let sprint of sprints">
       <a routerLink="/sprint/{{ sprint.id }}">
