@@ -7,7 +7,7 @@ import {
   isToDo,
   sortByDueDate,
   filterByProject,
-} from 'src/app/utils/filter-sprint';
+} from 'src/app/utils/filters';
 import { SprintService } from '../sprint.service';
 
 @Component({

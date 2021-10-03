@@ -2,6 +2,7 @@ import { Status } from 'src/app/enums/status';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Role } from 'src/app/enums/role';
+import { IsUrgent } from '../enums/is-urgent';
 
 @Injectable({
   providedIn: 'root'
@@ -81,29 +82,71 @@ export class InMemoryDataService implements InMemoryDbService {
     const tasks = [
       {
         id: 1,
-        title: 'Tarefa Teste 1',
-        description: 'Descrição do Tarefa Teste 1',
+        description: 'Aprovar design da campanha principal',
         status: Status.TO_DO,
-        sprint: 1,
-        dueDate: Date.now,
+        isUrgent: IsUrgent.URGENT,
+        sprint: {
+          id: 1,
+          title: 'Criar novo Manual e Identidade de Marca',
+          description: 'Incluir designs, tipografia, aplicações e logos',
+          status: Status.TO_DO,
+          project: {
+            id: 1,
+            title: 'Lançamento do eCommerce',
+            description: 'Uma nova virtual da marca será lançada, focada no público feminino',
+            dueDate: "2021-10-10",
+            createdAt: Date.now,
+          },
+          dueDate: "2021-10-10",
+          createdAt: Date.now,
+        },
+        dueDate: "2021-10-12",
         createdAt: Date.now,
       },
       {
         id: 2,
-        title: 'Tarefa Teste 2',
-        description: 'Descrição do Tarefa Teste 2',
+        description: 'Refatorar rotas da API',
         status: Status.IN_PROGRESS,
-        sprint: 1,
-        dueDate: Date.now,
+        isUrgent: IsUrgent.NOT_URGENT,
+        sprint: {
+          id: 2,
+          title: 'Desenvolver integração com boleto',
+          description: 'Deve conter rotas, documentação e possibilitar filtros',
+          status: Status.IN_PROGRESS,
+          project: {
+            id: 2,
+            title: 'Refatoração do Sitema de Pagamento',
+            description: 'Novo banco de dados e servidor',
+            dueDate: "2021-10-05",
+            createdAt: Date.now,
+          },
+          dueDate: "2021-10-24",
+          createdAt: Date.now,
+        },
+        dueDate: "2021-11-04",
         createdAt: Date.now,
       },
       {
         id: 3,
-        title: 'Tarefa Teste 3',
-        description: 'Descrição do Tarefa Teste 3',
+        description: 'Criar autorização de login',
         status: Status.DONE,
-        sprint: 1,
-        dueDate: Date.now,
+        isUrgent: IsUrgent.NOT_URGENT,
+        sprint: {
+          id: 3,
+          title: 'Atualizar dashboard com métricas de serviços',
+          description: 'A nova área do dashboard deve conter dados atualizados',
+          status: Status.DONE,
+          project: {
+            id: 3,
+            title: 'Criação de Ferramenta de Email',
+            description: 'Nova ferramenta para ajudar no disparo de emails de marketing',
+            dueDate: "2021-11-21",
+            createdAt: Date.now,
+          },
+          dueDate: "2021-11-14",
+          createdAt: Date.now,
+        },
+        dueDate: "2021-12-19",
         createdAt: Date.now,
       },
     ];

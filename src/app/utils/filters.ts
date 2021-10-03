@@ -1,9 +1,9 @@
 import { Status } from "../enums/status";
 import { Sprint } from "../interfaces/sprint";
 
-export function sortByDueDate(sprintA: Sprint, sprintB: Sprint) {
-  let dateA = new Date(sprintA.dueDate);
-  let dateB = new Date(sprintB.dueDate);
+export function sortByDueDate(itemA: any, itemB: any) {
+  let dateA = new Date(itemA.dueDate);
+  let dateB = new Date(itemB.dueDate);
 
   if (dateA > dateB) {
     return 1;
