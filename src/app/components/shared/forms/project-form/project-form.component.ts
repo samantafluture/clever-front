@@ -1,3 +1,4 @@
+import { Project } from './../../../../interfaces/project';
 import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
@@ -7,9 +8,8 @@ import { Location } from '@angular/common';
   styleUrls: ['./project-form.component.css'],
 })
 export class ProjectFormComponent implements OnInit {
-  @Input() btnTitle: string = '';
-  @Input() project!: any;
-  submitted = false;
+  @Input() project!: Project;
+  @Input() btnTitle!: string;
 
   constructor(private location: Location) {}
 
@@ -19,6 +19,4 @@ export class ProjectFormComponent implements OnInit {
     this.location.back();
     return false;
   }
-
-  onSubmit() { this.submitted = true; }
 }

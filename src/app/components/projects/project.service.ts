@@ -1,16 +1,16 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { Project, Projects } from '../interfaces/project';
+import { Projects, Project } from 'src/app/interfaces/project';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectService {
-  private projectsUrl = 'api/projects';
-
   constructor(private http: HttpClient) {}
+
+  private projectsUrl = 'api/projects';
 
   getProjects(): Observable<Projects> {
     return this.http.get<Projects>(this.projectsUrl).pipe(
@@ -23,12 +23,7 @@ export class ProjectService {
 
   getProjectById(id: number): Observable<Project> {
     const url = `${this.projectsUrl}/${id}`;
-    return this.http.get<Project>(url).pipe(
-      catchError((error: HttpErrorResponse) => {
-        console.error(error);
-        return throwError(error);
-      })
-    );
+    return this.http.get<Project>(url);
   }
 
   createProject(project: Project): Observable<Project> {
@@ -40,13 +35,16 @@ export class ProjectService {
     );
   }
 
-  editProject(project: Project): Observable<any> {
-    return this.http.put(this.projectsUrl, project).pipe(
-      catchError((error: HttpErrorResponse) => {
-        console.error(error);
-        return throwError(error);
-      })
-    );
+  editProject(project: Project, id: number): Observable<any> {
+    const url = `${this.projectsUrl}/${id}`;
+    return this.http.put<Project>(url, project);
+
+    // return this.http.put(this.projectsUrl, project).pipe(
+    //   catchError((error: HttpErrorResponse) => {
+    //     console.error(error);
+    //     return throwError(error);
+    //   })
+    // );
   }
 
   deleteProject(id: number): Observable<Project> {

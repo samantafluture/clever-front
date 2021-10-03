@@ -1,39 +1,28 @@
-<app-header
-  pageTitle="Dashboard"
-  btnTitle="Criar Projeto"
-  [routerLink]="['/novo-projeto']"
-></app-header>
-<section class="sidebar">
+<header>
+  <app-header
+    pageTitle="Dashboard"
+    btnTitle="Criar Projeto"
+    [routerLink]="['/novo-projeto']"
+  ></app-header>
+</header>
+
+<aside>
   <app-sidebar></app-sidebar>
-</section>
+</aside>
+
 <main>
   <section class="projects">
-    <app-card-grid>
-      <a [routerLink]="['/projeto']">
-        <app-card-item
-          cardTitle="Título do Projeto"
-          cardDescription="Descrição rápida do projeto ou informações de destaque"
-        ></app-card-item>
-      </a>
-      <a [routerLink]="['/projeto']">
-        <app-card-item
-          cardTitle="Título do Projeto"
-          cardDescription="Descrição rápida do projeto ou informações de destaque"
-        ></app-card-item>
-      </a>
-      <a [routerLink]="['/projeto']">
-        <app-card-item
-          cardTitle="Título do Projeto"
-          cardDescription="Descrição rápida do projeto ou informações de destaque"
-        ></app-card-item>
-      </a>
-    </app-card-grid>
+    <app-project-list
+      [showAll]="false"
+    ></app-project-list>
   </section>
+
   <a [routerLink]="['/projetos']" class="btn">
-    <app-btn-no-border btnTitle="Ver Mais"
+    <app-btn-no-border btnTitle="Ver Todos"
       ><i class="fas fa-chevron-down"></i
     ></app-btn-no-border>
   </a>
+
   <section class="summary">
     <app-divider dividerTitle="Resumo"></app-divider>
     <div class="summary__charts">
@@ -54,9 +43,10 @@
           cardTitle="Cronograma"
           cardDescription="Prazos a cumprir este mês"
         >
-        <app-calendar></app-calendar>
+          <app-calendar></app-calendar>
         </app-card-tasks>
       </app-card-grid>
     </div>
   </section>
+
 </main>

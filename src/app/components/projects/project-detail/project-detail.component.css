@@ -1,0 +1,40 @@
+.fa-plus-circle {
+  color: var(--bg-light);
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.fa-plus-circle:hover {
+  opacity: 0.8;
+}
+
+.project__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 2rem 2rem;
+  color: var(--subtitle-light);
+}
+
+.info {
+  margin: 0;
+}
+
+.info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.info--desc {
+  max-width: 50%;
+}
+
+.info--lead img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 0;
+}
+
+.info i {
+  margin-right: 0.5rem
+}
+

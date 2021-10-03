@@ -1,5 +1,5 @@
-<form #projectForm="ngForm" (ngSubmit)="onSubmit()">
-  <div class="fieldset">
+<form #projectForm="ngForm">
+  <fieldset>
     <div class="fieldset__infos">
       <div class="info">
         <label for="title">Título</label>
@@ -32,7 +32,7 @@
       <div class="info">
         <label for="date">Data de entrega</label>
         <input
-          [(ngModel)]="project.date"
+          [(ngModel)]="project.dueDate"
           #date="ngModel"
           type="date"
           placeholder="Data de término"
@@ -101,5 +101,5 @@
         </button>
       </div>
     </div>
-  </div>
+  </fieldset>
 </form>

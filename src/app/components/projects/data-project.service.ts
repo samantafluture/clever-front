@@ -1,4 +1,4 @@
-import { Status } from './../../enums/status';
+import { Status } from 'src/app/enums/status';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
@@ -10,26 +10,26 @@ export class DataProjectService implements InMemoryDbService {
     const projects = [
       {
         id: 1,
-        title: 'Projeto Teste 1',
-        description: 'Descrição do Projeto Teste 1',
+        title: 'Lançamento do eCommerce',
+        description: 'Uma nova virtual da marca será lançada, focada no público feminino',
         status: Status.TO_DO,
-        dueDate: Date.now,
+        dueDate: "2021-10-10",
         createdAt: Date.now,
       },
       {
         id: 2,
-        title: 'Projeto Teste 2',
-        description: 'Descrição do Projeto Teste 2',
+        title: 'Refatoração do Sitema de Pagamento',
+        description: 'Novo banco de dados e servidor',
         status: Status.IN_PROGRESS,
-        dueDate: Date.now,
+        dueDate: "2021-10-05",
         createdAt: Date.now,
       },
       {
         id: 3,
-        title: 'Projeto Teste 3',
-        description: 'Descrição do Projeto Teste 3',
+        title: 'Criação de Ferramenta de Email',
+        description: 'Nova ferramenta para ajudar no disparo de emails de marketing',
         status: Status.DONE,
-        dueDate: Date.now,
+        dueDate: "2021-11-21",
         createdAt: Date.now,
       },
     ];

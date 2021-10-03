@@ -1,3 +1,4 @@
+import { EditProjectComponent } from './components/pages/edit-project/edit-project.component';
 import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
 import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 import { CreateSprintComponent } from './components/pages/create-sprint/create-sprint.component';
@@ -22,8 +23,12 @@ const routes: Routes = [
     component: ListProjectsComponent,
   },
   {
-    path: 'projeto',
+    path: 'projeto/:id',
     component: ViewProjectComponent,
+  },
+  {
+    path: 'projeto/:id/editar',
+    component: EditProjectComponent,
   },
   {
     path: 'novo-sprint',

@@ -1,0 +1,60 @@
+.card__titles {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+
+.card__titles h3 {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card__titles p {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  color: var(--subtitle-light);
+}
+
+.card__progress {
+  height: 10px;
+  background-color: var(--border-light);
+  border-radius: 6px;
+  position: relative;
+  margin: 0.5rem 1rem;
+}
+
+.card__progress div {
+  height: 10px;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  background-color: var(--alert-green);
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card__details app-btn-border {
+  margin-left: 0;
+}
+
+.card__details span {
+  margin-left: 0;
+}
+
+.card__details img {
+  margin-right: 0;
+}
+
+i {
+  margin-right: 0.5rem
+}
