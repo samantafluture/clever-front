@@ -12,9 +12,8 @@
   <main>
 
     <div class="actions">
-      <a [routerLink]="['/sprint/' + sprint.id + '/editar/']"
-        ><i class="fas fa-pencil-alt"></i>Editar</a
-      >
+      <a [routerLink]="['/sprint/' + sprint.id + '/editar/']">
+        <i class="fas fa-pencil-alt"></i>Editar</a>
       <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
     </div>
 
@@ -35,8 +34,12 @@
         <p>3 Tarefas</p>
       </div>
       <div class="info info--date">
+        <h4><i class="fas fa-thermometer-half"></i>Status</h4>
+        <p>A Fazer</p>
+      </div>
+      <div class="info info--date">
         <h4><i class="fas fa-calendar"></i>Prazo</h4>
-        <p>12 de Outubro de 2021</p>
+        <p>12/10/2021</p>
       </div>
     </section>
 
