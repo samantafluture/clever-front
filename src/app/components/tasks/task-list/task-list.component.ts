@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-task-list',
@@ -6,11 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  @Input()
-  task: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 }
