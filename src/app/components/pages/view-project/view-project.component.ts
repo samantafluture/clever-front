@@ -1,6 +1,6 @@
 import { Project } from 'src/app/interfaces/project';
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectService } from '../../projects/project.service';
 import { Observable } from 'rxjs';
 
@@ -15,11 +15,21 @@ export class ViewProjectComponent implements OnInit {
 
   constructor(
     private projectService: ProjectService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params.id;
     this.project$ = this.projectService.getProjectById(this.id);
+  }
+
+  remove() {
+    this.projectService.deleteProject(this.id).subscribe(
+      () => {
+        this.router.navigate(['/projetos/']);
+      },
+      (error) => console.log(error)
+    );
   }
 }

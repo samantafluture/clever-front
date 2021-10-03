@@ -1,9 +1,8 @@
-import { ProjectService } from './../../../services/project.service';
+import { ProjectService } from '../../projects/project.service';
 import { Project } from './../../../interfaces/project';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { Status } from 'src/app/enums/status';
 
 @Component({
   selector: 'app-create-project',

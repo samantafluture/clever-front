@@ -9,6 +9,7 @@ import { Location } from '@angular/common';
 })
 export class ProjectFormComponent implements OnInit {
   @Input() project!: Project;
+  @Input() btnTitle!: string;
 
   constructor(private location: Location) {}
 

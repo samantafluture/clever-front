@@ -12,8 +12,8 @@
 
   <main>
     <div class="actions">
-      <a><i class="fas fa-pencil-alt"></i>Editar</a>
-      <a><i class="fas fa-trash"></i>Excluir</a>
+      <a [routerLink]="['/projeto/' + project.id + '/editar/']"><i class="fas fa-pencil-alt"></i>Editar</a>
+      <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
     </div>
 
     <app-project-detail

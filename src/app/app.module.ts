@@ -14,6 +14,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CreateSprintComponent } from './components/pages/create-sprint/create-sprint.component';
 import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.component';
 import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
+import { EditProjectComponent } from './components/pages/edit-project/edit-project.component';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { DataProjectService } from './services/data-project.service';
 // import { DataSprintService } from './services/in-memory/data-sprint.service';
@@ -30,6 +31,7 @@ import { CreateTaskComponent } from './components/pages/create-task/create-task.
     CreateSprintComponent,
     ViewSprintComponent,
     CreateTaskComponent,
+    EditProjectComponent,
   ],
   imports: [
     BrowserModule,
