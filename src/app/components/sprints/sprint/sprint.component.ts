@@ -15,7 +15,4 @@ export class SprintComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  view(): void {
-    this.router.navigateByUrl('sprint');
-  }
 }

@@ -2,7 +2,7 @@
   <app-header
     [pageTitle]="project.title"
     btnTitle="Criar Sprint"
-    [routerLink]="['/novo-sprint']"
+    (clickEvent)="newSprint()"
   >
   </app-header>
 

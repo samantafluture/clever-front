@@ -35,7 +35,7 @@ const routes: Routes = [
     component: CreateSprintComponent,
   },
   {
-    path: 'sprint',
+    path: 'sprint/:id',
     component: ViewSprintComponent,
   },
   {
