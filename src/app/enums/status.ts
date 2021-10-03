@@ -1,6 +1,6 @@
 export enum Status {
-  TO_DO = 'to do',
-  IN_PROGRESS = 'in progress',
-  DONE = 'done',
-  ARCHIVED = 'archived',
+  TO_DO = 'A Fazer',
+  IN_PROGRESS = 'Fazendo',
+  DONE = 'Feito',
+  ARCHIVED = 'Arquivado',
 }
