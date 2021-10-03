@@ -18,3 +18,13 @@ export function isToDo(sprint: Sprint) {
   const toDo = sprint.status === Status.TO_DO ? true : false;
   return toDo;
 }
+
+export function isInProgress(sprint: Sprint) {
+  const inProgress = sprint.status === Status.IN_PROGRESS ? true : false;
+  return inProgress;
+}
+
+export function isDone(sprint: Sprint) {
+  const done = sprint.status === Status.DONE ? true : false;
+  return done;
+}

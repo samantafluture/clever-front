@@ -38,7 +38,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Descrição do Sprint Teste 1',
         status: Status.TO_DO,
         project: 1,
-        dueDate: Date.now,
+        dueDate: "2021-10-10",
         createdAt: Date.now,
       },
       {
@@ -47,7 +47,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Descrição do Sprint Teste 2',
         status: Status.IN_PROGRESS,
         project: 1,
-        dueDate: Date.now,
+        dueDate: "2021-10-24",
         createdAt: Date.now,
       },
       {
@@ -56,7 +56,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Descrição do Sprint Teste 3',
         status: Status.DONE,
         project: 1,
-        dueDate: Date.now,
+        dueDate: "2021-11-14",
         createdAt: Date.now,
       },
     ];
