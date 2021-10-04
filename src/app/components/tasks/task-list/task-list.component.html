@@ -4,8 +4,10 @@
       [description]="task.description"
       [dueDate]="task.dueDate"
       [isUrgent]="task.isUrgent"
+      [isDone]="task.isDone"
       (editEvent)="edit()"
       (removeEvent)="remove()"
+      (checkEvent)="check()"
     ></app-task>
   </div>
 </div>

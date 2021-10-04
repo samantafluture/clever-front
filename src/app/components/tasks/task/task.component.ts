@@ -1,4 +1,3 @@
-import { IsUrgent } from './../../../enums/is-urgent';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -9,7 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class TaskComponent implements OnInit {
   @Input() description: string = '';
   @Input() dueDate!: Date;
-  @Input() isUrgent!: IsUrgent;
+  @Input() isUrgent: boolean = false;
+  @Input() isDone: boolean = false;
+  @Output() checkEvent = new EventEmitter<any>();
   @Output() editEvent = new EventEmitter<any>();
   @Output() removeEvent = new EventEmitter<any>();
 
@@ -26,4 +27,8 @@ export class TaskComponent implements OnInit {
     this.removeEvent.emit();
   }
 
+  check() {
+    this.checkEvent.emit();
+    this.isDone = true;
+  }
 }

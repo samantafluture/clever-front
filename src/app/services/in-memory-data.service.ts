@@ -2,7 +2,6 @@ import { Status } from 'src/app/enums/status';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Role } from 'src/app/enums/role';
-import { IsUrgent } from '../enums/is-urgent';
 
 @Injectable({
   providedIn: 'root'
@@ -84,7 +83,8 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 1,
         description: 'Aprovar design da campanha principal',
         status: Status.TO_DO,
-        isUrgent: IsUrgent.URGENT,
+        isUrgent: true,
+        isDone: false,
         sprint: {
           id: 1,
           title: 'Criar novo Manual e Identidade de Marca',
@@ -107,7 +107,8 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 2,
         description: 'Refatorar rotas da API',
         status: Status.IN_PROGRESS,
-        isUrgent: IsUrgent.NOT_URGENT,
+        isUrgent: false,
+        isDone: false,
         sprint: {
           id: 2,
           title: 'Desenvolver integração com boleto',
@@ -130,7 +131,8 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 3,
         description: 'Criar autorização de login',
         status: Status.DONE,
-        isUrgent: IsUrgent.NOT_URGENT,
+        isUrgent: false,
+        isDone: true,
         sprint: {
           id: 3,
           title: 'Atualizar dashboard com métricas de serviços',

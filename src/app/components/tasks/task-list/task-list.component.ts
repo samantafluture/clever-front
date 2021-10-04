@@ -32,4 +32,7 @@ export class TaskListComponent implements OnInit {
 
   }
 
+  check() {
+    console.log("checked");
+  }
 }

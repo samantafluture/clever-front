@@ -1,13 +1,13 @@
-<div class="task task--urgent">
+<div class="task" [class.task--done]="isDone" (click)="check()" >
   <div class="task__main">
-    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="task" id="task" [checked]="isDone" />
     <p>{{ description }}</p>
   </div>
   <div class="task__info">
     <div class="task__details">
-      <div class="task__urgency">
+      <div class="task__urgency" *ngIf="isUrgent">
         <span><i class="fas fa-exclamation-triangle"></i></span>
-        <p>{{ isUrgent }}</p>
+        <p>Urgente</p>
       </div>
       <div class="task__member">
         <img class="member" src="https://github.com/samantafluture.png" />

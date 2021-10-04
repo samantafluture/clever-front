@@ -1,4 +1,3 @@
-import { IsUrgent } from './../enums/is-urgent';
 import { Status } from './../enums/status';
 import { Sprint } from './sprint';
 import { Member } from './member';
@@ -7,7 +6,8 @@ export interface Task {
   id?: number,
   description: string,
   status: Status,
-  isUrgent: IsUrgent,
+  isUrgent: boolean,
+  isDone: boolean,
   assignedMember?: Member,
   sprint?: Sprint,
   dueDate: Date,
