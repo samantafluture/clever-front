@@ -2,11 +2,13 @@ import { TaskService } from './../task.service';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { sortByDueDate } from 'src/app/utils/filters';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
@@ -14,25 +16,13 @@ export class TaskListComponent implements OnInit {
   tasks$ = this.taskService
     .getTasks()
     .pipe(
-      map((tasks) =>
-      tasks.sort((taskA, taskB) => sortByDueDate(taskA, taskB))
-      )
+      map((tasks) => tasks.sort((taskA, taskB) => sortByDueDate(taskA, taskB)))
     );
 
-  constructor(private taskService: TaskService) { }
+  constructor(
+    private taskService: TaskService
+  ) {}
 
   ngOnInit(): void {
-  }
-
-  edit() {
-
-  }
-
-  remove() {
-
-  }
-
-  check() {
-    console.log("checked");
   }
 }

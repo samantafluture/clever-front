@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { ListProjectsComponent } from './components/pages/list-projects/list-projects.component';
 import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.component';
+import { EditTaskComponent } from './components/pages/edit-task/edit-task.component';
 
 const routes: Routes = [
   {
@@ -43,13 +44,13 @@ const routes: Routes = [
     path: 'sprint/:id/editar',
     component: EditSprintComponent,
   },
-  // {
-  //   path: 'nova-tarefa',
-  //   component: CreateTaskComponent
-  // },
   {
     path: 'sprint/:id/nova-tarefa',
     component: CreateTaskComponent,
+  },
+  {
+    path: 'tarefa/:id/editar',
+    component: EditTaskComponent,
   },
 ];
 

@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Task } from './../../../interfaces/task';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-task',
@@ -6,25 +8,27 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
+  @Input() task!: Task;
+  @Input() id!: any;
   @Input() description: string = '';
   @Input() dueDate!: Date;
   @Input() isUrgent: boolean = false;
   @Input() isDone: boolean = false;
   @Output() checkEvent = new EventEmitter<any>();
-  @Output() editEvent = new EventEmitter<any>();
-  @Output() removeEvent = new EventEmitter<any>();
+  @ViewChild('taskItem')
+  private taskElement!: ElementRef;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   edit() {
-    this.editEvent.emit();
+    this.router.navigate(['/tarefa/' + this.task.id + '/editar/']);
   }
 
   remove() {
-    this.removeEvent.emit();
+    this.taskElement.nativeElement.remove();
   }
 
   check() {

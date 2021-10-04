@@ -1,4 +1,5 @@
-<div class="task" [class.task--done]="isDone">
+<div class="task" [class.task--done]="isDone" #taskItem>
+  <span [hidden]="true">{{ task.id }}</span>
   <div class="task__main" (click)="check()">
     <input type="checkbox" name="task" id="task" [checked]="isDone" />
     <p>{{ description }}</p>
