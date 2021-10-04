@@ -10,7 +10,7 @@
           placeholder="Descrição da tarefa"
           id="description"
           name="description"
-          rows="7"
+          rows="5"
           required
           minlength="3"
           maxlength="500"
@@ -33,6 +33,18 @@
         <div class="alert" [hidden]="dueDate.valid || dueDate.pristine">
           Data de entrega é obrigatória
         </div>
+      </div>
+      <div class="info select__status" *ngIf="sprint$ | async as sprint">
+        Sprint a qual pertence
+        <select name="sprint" id="sprint" [(ngModel)]="task.sprint">
+          <option [value]="sprint.title" selected>
+            {{ sprint.title }}
+          </option>
+          <!-- <option *ngFor="let sprint of sprints" [ngValue]="sprint">
+            {{ sprint.title }}
+          </option> -->
+        </select>
+        <span><i class="fas fa-chevron-down"></i></span>
       </div>
       <div class="form-message">
         <span class="alert"

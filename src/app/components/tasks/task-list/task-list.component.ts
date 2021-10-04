@@ -1,9 +1,7 @@
 import { TaskService } from './../task.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { sortByDueDate } from 'src/app/utils/filters';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { filterBySprint, sortByDueDate } from 'src/app/utils/filters';
 
 @Component({
   selector: 'app-task-list',
@@ -12,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
+  @Input() sprintId!: any;
 
   tasks$ = this.taskService
     .getTasks()
@@ -19,10 +18,15 @@ export class TaskListComponent implements OnInit {
       map((tasks) => tasks.sort((taskA, taskB) => sortByDueDate(taskA, taskB)))
     );
 
-  constructor(
-    private taskService: TaskService
-  ) {}
+  filteredTasks$ = this.tasks$.pipe(
+    map((tasks) =>
+    tasks.filter((task) => filterBySprint(task, this.sprintId))
+    )
+  );
+
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
+    this.filteredTasks$;
   }
 }

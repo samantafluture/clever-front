@@ -26,11 +26,7 @@ export class ViewSprintComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.params.id;
     this.sprint$ = this.sprintService.getSprintById(this.id);
   }
-
-  create(task: any) {
-    this.router.navigateByUrl('nova-tarefa');
-  }
-
+  
   cancel() {
     this.location.back();
     return false;

@@ -1,4 +1,4 @@
-<div *ngIf="tasks$ | async as tasks; else empty">
+<div *ngIf="filteredTasks$ | async as tasks; else empty">
   <div *ngFor="let task of tasks">
     <app-task
       [task]="task"

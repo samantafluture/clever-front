@@ -34,4 +34,9 @@ export function filterByProject(sprint: Sprint, projectId: any) {
   return project;
 }
 
+export function filterBySprint(task: any, sprintId: any) {
+  const sprint = task.sprint?.id === sprintId ? true : false;
+  return sprint;
+}
+
 
