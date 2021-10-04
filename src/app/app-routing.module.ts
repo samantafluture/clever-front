@@ -43,10 +43,14 @@ const routes: Routes = [
     path: 'sprint/:id/editar',
     component: EditSprintComponent,
   },
+  // {
+  //   path: 'nova-tarefa',
+  //   component: CreateTaskComponent
+  // },
   {
-    path: 'nova-tarefa',
-    component: CreateTaskComponent
-  }
+    path: 'sprint/:id/nova-tarefa',
+    component: CreateTaskComponent,
+  },
 ];
 
 @NgModule({

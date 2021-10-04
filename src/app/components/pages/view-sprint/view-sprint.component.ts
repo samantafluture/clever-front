@@ -44,4 +44,8 @@ export class ViewSprintComponent implements OnInit {
       (error) => console.log(error)
     );
   }
+
+  newTask() {
+    this.router.navigate(['/sprint/' + this.id + '/nova-tarefa/']);
+  }
 }

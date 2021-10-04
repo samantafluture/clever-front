@@ -27,6 +27,15 @@
   box-shadow: none;
 }
 
+.task--done .actions {
+  cursor: default;
+}
+
+/* .task--done .task__info .actions a i:hover {
+  cursor: default;
+  color: var(--subtitle-light);
+} */
+
 .task__main {
   display: flex;
   justify-content: space-between;
