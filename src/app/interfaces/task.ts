@@ -3,12 +3,12 @@ import { Sprint } from './sprint';
 import { Member } from './member';
 
 export interface Task {
-  id: number,
-  title: string,
+  id?: number,
   description: string,
-  status: Status,
+  isUrgent: boolean,
+  isDone: boolean,
   assignedMember?: Member,
-  sprint: Sprint,
+  sprint?: Sprint,
   dueDate: Date,
   createdAt: Date,
   updatedAt?: Date

@@ -13,17 +13,12 @@ import { BtnBorderComponent } from './buttons/btn-border/btn-border.component';
 import { CardChartsComponent } from './card/card-charts/card-charts.component';
 import { BarsComponent } from './graphics/charts/bars/bars.component';
 import { AreaComponent } from './graphics/charts/area/area.component';
-import { TaskItemComponent } from './task/task-item/task-item.component';
 import { CardTasksComponent } from './card/card-tasks/card-tasks.component';
-import { ProjectFormComponent } from './forms/project-form/project-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardSprintComponent } from './card/card-sprint/card-sprint.component';
-import { SprintFormComponent } from './forms/sprint-form/sprint-form.component';
-import { TaskListComponent } from './task/task-list/task-list.component';
-import { TaskFormComponent } from './forms/task-form/task-form.component';
 import { CalendarComponent } from './graphics/calendar/calendar.component';
 
-@NgModule({
+@NgModule({ 
   declarations: [
     SidebarComponent,
     LogoComponent,
@@ -37,13 +32,8 @@ import { CalendarComponent } from './graphics/calendar/calendar.component';
     CardChartsComponent,
     BarsComponent,
     AreaComponent,
-    TaskItemComponent,
     CardTasksComponent,
-    ProjectFormComponent,
     CardSprintComponent,
-    SprintFormComponent,
-    TaskListComponent,
-    TaskFormComponent,
     CalendarComponent,
   ],
   imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
@@ -60,13 +50,8 @@ import { CalendarComponent } from './graphics/calendar/calendar.component';
     CardChartsComponent,
     BarsComponent,
     AreaComponent,
-    TaskItemComponent,
     CardTasksComponent,
-    ProjectFormComponent,
     CardSprintComponent,
-    SprintFormComponent,
-    TaskListComponent,
-    TaskFormComponent,
     CalendarComponent
   ],
 })

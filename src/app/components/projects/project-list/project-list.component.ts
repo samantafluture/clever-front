@@ -2,7 +2,7 @@ import { Project } from './../../../interfaces/project';
 import { Component, Input, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { map } from 'rxjs/operators';
-import { sortByDueDate } from 'src/app/utils/filter-project';
+import { sortByDueDate } from 'src/app/utils/filters';
 
 @Component({
   selector: 'app-project-list',

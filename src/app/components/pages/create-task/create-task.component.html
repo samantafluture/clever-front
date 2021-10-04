@@ -1,14 +1,18 @@
-<app-header
+<header>
+  <app-header
   pageTitle="Nova Tarefa"
   btnTitle="Voltar"
   (clickEvent)="cancel()"
 ></app-header>
-<section class="sidebar">
+</header>
+
+<aside>
   <app-sidebar></app-sidebar>
-</section>
+</aside>
+
 <main class="form">
   <app-task-form
-    (submit)="add(task)"
+    (submit)="create(task)"
     [task]="task"
     btnTitle="Criar Tarefa"
   ></app-task-form>

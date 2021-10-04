@@ -1,0 +1,27 @@
+<div class="task" [class.task--done]="isDone" #taskItem>
+  <span [hidden]="true">{{ task.id }}</span>
+  <div class="task__main" (click)="check()">
+    <input type="checkbox" name="task" id="task" [checked]="isDone" />
+    <p>{{ description }}</p>
+  </div>
+  <div class="task__info">
+    <div class="task__details">
+      <div class="task__urgency" *ngIf="isUrgent">
+        <span><i class="fas fa-exclamation-triangle"></i></span>
+        <p>Urgente</p>
+      </div>
+      <div class="task__member">
+        <img class="member" src="https://github.com/samantafluture.png" />
+        <p>S. F.</p>
+      </div>
+      <div class="task__date">
+        <span><i class="fas fa-calendar"></i></span>
+        <p>{{ dueDate | date: "dd/MM/yy" }}</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a (click)="edit()"><i class="fas fa-pencil-alt"></i></a>
+      <a (click)="remove()"><i class="fas fa-trash"></i></a>
+    </div>
+  </div>
+</div>

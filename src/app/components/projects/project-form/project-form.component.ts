@@ -1,4 +1,4 @@
-import { Project } from './../../../../interfaces/project';
+import { Project } from '../../../interfaces/project';
 import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 

@@ -27,6 +27,33 @@ form {
   margin-top: 0;
 }
 
+span .fa-chevron-down {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+}
+
+.select__status {
+  position: relative;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  width: 100%;
+  margin: 0.5rem 0 1.5rem;
+  border-radius: 6px;
+  background-color: var(--input-bg-light);
+  font-family: var(--font-rubik);
+  font-size: 1rem;
+  line-height: 1em;
+  border: none;
+  appearance: none;
+  color: var(--subtitle-light);
+  font-weight: bold;
+}
+
 input {
   display: block;
   width: 100%;
@@ -246,6 +273,16 @@ button {
   border-radius: 8px;
   cursor: pointer;
   margin-left: 1rem;
+}
+
+button:disabled {
+  background-color: var(--subtitle-light);
+  cursor: default;
+}
+
+button:disabled:hover {
+  background-color: var(--subtitle-light);
+  cursor: default;
 }
 
 .btn-submit,

@@ -1,0 +1,15 @@
+<div *ngIf="filteredTasks$ | async as tasks; else empty">
+  <div *ngFor="let task of tasks">
+    <app-task
+      [task]="task"
+      [description]="task.description"
+      [dueDate]="task.dueDate"
+      [isUrgent]="task.isUrgent"
+      [isDone]="task.isDone"
+    ></app-task>
+  </div>
+</div>
+
+<ng-template #empty>
+  <p>Não há tarefas cadastradas.</p>
+</ng-template>

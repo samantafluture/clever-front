@@ -17,6 +17,8 @@ import { ViewSprintComponent } from './components/pages/view-sprint/view-sprint.
 import { CreateTaskComponent } from './components/pages/create-task/create-task.component';
 import { EditProjectComponent } from './components/pages/edit-project/edit-project.component';
 import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.component';
+import { TasksModule } from './components/tasks/tasks.module';
+import { EditTaskComponent } from './components/pages/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.
     CreateTaskComponent,
     EditProjectComponent,
     EditSprintComponent,
+    EditTaskComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.
     ReactiveFormsModule,
     DragDropModule,
     ProjectsModule,
-    SprintsModule
+    SprintsModule,
+    TasksModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -29,10 +29,10 @@
         <app-divider dividerTitle="Tarefas do Sprint"></app-divider>
         <app-btn-border
           btnTitle="Criar Tarefa"
-          (click)="create(task)"
+          (click)="newTask()"
         ></app-btn-border>
       </div>
-      <app-task-list></app-task-list>
+      <app-task-list [sprintId]="sprint.id"></app-task-list>
     </section>
   </main>
 </div>

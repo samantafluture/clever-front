@@ -8,16 +8,30 @@ import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from '../../services/in-memory-data.service';
 import { SprintListComponent } from './sprint-list/sprint-list.component';
 import { SprintDetailComponent } from './sprint-detail/sprint-detail.component';
+import { SprintFormComponent } from './sprint-form/sprint-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [SprintComponent, SprintListComponent, SprintDetailComponent],
+  declarations: [
+    SprintComponent,
+    SprintListComponent,
+    SprintDetailComponent,
+    SprintFormComponent,
+  ],
   imports: [
     CommonModule,
     SharedModule,
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports: [SprintComponent, SprintListComponent, SprintDetailComponent],
+  exports: [
+    SprintComponent,
+    SprintListComponent,
+    SprintDetailComponent,
+    SprintFormComponent,
+  ],
 })
 export class SprintsModule {}
