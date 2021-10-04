@@ -1,5 +1,5 @@
-<div class="task" [class.task--done]="isDone" (click)="check()" >
-  <div class="task__main">
+<div class="task" [class.task--done]="isDone">
+  <div class="task__main" (click)="check()">
     <input type="checkbox" name="task" id="task" [checked]="isDone" />
     <p>{{ description }}</p>
   </div>
