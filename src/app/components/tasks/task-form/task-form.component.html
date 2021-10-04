@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="info select__status" *ngIf="sprint$ | async as sprint">
-        Sprint a qual pertence
+        Sprint atual
         <select name="sprint" id="sprint" [(ngModel)]="task.sprint">
           <option [value]="sprint.title" selected>
             {{ sprint.title }}

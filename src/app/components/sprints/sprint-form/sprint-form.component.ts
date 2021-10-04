@@ -4,6 +4,8 @@ import { Location } from '@angular/common';
 import { Status } from 'src/app/enums/status';
 import { Project } from 'src/app/interfaces/project';
 import { ProjectService } from 'src/app/components/projects/project.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sprint-form',
@@ -13,13 +15,21 @@ import { ProjectService } from 'src/app/components/projects/project.service';
 export class SprintFormComponent implements OnInit {
   @Input() btnTitle: string = '';
   @Input() sprint!: Sprint;
+  id!: number;
   status = [Status.TO_DO, Status.IN_PROGRESS, Status.DONE];
   allProjects$ = this.projectService.getProjects();
+  project$!: Observable<Project>;
 
-  constructor(private location: Location, private projectService: ProjectService) {}
+  constructor(
+    private location: Location,
+    private activatedRoute: ActivatedRoute,
+    private projectService: ProjectService
+  ) {}
 
   ngOnInit(): void {
     this.allProjects$;
+    this.id = this.activatedRoute.snapshot.params.id;
+    this.project$ = this.projectService.getProjectById(this.id);
   }
 
   cancel() {
