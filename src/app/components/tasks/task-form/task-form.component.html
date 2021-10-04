@@ -4,33 +4,33 @@
       <div class="info">
         <label for="description">Tarefa</label>
         <textarea
-          [(ngModel)]="task.text"
-          #text="ngModel"
-          type="text"
+          [(ngModel)]="task.description"
+          #description="ngModel"
+          type="description"
           placeholder="Descrição da tarefa"
-          id="text"
-          name="text"
-          rows="4"
+          id="description"
+          name="description"
+          rows="7"
           required
           minlength="3"
           maxlength="500"
         ></textarea>
-        <div class="alert" [hidden]="text.valid || text.pristine">
+        <div class="alert" [hidden]="description.valid || description.pristine">
           Tarefa é obrigatório e deve ter de 3 a 500 caracteres
         </div>
       </div>
       <div class="info">
         <label for="date">Data de entrega</label>
         <input
-          [(ngModel)]="task.date"
-          #date="ngModel"
+          [(ngModel)]="task.dueDate"
+          #dueDate="ngModel"
           type="date"
           placeholder="Data de término"
-          id="date"
-          name="date"
+          id="dueDate"
+          name="dueDate"
           required
         />
-        <div class="alert" [hidden]="date.valid || date.pristine">
+        <div class="alert" [hidden]="dueDate.valid || dueDate.pristine">
           Data de entrega é obrigatória
         </div>
       </div>
@@ -46,11 +46,12 @@
       <div class="members__search">
         <span><i class="fas fa-search"></i></span>
         <input
-          [(ngModel)]="task.members"
+          [(ngModel)]="task.assignedMember"
+          #assignedMember="ngModel"
           type="search"
           placeholder="Busque por membros para selecionar"
-          id="members"
-          name="members"
+          id="assignedMember"
+          name="assignedMember"
         />
       </div>
       <div class="members__selected">
@@ -65,7 +66,26 @@
       </div>
       <label class="urgent__check"
         >Marcar tarefa como urgente
-        <input type="checkbox" checked="checked" />
+        <input
+          [(ngModel)]="task.isUrgent"
+          #isUrgent="ngModel"
+          type="checkbox"
+          checked="false"
+          id="isUrgent"
+          name="isUrgent"
+        />
+        <span class="checkmark"></span>
+      </label>
+      <label class="urgent__check"
+        >Marcar tarefa como feita
+        <input
+          [(ngModel)]="task.isDone"
+          #isDone="ngModel"
+          type="checkbox"
+          checked="false"
+          id="isDone"
+          name="isDone"
+        />
         <span class="checkmark"></span>
       </label>
     </div>

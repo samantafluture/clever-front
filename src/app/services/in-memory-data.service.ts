@@ -82,7 +82,6 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 1,
         description: 'Aprovar design da campanha principal',
-        status: Status.TO_DO,
         isUrgent: true,
         isDone: false,
         sprint: {
@@ -106,7 +105,6 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 2,
         description: 'Refatorar rotas da API',
-        status: Status.IN_PROGRESS,
         isUrgent: false,
         isDone: false,
         sprint: {
@@ -130,7 +128,6 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 3,
         description: 'Criar autorização de login',
-        status: Status.DONE,
         isUrgent: false,
         isDone: true,
         sprint: {

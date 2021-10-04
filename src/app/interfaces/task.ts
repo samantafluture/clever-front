@@ -5,7 +5,6 @@ import { Member } from './member';
 export interface Task {
   id?: number,
   description: string,
-  status: Status,
   isUrgent: boolean,
   isDone: boolean,
   assignedMember?: Member,

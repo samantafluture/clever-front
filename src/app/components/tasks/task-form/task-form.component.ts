@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { Task } from 'src/app/interfaces/task';
 
 @Component({
   selector: 'app-task-form',
@@ -8,7 +9,7 @@ import { Location } from '@angular/common';
 })
 export class TaskFormComponent implements OnInit {
   @Input() btnTitle: string = '';
-  @Input() task!: any;
+  @Input() task!: Task;
 
   constructor(private location: Location) {}
 

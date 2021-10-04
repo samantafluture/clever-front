@@ -1,26 +1,38 @@
+import { TaskService } from './../../tasks/task.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-create-task',
   templateUrl: './create-task.component.html',
-  styleUrls: ['./create-task.component.css']
+  styleUrls: ['./create-task.component.css'],
 })
 export class CreateTaskComponent implements OnInit {
   task!: any;
   Date!: Date;
 
-  constructor(private router: Router, private location: Location) {
+  constructor(
+    private location: Location,
+    private taskService: TaskService
+  ) {
     this.task = {
-      text: '',
-      date: this.Date,
-      member: '',
-      isUrgent: false
+      description: '',
+      isUrgent: false,
+      isDone: false,
+      createdAt: this.Date,
+      dueDate: this.Date,
     };
   }
 
   ngOnInit(): void {
+    this.task = {
+      description: '',
+      isUrgent: false,
+      isDone: false,
+      createdAt: this.Date,
+      dueDate: this.Date,
+    };
   }
 
   cancel() {
@@ -28,8 +40,17 @@ export class CreateTaskComponent implements OnInit {
     return false;
   }
 
-  add(task: any): void {
-    console.log(task);
-    this.location.back();
-  }
+  create(task: any): void {
+    this.taskService.createTask(task).subscribe(
+      () => {
+        console.log('Task created!', task);
+        this.location.back();
+      },
+      (error) => {
+        console.log(error);
+        this.location.back();
+      }
+    );
+    }
+
 }

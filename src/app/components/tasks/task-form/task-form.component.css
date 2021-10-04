@@ -248,6 +248,16 @@ button {
   margin-left: 1rem;
 }
 
+button:disabled {
+  background-color: var(--subtitle-light);
+  cursor: default;
+}
+
+button:disabled:hover {
+  background-color: var(--subtitle-light);
+  cursor: default;
+}
+
 .btn-submit,
 .btn-cancel {
   width: 100%;

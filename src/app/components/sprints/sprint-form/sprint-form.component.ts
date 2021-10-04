@@ -14,7 +14,6 @@ export class SprintFormComponent implements OnInit {
   @Input() btnTitle: string = '';
   @Input() sprint!: Sprint;
   status = [Status.TO_DO, Status.IN_PROGRESS, Status.DONE];
-  // projects: Project[] = [];
   allProjects$ = this.projectService.getProjects();
 
   constructor(private location: Location, private projectService: ProjectService) {}
