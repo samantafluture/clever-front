@@ -1,0 +1,10 @@
+<header>
+  <app-divider dividerTitle="Novo Usuário"></app-divider>
+</header>
+<main>
+  <app-signup-form
+    btnTitle="Criar Usuário"
+    (submit)="create(user)"
+    [user]="user"
+  ></app-signup-form>
+</main>

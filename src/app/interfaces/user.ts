@@ -1,11 +1,13 @@
 import { Role } from "../enums/role";
 
 export interface User {
-  id: number,
+  id?: number,
   name: string,
   email: string,
   password: string,
-  jobTitle: string,
+  jobTitle?: string,
   photoUrl?: string,
   role: Role
 }
+
+export type Users = Array<User>;

@@ -10,11 +10,25 @@ import { DashboardComponent } from './components/pages/dashboard/dashboard.compo
 import { ListProjectsComponent } from './components/pages/list-projects/list-projects.component';
 import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.component';
 import { EditTaskComponent } from './components/pages/edit-task/edit-task.component';
+import { LoginUserComponent } from './components/pages/login-user/login-user.component';
+import { CreateUserComponent } from './components/pages/create-user/create-user.component';
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
+  {
+    path: 'login',
+    component: LoginUserComponent,
+  },
+  {
+    path: 'novo-usuario',
+    component: CreateUserComponent,
   },
   {
     path: 'novo-projeto',

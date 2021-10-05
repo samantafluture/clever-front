@@ -1,3 +1,4 @@
+import { UsersModule } from './components/users/users.module';
 import { SprintsModule } from './components/sprints/sprints.module';
 import { ProjectsModule } from './components/projects/projects.module';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,8 @@ import { EditProjectComponent } from './components/pages/edit-project/edit-proje
 import { EditSprintComponent } from './components/pages/edit-sprint/edit-sprint.component';
 import { TasksModule } from './components/tasks/tasks.module';
 import { EditTaskComponent } from './components/pages/edit-task/edit-task.component';
+import { LoginUserComponent } from './components/pages/login-user/login-user.component';
+import { CreateUserComponent } from './components/pages/create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,8 @@ import { EditTaskComponent } from './components/pages/edit-task/edit-task.compon
     EditProjectComponent,
     EditSprintComponent,
     EditTaskComponent,
+    LoginUserComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ import { EditTaskComponent } from './components/pages/edit-task/edit-task.compon
     DragDropModule,
     ProjectsModule,
     SprintsModule,
-    TasksModule
+    TasksModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent],
