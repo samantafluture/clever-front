@@ -1,8 +1,4 @@
 <form #signupForm="ngForm">
-  <!-- <p>
-    Preencha os dados abaixo para criar um novo usuário. Será enviado um de
-    confirmação e com instruções de login.
-  </p> -->
   <fieldset>
     <div class="fieldset__infos">
       <div class="info">
@@ -32,7 +28,7 @@
           name="email"
           required
           minlength="3"
-          pattern="@empresa.com"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         />
         <div class="alert" [hidden]="email.valid || email.pristine">
           Email é obrigatório e deve ser válido
