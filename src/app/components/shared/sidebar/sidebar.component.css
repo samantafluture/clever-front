@@ -85,6 +85,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 
 .sidebar__user a {
@@ -96,6 +97,7 @@
 .user__profile {
   display: flex;
   align-items: center;
+
 }
 
 .user__photo {
@@ -103,10 +105,26 @@
   border-radius: 50%;
   margin: 0 0.75rem 0 0;
   padding: 0;
-  width: 32px;
+  width: 36px;
+
+}
+
+.user__name {
+  margin-left: 0;
+}
+
+.user__name p:last-of-type {
+  font-size: 0.75rem;
+  color: var(--subtitle-light);
+  margin-top: 0.15rem;
 }
 
 .fa-sign-out-alt {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.divider {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-light);
 }

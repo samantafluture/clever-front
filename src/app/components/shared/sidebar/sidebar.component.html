@@ -11,22 +11,26 @@
           <span>{{ projects.length }}</span>
         </span>
       </a>
-      <a href="#"><i class="fas fa-calendar"></i>Calendário</a>
+      <a href="#"><i class="fas fa-calendar"></i>Cronograma</a>
       <a href="#"><i class="fas fa-chart-line"></i>Relatório</a>
-      <a href="#"><i class="fas fa-bell"></i>Configurações</a>
+      <a class="divider" [routerLink]="['/novo-usuario']"
+        ><i class="fas fa-users"></i>Cadastrar Membro</a
+      >
+      <a href="#"><i class="fas fa-cog"></i>Configurações</a>
       <a href="#" class="menu__number">
-        <div><i class="fas fa-cog"></i>Notificações</div>
+        <div><i class="fas fa-bell"></i>Notificações</div>
         <span>2</span>
       </a>
     </div>
   </div>
   <div class="sidebar__user">
-    <a href="#" class="user__profile"
-      ><img
-        class="user__photo"
-        src="https://github.com/samantafluture.png"
-      />Minha Conta</a
-    >
+    <a href="#" class="user__profile">
+      <img class="user__photo" src="https://github.com/samantafluture.png" />
+      <div class="user__name">
+        <p>Samanta Fluture</p>
+        <p>Gerente de Projetos</p>
+      </div>
+    </a>
     <a href="#"><i class="fas fa-sign-out-alt"></i>Sair</a>
   </div>
 </nav>

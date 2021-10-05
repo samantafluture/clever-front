@@ -74,7 +74,7 @@
         />
       </div>
       <div class="info">
-        <label for="title">Foto de perfil</label>
+        <label for="photoUrl">Foto de perfil</label>
         <input
           [(ngModel)]="user.photoUrl"
           #photoUrl="ngModel"
@@ -83,6 +83,7 @@
           id="photoUrl"
           name="photoUrl"
           accept="image/png, image/jpeg"
+          [hidden]="true"
         />
       </div>
     </div>
