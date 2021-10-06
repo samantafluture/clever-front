@@ -128,3 +128,11 @@
   margin-top: 2rem;
   border-top: 1px solid var(--border-light);
 }
+
+.active-link {
+  border-left: 1px solid var(--hover);
+}
+
+.active-link div, .active-link i {
+  color: var(--hover);
+}
