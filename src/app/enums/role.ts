@@ -1,4 +1,4 @@
 export enum Role {
   MEMBER = 'Membro',
-  MANAGER = 'Líder do Projeto'
+  MANAGER = 'Gerente de Projeto'
 }

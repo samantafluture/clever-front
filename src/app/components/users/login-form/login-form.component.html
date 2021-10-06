@@ -1,0 +1,56 @@
+<form #loginForm="ngForm">
+  <fieldset>
+    <div class="fieldset__infos">
+      <div class="info email">
+        <label for="description">Email</label>
+        <input
+          [(ngModel)]="user.email"
+          #email="ngModel"
+          type="email"
+          placeholder="Email (nome@empresa.com)"
+          id="email"
+          name="email"
+          required
+          minlength="3"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        />
+        <div class="alert" [hidden]="email.valid || email.pristine">
+          Email inválido!
+        </div>
+      </div>
+      <div class="info password">
+        <label for="date">Senha</label>
+        <input
+          [(ngModel)]="user.password"
+          #password="ngModel"
+          type="password"
+          placeholder="Senha de acesso"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        />
+        <div class="alert" [hidden]="password.valid || password.pristine">
+          Senha inválida!
+        </div>
+      </div>
+    </div>
+    <div class="form-message">
+      <a [routerLink]="['/login']" class="alert"
+        ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Não possui acesso? <span class="link">Solicite um convite!</span></a
+      >
+    </div>
+    <div class="fieldset__btns">
+      <div class="form-btn">
+        <button
+          class="btn-submit"
+          type="submit"
+          [disabled]="!loginForm.form.valid"
+        >
+          Fazer login
+        </button>
+      </div>
+    </div>
+  </fieldset>
+</form>

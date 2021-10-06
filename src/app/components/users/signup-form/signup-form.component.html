@@ -1,0 +1,109 @@
+<form #signupForm="ngForm">
+  <fieldset>
+    <div class="fieldset__infos">
+      <div class="info">
+        <label for="title">Nome</label>
+        <input
+          [(ngModel)]="user.name"
+          #name="ngModel"
+          type="text"
+          placeholder="Nome completo"
+          id="name"
+          name="name"
+          required
+          minlength="3"
+        />
+        <div class="alert" [hidden]="name.valid || name.pristine">
+          Nome é obrigatório e deve ser completo
+        </div>
+      </div>
+      <div class="info">
+        <label for="description">Email</label>
+        <input
+          [(ngModel)]="user.email"
+          #email="ngModel"
+          type="email"
+          placeholder="Email (nome@empresa.com)"
+          id="email"
+          name="email"
+          required
+          minlength="3"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        />
+        <div class="alert" [hidden]="email.valid || email.pristine">
+          Email é obrigatório e deve ser válido
+        </div>
+      </div>
+      <div class="info">
+        <label for="date">Senha</label>
+        <input
+          [(ngModel)]="user.password"
+          #password="ngModel"
+          type="password"
+          placeholder="Senha de acesso"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        />
+        <div class="alert" [hidden]="password.valid || password.pristine">
+          Senha é obrigatória. Deve conter pelo menos: 8 caracteres, um número,
+          uma letra maiúscula e uma letra minúscula
+        </div>
+      </div>
+      <div class="info info--role">
+        Nível de Acesso
+        <select name="role" id="role" [(ngModel)]="user.role">
+          <option value="" disabled>Selecione seu nível de acesso</option>
+          <option *ngFor="let r of role" [ngValue]="r">
+            {{ r }}
+          </option>
+        </select>
+        <span><i class="fas fa-chevron-down"></i></span>
+      </div>
+      <div class="info">
+        <label for="title">Cargo</label>
+        <input
+          [(ngModel)]="user.jobTitle"
+          #jobTitle="ngModel"
+          type="text"
+          placeholder="Cargo ou função atual"
+          id="jobTitle"
+          name="jobTitle"
+        />
+      </div>
+      <div class="info">
+        <label for="photoUrl">Foto de perfil</label>
+        <input
+          [(ngModel)]="user.photoUrl"
+          #photoUrl="ngModel"
+          type="file"
+          placeholder="Selecione uma foto de perfil"
+          id="photoUrl"
+          name="photoUrl"
+          accept="image/png, image/jpeg"
+          [hidden]="true"
+        />
+      </div>
+    </div>
+    <div class="form-message">
+      <span class="alert"
+        ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
+        obrigatórios</span
+      >
+    </div>
+    <div class="fieldset__btns">
+      <div class="form-btn">
+        <button class="btn-cancel" (click)="cancel()">Cancelar</button>
+        <button
+          class="btn-submit"
+          type="submit"
+          [disabled]="!signupForm.form.valid"
+        >
+          {{ btnTitle }}
+        </button>
+      </div>
+    </div>
+  </fieldset>
+</form>

@@ -1,4 +1,3 @@
-import { Status } from './../enums/status';
 import { Sprint } from './sprint';
 import { Member } from './member';
 

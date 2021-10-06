@@ -1,0 +1,182 @@
+form, fieldset {
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  appearance: none;
+  border: none;
+  max-width: 50vw;
+}
+
+form p {
+  padding: 0 0 1.5rem 1rem;
+  line-height: 1.5rem;
+  font-size: 0.75;
+}
+
+.fieldset__infos {
+  margin: 0;
+}
+
+.fieldset__infos .info {
+  margin-top: 1.5rem;
+}
+
+.fieldset__infos .info:first-of-type {
+  margin-top: 0;
+}
+
+span .fa-chevron-down {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.info--role {
+  position: relative;
+}
+
+select {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  width: 100%;
+  margin: 0.5rem 0 1.5rem;
+  border-radius: 6px;
+  background-color: var(--input-bg-light);
+  font-family: var(--font-rubik);
+  font-size: 1rem;
+  line-height: 1em;
+  border: none;
+  appearance: none;
+  color: var(--subtitle-light);
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  outline: 0;
+  appearance: none;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1em;
+  margin: 0.5rem 0 0rem;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--input-bg-light);
+  font-family: var(--font-rubik);
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  outline: 0;
+  appearance: none;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1em;
+  margin: 0.5rem 0 0rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--input-bg-light);
+  resize: vertical;
+  font-family: var(--font-rubik);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--hover);
+  box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid var(--alert-green);
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid var(--alert-red);
+}
+
+.form-message {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.form-message .alert {
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.fieldset__btns {
+  margin: 0 0 2rem 0;
+}
+
+.form-btn {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  line-height: 1rem;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+button:disabled {
+  background-color: var(--subtitle-light);
+  cursor: default;
+}
+
+button:disabled:hover {
+  background-color: var(--subtitle-light);
+  cursor: default;
+}
+
+.btn-submit,
+.btn-cancel {
+  width: 100%;
+  margin: 0;
+}
+
+.btn-submit {
+  background-color: var(--alert-green);
+  color: var(--bg-light);
+}
+
+.btn-submit:hover {
+  background-color: var(--hover);
+}
+
+.btn-cancel {
+  margin-right: 1.5rem;
+  background-color: var(--btn-bg-light);
+  color: var(--color-light);
+}
+
+.btn-cancel:hover {
+  background-color: var(--btn-hover-bg-light);
+  color: var(--bg-light);
+}
+
+.alert {
+  color: var(--alert-red);
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+i {
+  cursor: pointer;
+}

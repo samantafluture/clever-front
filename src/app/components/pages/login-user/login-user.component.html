@@ -1,0 +1,11 @@
+<header>
+  <app-logo></app-logo>
+  <h1>Login</h1>
+</header>
+<main>
+  <app-login-form
+    btnTitle="Fazer login"
+    (submit)="login(user.email, user.password)"
+    [user]="user"
+  ></app-login-form>
+</main>
