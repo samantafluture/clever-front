@@ -7,10 +7,10 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/app/services/in-memory-data.service';
 import { SharedModule } from '../shared/shared.module';
 import { SignupFormComponent } from './signup-form/signup-form.component';
-import { UserComponent } from './user/user.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
-  declarations: [SignupFormComponent, UserComponent],
+  declarations: [SignupFormComponent, LoginFormComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -20,6 +20,6 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports: [SignupFormComponent],
+  exports: [SignupFormComponent, LoginFormComponent],
 })
 export class UsersModule {}

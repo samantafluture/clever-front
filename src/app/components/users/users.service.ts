@@ -1,17 +1,40 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { User, Users } from 'src/app/interfaces/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersService {
+  private userSubject: BehaviorSubject<User>;
+  public user: Observable<User>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.userSubject = new BehaviorSubject<User>(
+      JSON.parse(localStorage.getItem('user') || '{}')
+    );
+    this.user = this.userSubject.asObservable();
+  }
 
   private usersUrl = 'api/users';
+
+  public get userValue(): User {
+    return this.userSubject.value;
+  }
+
+  login(username: any, password: any) {
+    return this.http
+      .post<User>(`${this.usersUrl}/login`, { username, password })
+      .pipe(
+        map((user) => {
+          localStorage.setItem('user', JSON.stringify(user));
+          this.userSubject.next(user);
+          return user;
+        })
+      );
+  }
 
   getUsers(): Observable<Users> {
     return this.http.get<Users>(this.usersUrl).pipe(
