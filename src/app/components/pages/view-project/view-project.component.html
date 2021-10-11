@@ -1,32 +1,26 @@
 <div *ngIf="project$ | async as project">
-  <app-header
+  <!-- <app-header
     [pageTitle]="project.title"
     btnTitle="Criar Sprint"
     (clickEvent)="newSprint()"
   >
-  </app-header>
+  </app-header> -->
 
-  <aside>
-    <app-sidebar></app-sidebar>
-  </aside>
+  <div class="actions">
+    <a (click)="edit()"
+      ><i class="fas fa-pencil-alt"></i>Editar</a
+    >
+    <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
+  </div>
 
-  <main>
-    <div class="actions">
-      <a [routerLink]="['/projeto/' + project.id + '/editar/']"
-        ><i class="fas fa-pencil-alt"></i>Editar</a
-      >
-      <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
-    </div>
+  <app-project-detail
+    [title]="project.title"
+    [description]="project.description"
+    [dueDate]="project.dueDate"
+  ></app-project-detail>
 
-    <app-project-detail
-      [title]="project.title"
-      [description]="project.description"
-      [dueDate]="project.dueDate"
-    ></app-project-detail>
-
-    <app-sprint-list
-      [projectId]="project.id"
-      (clickEvent)="newSprint()"
-    ></app-sprint-list>
-  </main>
+  <app-sprint-list
+    [projectId]="project.id"
+    (clickEvent)="newSprint()"
+  ></app-sprint-list>
 </div>

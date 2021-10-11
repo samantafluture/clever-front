@@ -1,7 +1,7 @@
-import { Status } from 'src/app/enums/status';
+import { Status } from 'src/app/models/enums/status';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Role } from 'src/app/enums/role';
+import { Role } from 'src/app/models/enums/role';
 
 @Injectable({
   providedIn: 'root'

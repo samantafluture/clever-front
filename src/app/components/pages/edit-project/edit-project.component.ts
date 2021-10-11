@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from 'src/app/interfaces/project';
+import { Project } from 'src/app/models/interfaces/project';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
-import { ProjectService } from '../../projects/project.service';
+import { ProjectService } from '../../features/projects/project.service';
 
 @Component({
   selector: 'app-edit-project',
@@ -23,7 +23,7 @@ export class EditProjectComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = this.activatedRoute.snapshot.params.id;
+    this.id = this.activatedRoute.snapshot.params.projetoId;
     this.project$ = this.projectService.getProjectById(this.id);
     console.log(this.id, this.project$);
   }

@@ -1,11 +1,11 @@
-import { Sprint } from 'src/app/interfaces/sprint';
-import { Status } from 'src/app/enums/status';
-import { SprintService } from './../../sprints/sprint.service';
+import { Sprint } from 'src/app/models/interfaces/sprint';
+import { Status } from 'src/app/models/enums/status';
+import { SprintService } from '../../features/sprints/sprint.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { Project } from 'src/app/interfaces/project';
+import { Project } from 'src/app/models/interfaces/project';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectService } from '../../projects/project.service';
+import { ProjectService } from '../../features/projects/project.service';
 
 @Component({
   selector: 'app-create-sprint',

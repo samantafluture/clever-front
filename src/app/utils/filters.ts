@@ -1,5 +1,5 @@
-import { Status } from "../enums/status";
-import { Sprint } from "../interfaces/sprint";
+import { Status } from "../models/enums/status";
+import { Sprint } from "../models/interfaces/sprint";
 
 export function sortByDueDate(itemA: any, itemB: any) {
   let dateA = new Date(itemA.dueDate);

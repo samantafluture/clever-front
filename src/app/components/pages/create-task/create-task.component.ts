@@ -1,4 +1,4 @@
-import { TaskService } from './../../tasks/task.service';
+import { TaskService } from '../../features/tasks/task.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';

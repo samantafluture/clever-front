@@ -1,0 +1,60 @@
+<section class="project__boards">
+  <div
+    class="board board--todo"
+    *ngIf="toDoSprints$ | async as sprints; else empty"
+  >
+    <div class="board__header">
+      <h3>A Fazer</h3>
+      <a (click)="click()"><i class="fas fa-plus-circle"></i></a>
+    </div>
+    <div class="board__body" *ngFor="let sprint of sprints">
+      <a routerLink="/sprint/{{ sprint.id }}">
+        <app-sprint
+          [title]="sprint.title"
+          [description]="sprint.description"
+          [dueDate]="sprint.dueDate"
+        ></app-sprint>
+      </a>
+    </div>
+  </div>
+  <div
+    class="board board--doing"
+    *ngIf="inProgressSprints$ | async as sprints; else empty"
+  >
+    <div class="board__header">
+      <h3>Fazendo</h3>
+      <a (click)="click()"><i class="fas fa-plus-circle"></i></a>
+    </div>
+    <div class="board__body" *ngFor="let sprint of sprints">
+      <a routerLink="/sprint/{{ sprint.id }}">
+        <app-sprint
+          [title]="sprint.title"
+          [description]="sprint.description"
+          [dueDate]="sprint.dueDate"
+        ></app-sprint>
+      </a>
+    </div>
+  </div>
+  <div
+    class="board board--done"
+    *ngIf="isDoneSprints$ | async as sprints; else empty"
+  >
+    <div class="board__header">
+      <h3>Feito</h3>
+      <a (click)="click()"><i class="fas fa-plus-circle"></i></a>
+    </div>
+    <div class="board__body" *ngFor="let sprint of sprints">
+      <a routerLink="/sprint/{{ sprint.id }}">
+        <app-sprint
+          [title]="sprint.title"
+          [description]="sprint.description"
+          [dueDate]="sprint.dueDate"
+        ></app-sprint>
+      </a>
+    </div>
+  </div>
+</section>
+
+<ng-template #empty>
+  <p>Não há sprints cadastrados.</p>
+</ng-template>

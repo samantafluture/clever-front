@@ -1,7 +1,7 @@
-import { Project } from 'src/app/interfaces/project';
+import { Project } from 'src/app/models/interfaces/project';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProjectService } from '../../projects/project.service';
+import { ProjectService } from '../../features/projects/project.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./view-project.component.css'],
 })
 export class ViewProjectComponent implements OnInit {
-  id!: number;
+  projetoId!: number;
   project$!: Observable<Project>;
 
   constructor(
@@ -20,12 +20,12 @@ export class ViewProjectComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.id = this.activatedRoute.snapshot.params.id;
-    this.project$ = this.projectService.getProjectById(this.id);
+    this.projetoId = this.activatedRoute.snapshot.params.projetoId;
+    this.project$ = this.projectService.getProjectById(this.projetoId);
   }
 
   remove() {
-    this.projectService.deleteProject(this.id).subscribe(
+    this.projectService.deleteProject(this.projetoId).subscribe(
       () => {
         this.router.navigate(['/projetos/']);
       },
@@ -34,6 +34,10 @@ export class ViewProjectComponent implements OnInit {
   }
 
   newSprint() {
-    this.router.navigate(['/projeto/' + this.id + '/novo-sprint/']);
+    this.router.navigate(['/projeto/' + this.projetoId + '/novo-sprint/']);
+  }
+
+  edit() {
+    this.router.navigate(['/projeto/' + this.projetoId + '/editar/'])
   }
 }

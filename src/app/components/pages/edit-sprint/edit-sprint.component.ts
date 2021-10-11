@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Sprint } from 'src/app/interfaces/sprint';
-import { SprintService } from '../../sprints/sprint.service';
+import { Sprint } from 'src/app/models/interfaces/sprint';
+import { SprintService } from '../../features/sprints/sprint.service';
 import { Location } from '@angular/common';
 
 @Component({
@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 })
 export class EditSprintComponent implements OnInit {
   Date!: Date;
-  id!: number;
+  sprintId!: number;
   sprint$!: Observable<Sprint>;
 
   constructor(
@@ -22,9 +22,9 @@ export class EditSprintComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = this.activatedRoute.snapshot.params.id;
-    this.sprint$ = this.sprintService.getSprintById(this.id);
-    console.log(this.id, this.sprint$);
+    this.sprintId = this.activatedRoute.snapshot.params.sprintId;
+    this.sprint$ = this.sprintService.getSprintById(this.sprintId);
+    console.log(this.sprintId, this.sprint$);
   }
 
   cancel() {
@@ -33,7 +33,7 @@ export class EditSprintComponent implements OnInit {
   }
 
   edit(sprint: Sprint): void {
-    this.sprintService.editSprint(sprint, this.id).subscribe(
+    this.sprintService.editSprint(sprint, this.sprintId).subscribe(
       () => {
         console.log('Sprint updated');
         this.location.back();

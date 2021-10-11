@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Role } from 'src/app/enums/role';
-import { User } from 'src/app/interfaces/user';
-import { UsersService } from '../../users/users.service';
+import { Role } from 'src/app/models/enums/role';
+import { User } from 'src/app/models/interfaces/user';
+import { UsersService } from '../../features/users/users.service';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
