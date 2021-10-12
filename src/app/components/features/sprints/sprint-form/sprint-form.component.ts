@@ -17,8 +17,9 @@ export class SprintFormComponent implements OnInit {
   @Input() sprint!: Sprint;
   id!: number;
   status = [Status.TO_DO, Status.IN_PROGRESS, Status.DONE];
-  allProjects$ = this.projectService.getProjects();
-  project$!: Observable<Project>;
+  @Input() project!: Project;
+  // allProjects$ = this.projectService.getProjects();
+  // project$!: Observable<Project>;
 
   constructor(
     private location: Location,
@@ -27,9 +28,9 @@ export class SprintFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.allProjects$;
-    this.id = this.activatedRoute.snapshot.params.id;
-    this.project$ = this.projectService.getProjectById(this.id);
+    // this.allProjects$;
+    // this.id = this.activatedRoute.snapshot.params.id;
+    // this.project$ = this.projectService.getProjectById(this.id);
   }
 
   cancel() {

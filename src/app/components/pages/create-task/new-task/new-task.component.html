@@ -1,0 +1,12 @@
+<app-header
+  class="header"
+  pageTitle="Nova Tarefa"
+  btnTitle="Voltar"
+  (clickEvent)="cancel()"
+></app-header>
+<app-task-form
+  class="form"
+  (submit)="create(task)"
+  [task]="task"
+  btnTitle="Criar Tarefa"
+></app-task-form>

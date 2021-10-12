@@ -1,13 +1,15 @@
-<!-- <app-header
-  pageTitle="Editar Projeto"
-  btnTitle="Cancelar"
-  (clickEvent)="cancel()"
-></app-header> -->
-
-<div class="form" *ngIf="project$ | async as project">
-  <app-project-form
-    (submit)="edit(project)"
-    [project]="project"
-    btnTitle="Editar Projeto"
-  ></app-project-form>
-</div>
+<section class="edit-project">
+  <app-header
+    class="header"
+    pageTitle="Editar Projeto"
+    btnTitle="Cancelar"
+    (clickEvent)="cancel()"
+  ></app-header>
+  <div class="form" *ngIf="project$ | async as project">
+    <app-project-form
+      (submit)="edit(project)"
+      [project]="project"
+      btnTitle="Editar Projeto"
+    ></app-project-form>
+  </div>
+</section>

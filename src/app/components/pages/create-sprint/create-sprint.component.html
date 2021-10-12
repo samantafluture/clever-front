@@ -1,12 +1,3 @@
-<!-- <app-header
-  pageTitle="Novo Sprint"
-  btnTitle="Voltar"
-  (clickEvent)="cancel()"
-></app-header> -->
-
-<app-sprint-form
-  class="form"
-  (submit)="create(sprint)"
-  [sprint]="sprint"
-  btnTitle="Criar Sprint"
-></app-sprint-form>
+<div *ngIf="project$ | async as project">
+  <app-new-sprint [project]="project"></app-new-sprint>
+</div>

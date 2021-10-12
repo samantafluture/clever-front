@@ -23,9 +23,6 @@ import { ProjectComponent } from './project/project.component';
 import { SprintComponent } from './sprint/sprint.component';
 import { TaskComponent } from './task/task.component';
 import { ProjectsRoutingModule } from '../features/projects/projects-routing.module';
-import { SprintsRoutingModule } from '../features/sprints/sprints-routing.module';
-import { TasksRoutingModule } from '../features/tasks/tasks-routing.module';
-import { UsersRoutingModule } from '../features/users/users-routing.module';
 
 @NgModule({
   declarations: [
@@ -55,10 +52,7 @@ import { UsersRoutingModule } from '../features/users/users-routing.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ProjectsRoutingModule,
-    SprintsRoutingModule,
-    TasksRoutingModule,
-    UsersRoutingModule,
+    ProjectsRoutingModule
   ],
   exports: [
     SidebarComponent,

@@ -29,13 +29,13 @@ export function isDone(sprint: Sprint) {
   return done;
 }
 
-export function filterByProject(sprint: Sprint, projectId: any) {
-  const project = sprint.project?.id === projectId ? true : false;
+export function filterByProject(sprint: any, projectId: any) {
+  const project = sprint === projectId ? true : false;
   return project;
 }
 
 export function filterBySprint(task: any, sprintId: any) {
-  const sprint = task.sprint?.id === sprintId ? true : false;
+  const sprint = task === sprintId ? true : false;
   return sprint;
 }
 

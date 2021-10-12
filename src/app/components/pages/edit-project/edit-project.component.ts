@@ -23,7 +23,7 @@ export class EditProjectComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = this.activatedRoute.snapshot.params.projetoId;
+    this.id = this.activatedRoute.snapshot.params.id;
     this.project$ = this.projectService.getProjectById(this.id);
     console.log(this.id, this.project$);
   }

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginFormComponent } from './components/features/users/login-form/login-form.component';
+import { CreateUserComponent } from './components/pages/create-user/create-user.component';
 
 const routes: Routes = [
   {
@@ -16,31 +18,18 @@ const routes: Routes = [
         (m) => m.ProjectsModule
       ),
   },
-  // {
-  //   path: 'sprint',
-  //   loadChildren: () =>
-  //     import('./components/features/sprints/sprints.module').then(
-  //       (m) => m.SprintsModule
-  //     ),
-  // },
-  // {
-  //   path: 'tarefa',
-  //   loadChildren: () =>
-  //     import('./components/features/tasks/tasks.module').then(
-  //       (m) => m.TasksModule
-  //     ),
-  // },
-  {
-    path: 'usuario',
-    loadChildren: () =>
-      import('./components/features/users/users.module').then(
-        (m) => m.UsersModule
-      ),
-  },
   {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LoginFormComponent
+  },
+  {
+    path: 'novo-usuario',
+    component: CreateUserComponent
   },
 ];
 

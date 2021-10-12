@@ -1,3 +1,4 @@
+import { Sprint } from 'src/app/models/interfaces/sprint';
 import { TaskService } from '../../features/tasks/task.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
@@ -11,6 +12,7 @@ import { filterBySprint, sortByDueDate } from 'src/app/utils/filters';
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
   @Input() sprintId!: any;
+  @Input() sprint!: Sprint;
 
   tasks$ = this.taskService
     .getTasks()
@@ -20,7 +22,7 @@ export class TaskListComponent implements OnInit {
 
   filteredTasks$ = this.tasks$.pipe(
     map((tasks) =>
-    tasks.filter((task) => filterBySprint(task, this.sprintId))
+    tasks.filter((task) => filterBySprint(task.sprint?.id, this.sprint.id))
     )
   );
 

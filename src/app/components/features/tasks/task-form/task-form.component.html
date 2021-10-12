@@ -34,18 +34,15 @@
           Data de entrega é obrigatória
         </div>
       </div>
-      <div class="info select__status" *ngIf="sprint$ | async as sprint">
+      <!-- <div class="info select__status" *ngIf="sprint$ | async as sprint">
         Sprint atual
         <select name="sprint" id="sprint" [(ngModel)]="task.sprint">
           <option [value]="sprint.title" selected>
             {{ sprint.title }}
           </option>
-          <!-- <option *ngFor="let sprint of sprints" [ngValue]="sprint">
-            {{ sprint.title }}
-          </option> -->
         </select>
         <span><i class="fas fa-chevron-down"></i></span>
-      </div>
+      </div> -->
       <div class="form-message">
         <span class="alert"
           ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos

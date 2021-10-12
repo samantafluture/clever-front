@@ -1,13 +1,15 @@
-<!-- <app-header
+<section class="edit-sprint">
+  <app-header
+    class="header"
     pageTitle="Editar Sprint"
     btnTitle="Cancelar"
     (clickEvent)="cancel()"
-  ></app-header> -->
-
-<div class="form" *ngIf="sprint$ | async as sprint">
-  <app-sprint-form
-    (submit)="edit(sprint)"
-    [sprint]="sprint"
-    btnTitle="Editar Sprint"
-  ></app-sprint-form>
-</div>
+  ></app-header>
+  <div class="form" *ngIf="sprint$ | async as sprint">
+    <app-sprint-form
+      (submit)="edit(sprint)"
+      [sprint]="sprint"
+      btnTitle="Editar Sprint"
+    ></app-sprint-form>
+  </div>
+</section>

@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class EditTaskComponent implements OnInit {
   Date!: Date;
-  tarefaId!: number;
+  id!: number;
   task$!: Observable<any>;
 
   constructor(
@@ -21,9 +21,9 @@ export class EditTaskComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.tarefaId = this.activatedRoute.snapshot.params.tarefaId;
-    this.task$ = this.taskService.getTaskById(this.tarefaId);
-    console.log(this.tarefaId, this.task$);
+    this.id = this.activatedRoute.snapshot.params.id;
+    this.task$ = this.taskService.getTaskById(this.id);
+    console.log(this.id, this.task$);
   }
 
   cancel() {
@@ -32,7 +32,7 @@ export class EditTaskComponent implements OnInit {
   }
 
   edit(task: any): void {
-    this.taskService.editTask(task, this.tarefaId).subscribe(
+    this.taskService.editTask(task, this.id).subscribe(
       () => {
         console.log('Task updated');
         this.location.back();

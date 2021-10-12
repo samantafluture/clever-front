@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateSprintComponent } from '../../pages/create-sprint/create-sprint.component';
 import { ViewSprintComponent } from '../../pages/view-sprint/view-sprint.component';
 import { EditSprintComponent } from '../../pages/edit-sprint/edit-sprint.component';
+import { NewSprintComponent } from '../../pages/create-sprint/new-sprint/new-sprint.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditSprintComponent } from '../../pages/edit-sprint/edit-sprint.compone
     SprintFormComponent,
     CreateSprintComponent,
     ViewSprintComponent,
-    EditSprintComponent
+    EditSprintComponent,
+    NewSprintComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { EditSprintComponent } from '../../pages/edit-sprint/edit-sprint.compone
     SprintFormComponent,
     CreateSprintComponent,
     ViewSprintComponent,
-    EditSprintComponent
+    EditSprintComponent,
+    NewSprintComponent
   ],
 })
 export class SprintsModule {}

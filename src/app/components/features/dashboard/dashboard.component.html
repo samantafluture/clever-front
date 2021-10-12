@@ -1,14 +1,16 @@
-<!-- <app-header
+<section class="dashboard">
+  <app-header
+  class="header"
   pageTitle="Dashboard"
   btnTitle="Criar Projeto"
   (clickEvent)="newProject()"
-></app-header> -->
+></app-header>
 
 <section class="projects">
   <app-project-list [showAll]="false"></app-project-list>
 </section>
 
-<a [routerLink]="['/projeto']" class="btn">
+<a [routerLink]="['/projetos']" class="btn">
   <app-btn-no-border btnTitle="Ver Todos"
     ><i class="fas fa-chevron-down"></i
   ></app-btn-no-border>
@@ -32,10 +34,13 @@
       </app-card-charts>
       <app-card-tasks
         cardTitle="Cronograma"
-        cardDescription="Prazos a cumprir este mês"
+        cardDescription="Prazos de Outubro de 2021"
       >
         <app-calendar></app-calendar>
       </app-card-tasks>
     </app-card-grid>
   </div>
 </section>
+</section>
+
+

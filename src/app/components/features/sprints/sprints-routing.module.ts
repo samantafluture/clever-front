@@ -9,15 +9,15 @@ const routes: Routes = [
     path: 'sprint',
     children: [
       {
-        path: ':sprintId',
+        path: ':id',
         component: ViewSprintComponent,
       },
       {
-        path: ':sprintId/editar',
+        path: ':id/editar',
         component: EditSprintComponent,
       },
       {
-        path: ':sprintId/nova-tarefa',
+        path: ':id/nova-tarefa',
         component: CreateTaskComponent,
       },
     ],

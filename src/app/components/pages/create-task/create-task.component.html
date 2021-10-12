@@ -1,12 +1,3 @@
-<!-- <app-header
-  pageTitle="Nova Tarefa"
-  btnTitle="Voltar"
-  (clickEvent)="cancel()"
-></app-header> -->
-
-<app-task-form
-  class="form"
-  (submit)="create(task)"
-  [task]="task"
-  btnTitle="Criar Tarefa"
-></app-task-form>
+<section class="create-task" *ngIf="sprint$ | async as sprint">
+  <app-new-task [sprint]="sprint"></app-new-task>
+</section>

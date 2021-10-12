@@ -1,13 +1,15 @@
-<!-- <app-header
+<section class="edit-task">
+  <app-header
+    class="header"
     pageTitle="Editar Tarefa"
     btnTitle="Cancelar"
     (clickEvent)="cancel()"
-  ></app-header> -->
-
-<div class="form" *ngIf="task$ | async as task">
-  <app-task-form
-    (submit)="edit(task)"
-    [task]="task"
-    btnTitle="Editar Tarefa"
-  ></app-task-form>
-</div>
+  ></app-header>
+  <div class="form" *ngIf="task$ | async as task">
+    <app-task-form
+      (submit)="edit(task)"
+      [task]="task"
+      btnTitle="Editar Tarefa"
+    ></app-task-form>
+  </div>
+</section>

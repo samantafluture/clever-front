@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 })
 export class EditSprintComponent implements OnInit {
   Date!: Date;
-  sprintId!: number;
+  id!: number;
   sprint$!: Observable<Sprint>;
 
   constructor(
@@ -22,9 +22,9 @@ export class EditSprintComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.sprintId = this.activatedRoute.snapshot.params.sprintId;
-    this.sprint$ = this.sprintService.getSprintById(this.sprintId);
-    console.log(this.sprintId, this.sprint$);
+    this.id = this.activatedRoute.snapshot.params.id;
+    this.sprint$ = this.sprintService.getSprintById(this.id);
+    console.log(this.id, this.sprint$);
   }
 
   cancel() {
@@ -33,7 +33,7 @@ export class EditSprintComponent implements OnInit {
   }
 
   edit(sprint: Sprint): void {
-    this.sprintService.editSprint(sprint, this.sprintId).subscribe(
+    this.sprintService.editSprint(sprint, this.id).subscribe(
       () => {
         console.log('Sprint updated');
         this.location.back();

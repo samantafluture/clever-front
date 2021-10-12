@@ -20,48 +20,65 @@ const routes: Routes = [
     component: CreateProjectComponent,
   },
   {
-    path: '',
-    children: [
-      {
-        path: ':projetoId',
-        component: ViewProjectComponent,
-      },
-      {
-        path: ':projetoId/editar',
-        component: EditProjectComponent,
-      },
-      {
-        path: ':projetoId/novo-sprint',
-        component: CreateSprintComponent,
-      },
-      {
-        path: 'sprint',
-        children: [
-          {
-            path: ':sprintId',
-            component: ViewSprintComponent,
-          },
-          {
-            path: ':sprintId/editar',
-            component: EditSprintComponent,
-          },
-          {
-            path: ':sprintId/nova-tarefa',
-            component: CreateTaskComponent,
-          },
-        ],
-      },
-      {
-        path: 'tarefa',
-        children: [
-          {
-            path: ':tarefaId/editar',
-            component: EditTaskComponent,
-          },
-        ],
-      },
-    ],
+    path: 'projeto/:id',
+    component: ViewProjectComponent,
   },
+  {
+    path: 'projeto/:id/editar',
+    component: EditProjectComponent,
+  },
+  {
+    path: 'projeto/:id/novo-sprint',
+    component: CreateSprintComponent,
+  },
+  {
+    path: 'sprint/:id',
+    component: ViewSprintComponent,
+  },
+  {
+    path: 'sprint/:id/editar',
+    component: EditSprintComponent,
+  },
+  {
+    path: 'sprint/:id/nova-tarefa',
+    component: CreateTaskComponent,
+  },
+  {
+    path: 'tarefa/:id/editar',
+    component: EditTaskComponent,
+  },
+  // {
+  //   path: '',
+  //   children: [
+
+  //     // {
+  //     //   path: 'sprint',
+  //     //   children: [
+  //     //     {
+  //     //       path: ':id',
+  //     //       component: ViewSprintComponent,
+  //     //     },
+  //     //     {
+  //     //       path: ':id/editar',
+  //     //       component: EditSprintComponent,
+  //     //     },
+  //     //     {
+  //     //       path: ':id/nova-tarefa',
+  //     //       component: CreateTaskComponent,
+  //     //     },
+  //     //   ],
+  //     // },
+  //     // {
+  //     //   path: 'tarefa',
+  //     //   children: [
+  //     //     {
+  //     //       path: ':id/editar',
+  //     //       component: EditTaskComponent,
+  //     //     },
+  //     //   ],
+  //     // },
+  //   ],
+  // },
 ];
 
 @NgModule({

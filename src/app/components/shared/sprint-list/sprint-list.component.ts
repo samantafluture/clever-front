@@ -1,3 +1,4 @@
+import { Project } from 'src/app/models/interfaces/project';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Sprint } from 'src/app/models/interfaces/sprint';
@@ -18,6 +19,7 @@ import { SprintService } from '../../features/sprints/sprint.service';
 export class SprintListComponent implements OnInit {
   @Output() clickEvent = new EventEmitter<any>();
   @Input() projectId!: any;
+  @Input() project!: Project;
   sprints: Sprint[] = [];
 
   allSprints$ = this.sprintService
@@ -29,7 +31,7 @@ export class SprintListComponent implements OnInit {
     );
   filteredSprints$ = this.allSprints$.pipe(
     map((sprints) =>
-      sprints.filter((sprint) => filterByProject(sprint, this.projectId))
+      sprints.filter((sprint) => filterByProject(sprint.project?.id, this.projectId))
     )
   );
   toDoSprints$ = this.filteredSprints$.pipe(
@@ -42,12 +44,16 @@ export class SprintListComponent implements OnInit {
     map((sprints) => sprints.filter((sprint) => isDone(sprint)))
   );
 
-  constructor(private sprintService: SprintService) {}
+  constructor(
+    private sprintService: SprintService
+  ) {}
 
   ngOnInit(): void {
     this.toDoSprints$;
     this.inProgressSprints$;
     this.isDoneSprints$;
+    console.log(this.project);
+    console.log(this.project.id);
   }
 
   click() {

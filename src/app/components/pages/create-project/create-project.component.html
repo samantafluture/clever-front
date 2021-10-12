@@ -1,12 +1,13 @@
-<!-- <app-header
-  pageTitle="Novo Projeto"
-  btnTitle="Voltar"
-  (clickEvent)="cancel()"
-></app-header> -->
-
-<app-project-form
-  class="form"
-  (submit)="create(project)"
-  [project]="project"
-  btnTitle="Criar Projeto"
-></app-project-form>
+<section class="create-project">
+  <app-header
+    class="header"
+    pageTitle="Novo Projeto"
+    btnTitle="Voltar"
+    (clickEvent)="cancel()"
+  ></app-header>
+  <app-project-form
+    (submit)="create(project)"
+    [project]="project"
+    btnTitle="Criar Projeto"
+  ></app-project-form>
+</section>

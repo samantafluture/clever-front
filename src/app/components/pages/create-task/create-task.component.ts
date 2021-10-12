@@ -1,7 +1,8 @@
-import { TaskService } from '../../features/tasks/task.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { Observable } from 'rxjs';
+import { SprintService } from '../../features/sprints/sprint.service';
+import { Sprint } from 'src/app/models/interfaces/sprint';
 
 @Component({
   selector: 'app-create-task',
@@ -9,48 +10,17 @@ import { Location } from '@angular/common';
   styleUrls: ['./create-task.component.css'],
 })
 export class CreateTaskComponent implements OnInit {
-  task!: any;
-  Date!: Date;
+  sprint$!: Observable<Sprint>;
+  id!: number;
 
   constructor(
-    private location: Location,
-    private taskService: TaskService
-  ) {
-    this.task = {
-      description: '',
-      isUrgent: false,
-      isDone: false,
-      createdAt: this.Date,
-      dueDate: this.Date,
-    };
-  }
+    private sprintService: SprintService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.task = {
-      description: '',
-      isUrgent: false,
-      isDone: false,
-      createdAt: this.Date,
-      dueDate: this.Date,
-    };
+    this.id = this.activatedRoute.snapshot.params.id;
+    this.sprint$ = this.sprintService.getSprintById(this.id);
   }
-
-  cancel() {
-    this.location.back();
-    return false;
-  }
-
-  create(task: any): void {
-    this.taskService.createTask(task).subscribe(
-      () => {
-        console.log('Task created!', task);
-        this.location.back();
-      },
-      (error) => {
-        console.log(error);
-        this.location.back();
-      }
-    );
-    }
 
 }

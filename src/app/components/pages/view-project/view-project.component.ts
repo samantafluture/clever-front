@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./view-project.component.css'],
 })
 export class ViewProjectComponent implements OnInit {
-  projetoId!: number;
+  id!: number;
   project$!: Observable<Project>;
 
   constructor(
@@ -20,12 +20,13 @@ export class ViewProjectComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.projetoId = this.activatedRoute.snapshot.params.projetoId;
-    this.project$ = this.projectService.getProjectById(this.projetoId);
+    this.id = this.activatedRoute.snapshot.params.id;
+    this.project$ = this.projectService.getProjectById(this.id);
+    console.log(this.id);
   }
 
   remove() {
-    this.projectService.deleteProject(this.projetoId).subscribe(
+    this.projectService.deleteProject(this.id).subscribe(
       () => {
         this.router.navigate(['/projetos/']);
       },
@@ -34,10 +35,10 @@ export class ViewProjectComponent implements OnInit {
   }
 
   newSprint() {
-    this.router.navigate(['/projeto/' + this.projetoId + '/novo-sprint/']);
+    this.router.navigate(['/projeto/' + this.id + '/novo-sprint/']);
   }
 
   edit() {
-    this.router.navigate(['/projeto/' + this.projetoId + '/editar/'])
+    this.router.navigate(['/projeto/' + this.id + '/editar/'])
   }
 }

@@ -1,15 +1,14 @@
-<div *ngIf="project$ | async as project">
-  <!-- <app-header
+<section *ngIf="project$ | async as project" class="view-project">
+  <app-header
+    class="header"
     [pageTitle]="project.title"
     btnTitle="Criar Sprint"
     (clickEvent)="newSprint()"
   >
-  </app-header> -->
+  </app-header>
 
   <div class="actions">
-    <a (click)="edit()"
-      ><i class="fas fa-pencil-alt"></i>Editar</a
-    >
+    <a (click)="edit()"><i class="fas fa-pencil-alt"></i>Editar</a>
     <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
   </div>
 
@@ -20,7 +19,8 @@
   ></app-project-detail>
 
   <app-sprint-list
+    [project]="project"
     [projectId]="project.id"
     (clickEvent)="newSprint()"
   ></app-sprint-list>
-</div>
+</section>

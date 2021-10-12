@@ -12,7 +12,7 @@ import { SprintService } from '../../features/sprints/sprint.service';
 })
 export class ViewSprintComponent implements OnInit {
   @Input() task!: any;
-  sprintId!: number;
+  id!: number;
   sprint$!: Observable<Sprint>;
 
   constructor(
@@ -23,8 +23,8 @@ export class ViewSprintComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.sprintId = this.activatedRoute.snapshot.params.sprintId;
-    this.sprint$ = this.sprintService.getSprintById(this.sprintId);
+    this.id = this.activatedRoute.snapshot.params.id;
+    this.sprint$ = this.sprintService.getSprintById(this.id);
   }
 
   cancel() {
@@ -33,7 +33,7 @@ export class ViewSprintComponent implements OnInit {
   }
 
   remove() {
-    this.sprintService.deleteSprint(this.sprintId).subscribe(
+    this.sprintService.deleteSprint(this.id).subscribe(
       () => {
         this.location.back();
       },
@@ -42,6 +42,6 @@ export class ViewSprintComponent implements OnInit {
   }
 
   newTask() {
-    this.router.navigate(['/sprint/' + this.sprintId + '/nova-tarefa/']);
+    this.router.navigate(['/sprint/' + this.id + '/nova-tarefa/']);
   }
 }

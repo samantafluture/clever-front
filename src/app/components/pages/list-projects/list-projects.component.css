@@ -1,0 +1,13 @@
+.list-projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

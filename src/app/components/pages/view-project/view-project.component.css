@@ -16,12 +16,12 @@ button:hover {
   color: var(--hover);
 }
 
-main .actions {
+section .actions {
   margin: 0 1.5rem;
   position: absolute;
-  top: 3.5%;
+  top: 3%;
   /* left: 37.5% */
-  right: 12%;
+  right: 15%;
 }
 
 .actions > a {
@@ -38,4 +38,14 @@ main .actions {
 
 .actions a:hover {
   color: var(--hover);
+}
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.view-project {
+  position: relative;
 }
