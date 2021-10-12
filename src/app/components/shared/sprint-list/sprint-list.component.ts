@@ -10,6 +10,11 @@ import {
   filterByProject,
 } from 'src/app/utils/filters';
 import { SprintService } from '../../features/sprints/sprint.service';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-sprint-list',
@@ -31,7 +36,9 @@ export class SprintListComponent implements OnInit {
     );
   filteredSprints$ = this.allSprints$.pipe(
     map((sprints) =>
-      sprints.filter((sprint) => filterByProject(sprint.project?.id, this.projectId))
+      sprints.filter((sprint) =>
+        filterByProject(sprint.project?.id, this.projectId)
+      )
     )
   );
   toDoSprints$ = this.filteredSprints$.pipe(
@@ -44,9 +51,7 @@ export class SprintListComponent implements OnInit {
     map((sprints) => sprints.filter((sprint) => isDone(sprint)))
   );
 
-  constructor(
-    private sprintService: SprintService
-  ) {}
+  constructor(private sprintService: SprintService) {}
 
   ngOnInit(): void {
     this.toDoSprints$;
@@ -58,5 +63,22 @@ export class SprintListComponent implements OnInit {
 
   click() {
     this.clickEvent.emit();
+  }
+
+  drop(event: CdkDragDrop<any[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
   }
 }
