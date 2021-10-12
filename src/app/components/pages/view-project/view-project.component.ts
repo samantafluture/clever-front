@@ -1,7 +1,7 @@
-import { Project } from 'src/app/interfaces/project';
+import { Project } from 'src/app/models/interfaces/project';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProjectService } from '../../projects/project.service';
+import { ProjectService } from '../../features/projects/project.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -22,6 +22,7 @@ export class ViewProjectComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params.id;
     this.project$ = this.projectService.getProjectById(this.id);
+    console.log(this.id);
   }
 
   remove() {
@@ -35,5 +36,9 @@ export class ViewProjectComponent implements OnInit {
 
   newSprint() {
     this.router.navigate(['/projeto/' + this.id + '/novo-sprint/']);
+  }
+
+  edit() {
+    this.router.navigate(['/projeto/' + this.id + '/editar/'])
   }
 }

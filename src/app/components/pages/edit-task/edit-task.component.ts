@@ -1,9 +1,8 @@
-import { TaskService } from './../../tasks/task.service';
+import { TaskService } from '../../features/tasks/task.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Task } from 'src/app/interfaces/task';
 
 @Component({
   selector: 'app-edit-task',

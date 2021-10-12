@@ -1,14 +1,13 @@
-aside {
-  float: left;
-  width: 20%;
-  position: fixed;
-  background-color: var(--bg-light);
-  z-index: 2;
-}
-
-main {
+.list-projects {
   display: flex;
   flex-direction: column;
-  float: right;
-  width: 80%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

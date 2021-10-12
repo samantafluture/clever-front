@@ -1,19 +1,13 @@
-<header>
+<section class="create-project">
   <app-header
+    class="header"
     pageTitle="Novo Projeto"
     btnTitle="Voltar"
     (clickEvent)="cancel()"
   ></app-header>
-</header>
-
-<aside>
-  <app-sidebar></app-sidebar>
-</aside>
-
-<main class="form">
   <app-project-form
     (submit)="create(project)"
     [project]="project"
     btnTitle="Criar Projeto"
   ></app-project-form>
-</main>
+</section>

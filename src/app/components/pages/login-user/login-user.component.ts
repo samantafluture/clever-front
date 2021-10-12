@@ -1,8 +1,8 @@
-import { UsersService } from './../../users/users.service';
+import { UsersService } from '../../features/users/users.service';
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/interfaces/user';
+import { User } from 'src/app/models/interfaces/user';
 import { Router } from '@angular/router';
-import { Role } from 'src/app/enums/role';
+import { Role } from 'src/app/models/enums/role';
 
 @Component({
   selector: 'app-login-user',

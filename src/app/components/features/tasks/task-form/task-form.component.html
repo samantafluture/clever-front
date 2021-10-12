@@ -1,0 +1,114 @@
+<form #taskForm="ngForm">
+  <div class="fieldset">
+    <div class="fieldset__infos">
+      <div class="info">
+        <label for="description">Tarefa</label>
+        <textarea
+          [(ngModel)]="task.description"
+          #description="ngModel"
+          type="description"
+          placeholder="Descrição da tarefa"
+          id="description"
+          name="description"
+          rows="5"
+          required
+          minlength="3"
+          maxlength="500"
+        ></textarea>
+        <div class="alert" [hidden]="description.valid || description.pristine">
+          Tarefa é obrigatório e deve ter de 3 a 500 caracteres
+        </div>
+      </div>
+      <div class="info">
+        <label for="date">Data de entrega</label>
+        <input
+          [(ngModel)]="task.dueDate"
+          #dueDate="ngModel"
+          type="date"
+          placeholder="Data de término"
+          id="dueDate"
+          name="dueDate"
+          required
+        />
+        <div class="alert" [hidden]="dueDate.valid || dueDate.pristine">
+          Data de entrega é obrigatória
+        </div>
+      </div>
+      <!-- <div class="info select__status" *ngIf="sprint$ | async as sprint">
+        Sprint atual
+        <select name="sprint" id="sprint" [(ngModel)]="task.sprint">
+          <option [value]="sprint.title" selected>
+            {{ sprint.title }}
+          </option>
+        </select>
+        <span><i class="fas fa-chevron-down"></i></span>
+      </div> -->
+      <div class="form-message">
+        <span class="alert"
+          ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
+          obrigatórios</span
+        >
+      </div>
+    </div>
+    <div class="fieldset__members">
+      <label for="members">Atribua a tarefa a um membro</label>
+      <div class="members__search">
+        <span><i class="fas fa-search"></i></span>
+        <input
+          [(ngModel)]="task.assignedMember"
+          #assignedMember="ngModel"
+          type="search"
+          placeholder="Busque por membros para selecionar"
+          id="assignedMember"
+          name="assignedMember"
+        />
+      </div>
+      <div class="members__selected">
+        <h3>Membro responsável</h3>
+        <div class="members">
+          <div class="member">
+            <img src="https://github.com/samantafluture.png" />
+            <p>Nome do membro da equipe</p>
+            <span><i class="fas fa-times"></i></span>
+          </div>
+        </div>
+      </div>
+      <label class="urgent__check"
+        >Marcar tarefa como urgente
+        <input
+          [(ngModel)]="task.isUrgent"
+          #isUrgent="ngModel"
+          type="checkbox"
+          checked="false"
+          id="isUrgent"
+          name="isUrgent"
+        />
+        <span class="checkmark"></span>
+      </label>
+      <label class="urgent__check"
+        >Marcar tarefa como feita
+        <input
+          [(ngModel)]="task.isDone"
+          #isDone="ngModel"
+          type="checkbox"
+          checked="false"
+          id="isDone"
+          name="isDone"
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="fieldset__btns">
+      <div class="form-btn">
+        <button class="btn-cancel" (click)="cancel()">Cancelar</button>
+        <button
+          class="btn-submit"
+          type="submit"
+          [disabled]="!taskForm.form.valid"
+        >
+          {{ btnTitle }}
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Sprint } from 'src/app/interfaces/sprint';
-import { SprintService } from '../../sprints/sprint.service';
+import { Sprint } from 'src/app/models/interfaces/sprint';
+import { SprintService } from '../../features/sprints/sprint.service';
 import { Location } from '@angular/common';
 
 @Component({

@@ -1,38 +1,33 @@
-<div *ngIf="sprint$ | async as sprint">
+<section *ngIf="sprint$ | async as sprint" class="view-sprint">
   <app-header
+    class="header"
     [pageTitle]="sprint.title"
     btnTitle="Voltar"
     (clickEvent)="cancel()"
   ></app-header>
 
-  <aside>
-    <app-sidebar></app-sidebar>
-  </aside>
+  <div class="actions">
+    <a [routerLink]="['/sprint/' + sprint.id + '/editar/']">
+      <i class="fas fa-pencil-alt"></i>Editar</a
+    >
+    <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
+  </div>
 
-  <main>
-    <div class="actions">
-      <a [routerLink]="['/sprint/' + sprint.id + '/editar/']">
-        <i class="fas fa-pencil-alt"></i>Editar</a
-      >
-      <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
+  <app-sprint-detail
+    [description]="sprint.description"
+    [projectName]="sprint.project?.title"
+    [status]="sprint.status"
+    [dueDate]="sprint.dueDate"
+  ></app-sprint-detail>
+
+  <section class="tasks__list">
+    <div class="tasks__header">
+      <app-divider dividerTitle="Tarefas do Sprint"></app-divider>
+      <app-btn-border
+        btnTitle="Criar Tarefa"
+        (click)="newTask()"
+      ></app-btn-border>
     </div>
-
-    <app-sprint-detail
-      [description]="sprint.description"
-      [projectName]="sprint.project?.title"
-      [status]="sprint.status"
-      [dueDate]="sprint.dueDate"
-    ></app-sprint-detail>
-
-    <section class="tasks__list">
-      <div class="tasks__header">
-        <app-divider dividerTitle="Tarefas do Sprint"></app-divider>
-        <app-btn-border
-          btnTitle="Criar Tarefa"
-          (click)="newTask()"
-        ></app-btn-border>
-      </div>
-      <app-task-list [sprintId]="sprint.id"></app-task-list>
-    </section>
-  </main>
-</div>
+    <app-task-list [sprint]="sprint" [sprintId]="sprint.id"></app-task-list>
+  </section>
+</section>

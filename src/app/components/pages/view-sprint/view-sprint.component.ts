@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
-import { Sprint } from 'src/app/interfaces/sprint';
-import { SprintService } from '../../sprints/sprint.service';
+import { Sprint } from 'src/app/models/interfaces/sprint';
+import { SprintService } from '../../features/sprints/sprint.service';
 
 @Component({
   selector: 'app-view-sprint',
@@ -26,7 +26,7 @@ export class ViewSprintComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.params.id;
     this.sprint$ = this.sprintService.getSprintById(this.id);
   }
-  
+
   cancel() {
     this.location.back();
     return false;

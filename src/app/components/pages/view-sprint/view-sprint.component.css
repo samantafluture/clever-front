@@ -1,31 +1,14 @@
-aside {
-  float: left;
-  width: 20%;
-  position: fixed;
-  background-color: var(--bg-light);
-  z-index: 2;
-}
-
-app-header {
-  cursor: pointer;
-}
-
-main {
-  float: right;
-  width: 80%;
-}
-
 .tasks__list {
   /* border-top: 1px solid var(--border-light); */
   margin: 0;
 }
 
-main .actions {
+section .actions {
   margin: 0 1.5rem;
   position: absolute;
-  top: 3.5%;
+  top: 6%;
   /* left: 37.5% */
-  right: 9%;
+  right: 10%;
 }
 
 .actions > a {
@@ -62,4 +45,14 @@ main .actions {
 
 .tasks__list {
   margin-bottom: 2rem;
+}
+
+.view-sprint {
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

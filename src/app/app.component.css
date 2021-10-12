@@ -1,0 +1,15 @@
+aside {
+  float: left;
+  width: 20%;
+  position: fixed;
+  background-color: var(--bg-light);
+  z-index: 2;
+}
+
+main {
+  /* display: flex; */
+  /* flex-direction: column; */
+  float: right;
+  width: 80%;
+}
+

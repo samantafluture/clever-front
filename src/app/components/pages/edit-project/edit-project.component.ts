@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from 'src/app/interfaces/project';
+import { Project } from 'src/app/models/interfaces/project';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
-import { ProjectService } from '../../projects/project.service';
+import { ProjectService } from '../../features/projects/project.service';
 
 @Component({
   selector: 'app-edit-project',

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AppRoutingModule } from 'src/app/app-routing.module';
 import { LogoComponent } from './sidebar/logo/logo.component';
 import { HeaderComponent } from './header/header.component';
 import { CardItemComponent } from './card/card-item/card-item.component';
@@ -17,8 +16,15 @@ import { CardTasksComponent } from './card/card-tasks/card-tasks.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardSprintComponent } from './card/card-sprint/card-sprint.component';
 import { CalendarComponent } from './graphics/calendar/calendar.component';
+import { ProjectListComponent } from './project-list/project-list.component';
+import { SprintListComponent } from './sprint-list/sprint-list.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { ProjectComponent } from './project/project.component';
+import { SprintComponent } from './sprint/sprint.component';
+import { TaskComponent } from './task/task.component';
+import { ProjectsRoutingModule } from '../features/projects/projects-routing.module';
 
-@NgModule({ 
+@NgModule({
   declarations: [
     SidebarComponent,
     LogoComponent,
@@ -35,8 +41,19 @@ import { CalendarComponent } from './graphics/calendar/calendar.component';
     CardTasksComponent,
     CardSprintComponent,
     CalendarComponent,
+    ProjectListComponent,
+    SprintListComponent,
+    TaskListComponent,
+    ProjectComponent,
+    SprintComponent,
+    TaskComponent,
   ],
-  imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ProjectsRoutingModule
+  ],
   exports: [
     SidebarComponent,
     LogoComponent,
@@ -52,7 +69,13 @@ import { CalendarComponent } from './graphics/calendar/calendar.component';
     AreaComponent,
     CardTasksComponent,
     CardSprintComponent,
-    CalendarComponent
+    CalendarComponent,
+    ProjectListComponent,
+    SprintListComponent,
+    TaskListComponent,
+    ProjectComponent,
+    SprintComponent,
+    TaskComponent,
   ],
 })
 export class SharedModule {}

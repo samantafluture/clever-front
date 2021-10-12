@@ -1,0 +1,14 @@
+<section class="create-sprint">
+  <app-header
+    class="header"
+    pageTitle="Novo Sprint"
+    btnTitle="Voltar"
+    (clickEvent)="cancel()"
+  ></app-header>
+  <app-sprint-form
+    (submit)="create(sprint)"
+    [sprint]="sprint"
+    [project]="project"
+    btnTitle="Criar Sprint"
+  ></app-sprint-form>
+</section>

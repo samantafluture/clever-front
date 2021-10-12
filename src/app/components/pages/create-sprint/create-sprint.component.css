@@ -1,22 +1,6 @@
-aside {
-  float: left;
-  width: 20%;
-  position: fixed;
-  background-color: var(--bg-light);
-  z-index: 2;
-}
-
-app-header {
-  cursor: pointer;
-}
-
-main {
-  float: right;
-  width: 80%;
-}
-
-.form {
+.header {
+  width: 100%;
   margin: 0;
-  padding: 0 2rem 2rem 2rem;
-  height: 100%;
+  padding: 0;
 }
+
