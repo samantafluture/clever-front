@@ -1,0 +1,39 @@
+section {
+  min-height: 100vh;
+  background-color: var(--bg-ligh);
+}
+
+.loader {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  margin-top: -36.6666666667px;
+  margin-left: -36.6666666667px;
+  width: 73.3333333333px;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  left: 26.6666666667px;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: -26.6666666667px 0 0 0 var(--hover),
+    26.6666666667px 0 0 0 var(--hover);
+  animation: alter 1s ease-in-out infinite;
+}
+
+@keyframes alter {
+  0%,
+  100% {
+    background-color: rgba(55, 84, 219, 0.5);
+    box-shadow: -26.6666666667px 0 0 0 var(--hover),
+      26.6666666667px 0 0 0 var(--hover);
+  }
+  50% {
+    background-color: var(--hover);
+    box-shadow: 0 0 0 0 rgba(55, 84, 219, 0.5), 0 0 0 0 rgba(55, 84, 219, 0.5);
+  }
+}
