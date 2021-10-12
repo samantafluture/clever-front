@@ -23,6 +23,7 @@ import { ProjectComponent } from './project/project.component';
 import { SprintComponent } from './sprint/sprint.component';
 import { TaskComponent } from './task/task.component';
 import { ProjectsRoutingModule } from '../features/projects/projects-routing.module';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ProjectsRoutingModule } from '../features/projects/projects-routing.mod
     ProjectComponent,
     SprintComponent,
     TaskComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,
@@ -76,6 +78,7 @@ import { ProjectsRoutingModule } from '../features/projects/projects-routing.mod
     ProjectComponent,
     SprintComponent,
     TaskComponent,
+    LoaderComponent
   ],
 })
 export class SharedModule {}
