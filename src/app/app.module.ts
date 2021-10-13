@@ -10,6 +10,7 @@ import { SharedModule } from './components/shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { TasksModule } from './components/features/tasks/tasks.module';
 import { DashboardModule } from './components/features/dashboard/dashboard.module';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { DashboardModule } from './components/features/dashboard/dashboard.modul
     TasksModule,
     UsersModule,
     DashboardModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

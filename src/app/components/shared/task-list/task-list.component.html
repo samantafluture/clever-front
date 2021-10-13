@@ -1,5 +1,10 @@
-<div *ngIf="filteredTasks$ | async as tasks; else empty">
-  <div *ngFor="let task of tasks">
+<div
+  *ngIf="filteredTasks$ | async as tasks; else empty"
+  cdkDropList
+  [cdkDropListData]="tasks"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div *ngFor="let task of tasks" cdkDrag>
     <app-task
       [task]="task"
       [description]="task.description"

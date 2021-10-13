@@ -1,56 +1,62 @@
-<section class="project__boards">
+<section class="project__boards" cdkDropListGroup>
   <div
     class="board board--todo"
-    *ngIf="toDoSprints$ | async as sprints; else empty"
+    *ngIf="toDoSprints$ | async as toDoSprints; else empty"
+    cdkDropList
+    [cdkDropListData]="toDoSprints"
+    (cdkDropListDropped)="drop($event)"
   >
     <div class="board__header">
       <h3>A Fazer</h3>
       <a (click)="click()"><i class="fas fa-plus-circle"></i></a>
     </div>
-    <div class="board__body" *ngFor="let sprint of sprints">
-      <a routerLink="/sprint/{{ sprint.id }}">
-        <app-sprint
-          [title]="sprint.title"
-          [description]="sprint.description"
-          [dueDate]="sprint.dueDate"
-        ></app-sprint>
-      </a>
+    <div class="board__body" *ngFor="let sprint of toDoSprints" cdkDrag>
+      <app-sprint
+        [title]="sprint.title"
+        [description]="sprint.description"
+        [dueDate]="sprint.dueDate"
+        [id]="sprint.id"
+      ></app-sprint>
     </div>
   </div>
   <div
     class="board board--doing"
-    *ngIf="inProgressSprints$ | async as sprints; else empty"
+    *ngIf="inProgressSprints$ | async as inProgressSprints; else empty"
+    cdkDropList
+    [cdkDropListData]="inProgressSprints"
+    (cdkDropListDropped)="drop($event)"
   >
     <div class="board__header">
       <h3>Fazendo</h3>
       <a (click)="click()"><i class="fas fa-plus-circle"></i></a>
     </div>
-    <div class="board__body" *ngFor="let sprint of sprints">
-      <a routerLink="/sprint/{{ sprint.id }}">
-        <app-sprint
-          [title]="sprint.title"
-          [description]="sprint.description"
-          [dueDate]="sprint.dueDate"
-        ></app-sprint>
-      </a>
+    <div class="board__body" *ngFor="let sprint of inProgressSprints" cdkDrag>
+      <app-sprint
+        [title]="sprint.title"
+        [description]="sprint.description"
+        [dueDate]="sprint.dueDate"
+        [id]="sprint.id"
+      ></app-sprint>
     </div>
   </div>
   <div
     class="board board--done"
-    *ngIf="isDoneSprints$ | async as sprints; else empty"
+    *ngIf="isDoneSprints$ | async as isDoneSprints; else empty"
+    cdkDropList="isDone"
+    [cdkDropListData]="isDoneSprints"
+    (cdkDropListDropped)="drop($event)"
   >
     <div class="board__header">
       <h3>Feito</h3>
       <a (click)="click()"><i class="fas fa-plus-circle"></i></a>
     </div>
-    <div class="board__body" *ngFor="let sprint of sprints">
-      <a routerLink="/sprint/{{ sprint.id }}">
-        <app-sprint
-          [title]="sprint.title"
-          [description]="sprint.description"
-          [dueDate]="sprint.dueDate"
-        ></app-sprint>
-      </a>
+    <div class="board__body" *ngFor="let sprint of isDoneSprints" cdkDrag>
+      <app-sprint
+        [title]="sprint.title"
+        [description]="sprint.description"
+        [dueDate]="sprint.dueDate"
+        [id]="sprint.id"
+      ></app-sprint>
     </div>
   </div>
 </section>

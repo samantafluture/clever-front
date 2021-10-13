@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sprint',
@@ -10,8 +9,9 @@ export class SprintComponent implements OnInit {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() dueDate!: Date;
+  @Input() id!: any;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {}
 

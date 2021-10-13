@@ -3,6 +3,7 @@ import { TaskService } from '../../features/tasks/task.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { filterBySprint, sortByDueDate } from 'src/app/utils/filters';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-task-list',
@@ -30,5 +31,22 @@ export class TaskListComponent implements OnInit {
 
   ngOnInit(): void {
     this.filteredTasks$;
+  }
+
+  drop(event: CdkDragDrop<any[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
   }
 }

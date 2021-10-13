@@ -24,6 +24,7 @@ import { SprintComponent } from './sprint/sprint.component';
 import { TaskComponent } from './task/task.component';
 import { ProjectsRoutingModule } from '../features/projects/projects-routing.module';
 import { LoaderComponent } from './loader/loader.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { LoaderComponent } from './loader/loader.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ProjectsRoutingModule
+    ProjectsRoutingModule,
+    DragDropModule
   ],
   exports: [
     SidebarComponent,

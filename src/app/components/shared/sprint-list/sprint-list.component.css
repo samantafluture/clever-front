@@ -39,7 +39,6 @@
 
 .board--todo {
   background-color: var(--alert-red);
-
 }
 
 .board--doing {
@@ -59,3 +58,6 @@
   color: var(--hover);
   cursor: pointer;
 }
+
+
+
