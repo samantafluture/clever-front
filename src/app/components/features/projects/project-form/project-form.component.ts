@@ -39,6 +39,8 @@ export class ProjectFormComponent implements OnInit {
       role: Role.MEMBER,
     },
   ];
+  members: any[] = [];
+
   filteredOptions!: Observable<User[]>;
 
   constructor(private location: Location) {}
@@ -70,5 +72,12 @@ export class ProjectFormComponent implements OnInit {
 
   remove() {
     this.memberElement.nativeElement.remove();
+  }
+
+  addMember(member: any) {
+    if (member) {
+      this.members.push(member);
+    }
+    return false;
   }
 }

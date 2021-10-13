@@ -10,6 +10,7 @@ import { CreateTaskComponent } from '../../pages/create-task/create-task.compone
 import { EditTaskComponent } from '../../pages/edit-task/edit-task.component';
 import { ProjectsRoutingModule } from '../projects/projects-routing.module';
 import { NewTaskComponent } from '../../pages/create-task/new-task/new-task.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NewTaskComponent } from '../../pages/create-task/new-task/new-task.comp
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
     FormsModule,
     ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   exports: [
     TaskFormComponent,
