@@ -1,10 +1,11 @@
 <app-card-grid *ngIf="sortedProjects$ | async as projects; else empty">
-  <div *ngFor="let project of (showAll ? projects : projects.slice(0,3))">
+  <div *ngFor="let project of showAll ? projects : projects.slice(0, 3)">
     <a routerLink="/projeto/{{ project.id }}">
       <app-project
         [title]="project.title"
         [description]="project.description"
         [dueDate]="project.dueDate"
+        [progress]="project.progress"
       ></app-project>
     </a>
   </div>

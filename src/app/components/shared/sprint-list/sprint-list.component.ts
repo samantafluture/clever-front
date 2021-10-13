@@ -1,5 +1,11 @@
 import { Project } from 'src/app/models/interfaces/project';
-import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Sprint } from 'src/app/models/interfaces/sprint';
 import {
@@ -15,24 +21,17 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { NgProgressComponent } from 'ngx-progressbar';
 
 @Component({
   selector: 'app-sprint-list',
   templateUrl: './sprint-list.component.html',
   styleUrls: ['./sprint-list.component.css'],
 })
-export class SprintListComponent implements OnInit, AfterViewInit {
+export class SprintListComponent implements OnInit {
   @Output() clickEvent = new EventEmitter<any>();
   @Input() projectId!: any;
   @Input() project!: Project;
   sprints: Sprint[] = [];
-
-  @ViewChild(NgProgressComponent) progressBar!: NgProgressComponent;
-
-  ngAfterViewInit() {
-    this.progressBar.set(40);
-  }
 
   allSprints$ = this.sprintService
     .getSprints()
@@ -88,5 +87,4 @@ export class SprintListComponent implements OnInit, AfterViewInit {
       );
     }
   }
-
 }

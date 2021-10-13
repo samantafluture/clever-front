@@ -30,7 +30,9 @@ import { NgProgressModule } from 'ngx-progressbar';
     NgProgressModule.withConfig({
       spinner: false,
       meteor: false,
-      fixed: false
+      fixed: false,
+      speed: 10,
+      trickleSpeed: 10
     }),
   ],
   providers: [],

@@ -67,7 +67,7 @@ a {
 .ng-progress-bar {
   /* border: 1px solid blue; */
   position: absolute !important;
-  transition: none !important;;
+  transition: none !important;
   z-index: 1 !important;
   box-shadow: none !important;
   border-radius: 6px !important;

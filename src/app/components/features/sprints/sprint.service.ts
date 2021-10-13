@@ -2,13 +2,14 @@ import { Sprints, Sprint } from 'src/app/models/interfaces/sprint';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
+import { isDone, isInProgress, isToDo } from 'src/app/utils/filters';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SprintService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   private sprintsUrl = 'api/sprints';
 
@@ -19,6 +20,24 @@ export class SprintService {
         return throwError(error);
       })
     );
+  }
+
+  getTodoSprints(): Observable<Sprints> {
+    return this.http
+      .get<Sprints>(this.sprintsUrl)
+      .pipe(map((sprints) => sprints.filter((sprint) => isToDo(sprint))));
+  }
+
+  getDoneSprints(): Observable<Sprints> {
+    return this.http
+      .get<Sprints>(this.sprintsUrl)
+      .pipe(map((sprints) => sprints.filter((sprint) => isDone(sprint))));
+  }
+
+  getInProgressSprints(): Observable<Sprints> {
+    return this.http
+      .get<Sprints>(this.sprintsUrl)
+      .pipe(map((sprints) => sprints.filter((sprint) => isInProgress(sprint))));
   }
 
   getSprintById(id: number): Observable<Sprint> {
@@ -49,5 +68,4 @@ export class SprintService {
       })
     );
   }
-
 }
