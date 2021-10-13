@@ -12,6 +12,7 @@ import { TasksModule } from './components/features/tasks/tasks.module';
 import { DashboardModule } from './components/features/dashboard/dashboard.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgProgressModule } from 'ngx-progressbar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,8 +33,9 @@ import { NgProgressModule } from 'ngx-progressbar';
       meteor: false,
       fixed: false,
       speed: 10,
-      trickleSpeed: 10
+      trickleSpeed: 10,
     }),
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
