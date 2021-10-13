@@ -6,8 +6,11 @@
   <div class="card__progress">
     <div class="progress-bar"></div>
   </div>
+  <ng-progress></ng-progress>
   <div class="card__details">
-    <span><i class="fas fa-clock"></i>Prazo: {{ dueDate | date: 'dd/MM/yy' }}</span>
+    <span
+      ><i class="fas fa-clock"></i>Prazo: {{ dueDate | date: "dd/MM/yy" }}</span
+    >
     <img src="https://hostmyimg.s3.amazonaws.com/members.png" />
   </div>
 </app-card-wrapper>

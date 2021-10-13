@@ -59,3 +59,21 @@ a {
 .charts-css.area tbody tr td:nth-of-type(10n+2)::before {
   background-color: var(--alert-yellow);
 }
+
+.ng-progress-bar {
+  transition: none !important;;
+  z-index: 0 !important;
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}
+
+.ng-bar-placeholder {
+  height: 10px !important;
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}
+
+.ng-bar {
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}

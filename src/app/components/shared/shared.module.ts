@@ -25,6 +25,7 @@ import { TaskComponent } from './task/task.component';
 import { ProjectsRoutingModule } from '../features/projects/projects-routing.module';
 import { LoaderComponent } from './loader/loader.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NgProgressModule } from 'ngx-progressbar';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,12 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FormsModule,
     ReactiveFormsModule,
     ProjectsRoutingModule,
-    DragDropModule
+    DragDropModule,
+    NgProgressModule.withConfig({
+      spinner: false,
+      meteor: false,
+      fixed: false
+    }),
   ],
   exports: [
     SidebarComponent,
@@ -80,7 +86,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     ProjectComponent,
     SprintComponent,
     TaskComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
 })
 export class SharedModule {}
