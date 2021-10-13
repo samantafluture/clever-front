@@ -1,18 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { NgProgressComponent } from 'ngx-progressbar';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styleUrls: ['./project.component.css'],
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent implements OnInit, AfterViewInit {
   @Input() title!: string;
   @Input() description!: string;
   @Input() dueDate!: Date;
+  @ViewChild(NgProgressComponent) progressBar!: NgProgressComponent;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngAfterViewInit() {
+    this.progressBar.set(50);
   }
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }
