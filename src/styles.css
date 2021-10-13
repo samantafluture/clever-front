@@ -59,3 +59,29 @@ a {
 .charts-css.area tbody tr td:nth-of-type(10n+2)::before {
   background-color: var(--alert-yellow);
 }
+
+/* ng-progress {
+  border: 1px solid red;
+} */
+
+.ng-progress-bar {
+  /* border: 1px solid blue; */
+  position: absolute !important;
+  transition: none !important;
+  z-index: 1 !important;
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}
+
+.ng-bar-placeholder {
+  /* border: 1px solid green; */
+  height: 10px !important;
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}
+
+.ng-bar {
+  /* border: 1px solid black; */
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}

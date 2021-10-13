@@ -1,5 +1,11 @@
 import { Project } from 'src/app/models/interfaces/project';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Sprint } from 'src/app/models/interfaces/sprint';
 import {
@@ -81,5 +87,4 @@ export class SprintListComponent implements OnInit {
       );
     }
   }
-
 }

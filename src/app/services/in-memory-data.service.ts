@@ -2,6 +2,7 @@ import { Status } from 'src/app/models/enums/status';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Role } from 'src/app/models/enums/role';
+import { Progress } from '../models/enums/progress';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Uma nova virtual da marca será lançada, focada no público feminino',
         dueDate: "2021-10-10",
         createdAt: Date.now,
+        progress: Progress.TO_DO
       },
       {
         id: 2,
@@ -22,6 +24,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Novo banco de dados e servidor',
         dueDate: "2021-10-05",
         createdAt: Date.now,
+        progress: Progress.IN_PROGRESS
       },
       {
         id: 3,
@@ -29,6 +32,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Nova ferramenta para ajudar no disparo de emails de marketing',
         dueDate: "2021-11-21",
         createdAt: Date.now,
+        progress: Progress.DONE
       },
     ];
     const sprints = [

@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { TasksModule } from './components/features/tasks/tasks.module';
 import { DashboardModule } from './components/features/dashboard/dashboard.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NgProgressModule } from 'ngx-progressbar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +28,14 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     UsersModule,
     DashboardModule,
     DragDropModule,
+    NgProgressModule.withConfig({
+      spinner: false,
+      meteor: false,
+      fixed: false,
+      speed: 10,
+      trickleSpeed: 10,
+    }),
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

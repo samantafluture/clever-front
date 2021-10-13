@@ -4,10 +4,12 @@
     <p>{{ description }}</p>
   </div>
   <div class="card__progress">
-    <div class="progress-bar"></div>
+    <ng-progress [color]="color" [max]="progress"></ng-progress>
   </div>
   <div class="card__details">
-    <span><i class="fas fa-clock"></i>Prazo: {{ dueDate | date: 'dd/MM/yy' }}</span>
+    <span
+      ><i class="fas fa-clock"></i>Prazo: {{ dueDate | date: "dd/MM/yy" }}</span
+    >
     <img src="https://hostmyimg.s3.amazonaws.com/members.png" />
   </div>
 </app-card-wrapper>

@@ -53,23 +53,29 @@
     <div class="fieldset__members">
       <label for="members">Atribua a tarefa a um membro</label>
       <div class="members__search">
-        <span><i class="fas fa-search"></i></span>
         <input
           [(ngModel)]="task.assignedMember"
-          #assignedMember="ngModel"
           type="search"
           placeholder="Busque por membros para selecionar"
           id="assignedMember"
           name="assignedMember"
+          [matAutocomplete]="auto"
+          [formControl]="myControl"
+          #member
         />
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
       </div>
       <div class="members__selected">
         <h3>Membro responsável</h3>
         <div class="members">
-          <div class="member">
-            <img src="https://github.com/samantafluture.png" />
-            <p>Nome do membro da equipe</p>
-            <span><i class="fas fa-times"></i></span>
+          <div class="member" *ngIf="member.value; else empty" #memberItem>
+            <img src="https://i.pravatar.cc/300" />
+            <p>{{ member.value }}</p>
+            <span><a (click)="remove()"><i class="fas fa-times"></i></a></span>
           </div>
         </div>
       </div>
@@ -112,3 +118,6 @@
     </div>
   </div>
 </form>
+<ng-template #empty>
+  <p class="empty">Ainda não há membros adicionados...</p>
+</ng-template>

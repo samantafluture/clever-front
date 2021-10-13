@@ -26,14 +26,15 @@
   margin: 0.5rem 1rem;
 }
 
-.card__progress div {
+.card__progress ng-progress {
   height: 10px;
-  width: 80%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 6px;
-  background-color: var(--alert-green);
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .card__details {

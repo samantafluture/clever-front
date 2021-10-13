@@ -321,3 +321,8 @@ i {
   cursor: pointer;
 }
 
+.empty {
+  color: var(--subtitle-light);
+  text-align: left;
+  margin-left: 0;
+}

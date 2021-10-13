@@ -10,7 +10,9 @@ import { sortByDueDate } from 'src/app/utils/filters';
   styleUrls: ['./project-list.component.css'],
 })
 export class ProjectListComponent implements OnInit {
+  project!: Project;
   projects: Project[] = [];
+  progress!: number;
   @Input() showAll = true;
 
   allProjects$ = this.projectService.getProjects();
@@ -24,5 +26,7 @@ export class ProjectListComponent implements OnInit {
 
   ngOnInit(): void {
     this.sortedProjects$;
+    this.progress = 85;
   }
+
 }

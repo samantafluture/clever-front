@@ -6,13 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { InMemoryDataService } from '../../../services/in-memory-data.service';
 import { ProjectFormComponent } from './project-form/project-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectsRoutingModule } from './projects-routing.module';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { ProjectsRoutingModule } from './projects-routing.module';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   exports: [
     ProjectDetailComponent,

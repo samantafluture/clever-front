@@ -23,6 +23,7 @@ export class CreateProjectComponent implements OnInit {
       description: '',
       dueDate: this.Date,
       createdAt: this.Date,
+      progress: 20
     };
   }
 
@@ -32,6 +33,7 @@ export class CreateProjectComponent implements OnInit {
       description: '',
       dueDate: this.Date,
       createdAt: this.Date,
+      progress: 20
     };
   }
 
