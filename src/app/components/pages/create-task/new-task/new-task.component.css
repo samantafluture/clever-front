@@ -1,0 +1,18 @@
+.create-task h2 {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .create-task h2 {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    text-align: left;
+  }
+}

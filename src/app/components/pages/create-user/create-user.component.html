@@ -1,10 +1,16 @@
-<header>
-  <h1>Novo Usuário</h1>
-</header>
-<main>
-  <app-signup-form
-    btnTitle="Criar Usuário"
-    (submit)="create(user)"
-    [user]="user"
-  ></app-signup-form>
-</main>
+<section class="create-user">
+  <app-header
+    class="header"
+    pageTitle="Novo Usuário"
+    btnTitle="Voltar"
+    (clickEvent)="cancel()"
+  ></app-header>
+  <h2>Criar Novo Usuário</h2>
+  <main>
+    <app-signup-form
+      btnTitle="Criar Usuário"
+      (submit)="create(user)"
+      [user]="user"
+    ></app-signup-form>
+  </main>
+</section>
