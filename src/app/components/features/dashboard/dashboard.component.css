@@ -3,10 +3,12 @@
   flex-direction: column;
   max-width: 100vw;
   justify-content: space-between;
+  margin: 0;
 }
 
 .projects {
-  margin: 0 2rem;
+  margin: 0 2rem 0 2rem;
+  max-width: 100vw;
 }
 
 .header {
@@ -31,6 +33,10 @@ i {
 }
 
 @media (max-width: 768px) {
+  .header {
+    width: 100vw;
+  }
+
   .dashboard {
     display: flex;
     flex-direction: column;
@@ -56,9 +62,8 @@ i {
   }
 
   .projects {
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-    width: 100vw;
+    margin: 0 0 2rem 1rem;
+    max-width: 100vw;
     overflow-x: scroll;
   }
 
