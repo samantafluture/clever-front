@@ -41,6 +41,7 @@ header .menu-mobile {
 @media (max-width: 768px) {
   header {
     justify-content: space-between;
+    margin-bottom: 1.5rem;
   }
 
   header h1 {
@@ -58,12 +59,13 @@ header .menu-mobile {
 
   i {
     color: var(--color-light);
-    font-size: 24px;
+    font-size: 1.25rem;
     padding-left: 1rem;
   }
 
   header a {
     padding: 0.25rem 1rem;
     margin: 0.5rem 1rem 0.5rem 0;
+    font-weight: 400;
   }
 }

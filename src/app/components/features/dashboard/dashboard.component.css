@@ -24,3 +24,43 @@
 i {
   margin-right: 0.5rem;
 }
+
+.dashboard h2 {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .dashboard h2 {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+  }
+
+  .dashboard .btn {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+
+  .projects {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    width: 100vw;
+    overflow-x: scroll;
+  }
+
+}
