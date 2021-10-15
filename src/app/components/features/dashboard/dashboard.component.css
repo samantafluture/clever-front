@@ -3,7 +3,10 @@
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+}
+
+.projects {
+  margin: 0 2rem;
 }
 
 .header {
@@ -14,11 +17,7 @@
 
 .summary {
   border-top: 1px solid var(--border-light);
-  margin: 0;
-}
-
-.summary__charts {
-  margin: 0 1rem 2rem;
+  margin: 0 2rem 2rem 2rem;
 }
 
 i {
@@ -63,4 +62,7 @@ i {
     overflow-x: scroll;
   }
 
+  .summary {
+    margin-left: 1rem;
+  }
 }
