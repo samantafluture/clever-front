@@ -150,3 +150,21 @@
 .actions a:hover {
   color: var(--hover);
 }
+
+@media (max-width: 1024px) {
+  .task {
+   margin: 0 1rem 1rem;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: stretch;
+  }
+
+  .task .task__main {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .task .task__info {
+    margin: 0;
+  }
+}

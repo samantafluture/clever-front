@@ -6,11 +6,12 @@
     (clickEvent)="cancel()"
   ></app-header>
 
+  <h2>{{ sprint.title }}</h2>
   <div class="actions">
     <a [routerLink]="['/sprint/' + sprint.id + '/editar/']">
-      <i class="fas fa-pencil-alt"></i>Editar</a
+      <i class="fas fa-pencil-alt"></i><span class="actions-title">Editar</span></a
     >
-    <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
+    <a (click)="remove()"><i class="fas fa-trash"></i><span class="actions-title">Excluir</span></a>
   </div>
 
   <app-sprint-detail

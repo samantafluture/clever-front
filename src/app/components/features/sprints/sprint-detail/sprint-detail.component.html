@@ -11,20 +11,24 @@
       {{ projectName }}
     </p>
   </div>
-  <div class="info info--todo">
-    <h4><i class="fas fa-exclamation-circle"></i>Pendente</h4>
-    <p>1 Tarefas</p>
+  <div class="info--tasks">
+    <div class="info info--todo">
+      <h4><i class="fas fa-exclamation-circle"></i>Pendente</h4>
+      <p>1 Tarefas</p>
+    </div>
+    <div class="info info--done">
+      <h4><i class="fas fa-check-circle"></i>Realizado</h4>
+      <p>0 Tarefas</p>
+    </div>
   </div>
-  <div class="info info--done">
-    <h4><i class="fas fa-check-circle"></i>Realizado</h4>
-    <p>0 Tarefas</p>
-  </div>
-  <div class="info info--date">
-    <h4><i class="fas fa-thermometer-half"></i>Status</h4>
-    <p>{{ status }}</p>
-  </div>
-  <div class="info info--date">
-    <h4><i class="fas fa-calendar"></i>Prazo</h4>
-    <p>{{ dueDate | date: 'dd/MM/yy' }}</p>
+  <div class="info--status">
+    <div class="info info--date info--date-status">
+      <h4><i class="fas fa-thermometer-half"></i>Status</h4>
+      <p>{{ status }}</p>
+    </div>
+    <div class="info info--date">
+      <h4><i class="fas fa-calendar"></i>Prazo</h4>
+      <p>{{ dueDate | date: "dd/MM/yy" }}</p>
+    </div>
   </div>
 </section>
