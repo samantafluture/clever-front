@@ -7,9 +7,20 @@ aside {
 }
 
 main {
-  /* display: flex; */
-  /* flex-direction: column; */
   float: right;
   width: 80%;
 }
 
+@media (max-width: 768px) {
+  aside {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    float: none;
+  }
+}

@@ -32,7 +32,38 @@ header a:hover {
   color: var(--btn-hover-color-light);
 }
 
-header i {
-  margin-right: 0.75rem;
+header .menu-mobile {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header h1 {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  header .menu-mobile {
+    margin-left: 0;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  i {
+    color: var(--color-light);
+    font-size: 24px;
+    padding-left: 1rem;
+  }
+
+  header a {
+    padding: 0.25rem 1rem;
+    margin: 0.5rem 1rem 0.5rem 0;
+  }
+}
