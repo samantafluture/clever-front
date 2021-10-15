@@ -59,3 +59,17 @@
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .project__boards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 0 1rem 2rem;
+    width: 100vw;
+    overflow-x: scroll;
+  }
+
+  .board__header{
+    min-width: 100px;
+  }
+}
