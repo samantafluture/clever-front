@@ -19,6 +19,10 @@
 }
 
 @media (max-width: 1024px) {
+  .list-projects {
+    margin-bottom: 2rem;
+  }
+
   .list-projects h2 {
     visibility: visible;
     opacity: 1;

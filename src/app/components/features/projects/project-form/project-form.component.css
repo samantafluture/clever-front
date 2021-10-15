@@ -303,7 +303,7 @@ i {
 
 @media (max-width: 1024px) {
   form {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
   fieldset {
