@@ -64,7 +64,7 @@ section .actions {
     visibility: visible;
     opacity: 1;
     display: block;
-    margin: 2rem 1rem 1rem 1rem;
+    margin: 2rem 1.5rem 1rem 1.5rem;
   }
 
   section .actions {
@@ -95,11 +95,11 @@ section .actions {
   }
 
   .tasks__header app-btn-border {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
 
   .tasks__header app-divider {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
 
 }

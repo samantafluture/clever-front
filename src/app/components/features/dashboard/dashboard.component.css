@@ -51,7 +51,7 @@ i {
     font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     text-align: left;
   }
 
@@ -63,16 +63,21 @@ i {
 
   .projects {
     margin: 0 0 2rem 1rem;
-    max-width: 100vw;
-    overflow-x: scroll;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .summary {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
 
   .summary__charts {
-    width: 100vw;
-    overflow-x: scroll;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

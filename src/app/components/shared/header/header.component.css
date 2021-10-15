@@ -64,12 +64,12 @@ header .menu-mobile {
   i {
     color: var(--color-light);
     font-size: 1.25rem;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
   }
 
   header a {
     padding: 0.25rem 1rem;
-    margin: 0.5rem 1rem 0.5rem 0;
+    margin: 0.5rem 1.5rem 0.5rem 0;
     font-weight: 400;
   }
 }
