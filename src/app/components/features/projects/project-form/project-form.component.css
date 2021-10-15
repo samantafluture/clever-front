@@ -300,3 +300,35 @@ i {
   text-align: left;
   margin-left: 0;
 }
+
+@media (max-width: 1024px) {
+  form {
+    padding: 0 1rem;
+  }
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  .fieldset__infos {
+    padding-right: 0;
+    border: none;
+  }
+
+  .fieldset__infos .form-message {
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+
+  .fieldset__members {
+    padding: 0;
+    margin: 2rem 0 0 0;
+  }
+
+  .fieldset__btns .form-btn {
+    margin: 1rem 0 2rem 0;
+  }
+
+}
