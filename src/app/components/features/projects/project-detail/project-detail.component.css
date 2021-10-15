@@ -38,3 +38,34 @@
   margin-right: 0.5rem
 }
 
+@media (max-width: 1024px) {
+  .project__info {
+    display: flex;
+    flex-direction: column;
+    color: var(--subtitle-light);
+    padding: 0 1rem 0 1rem;
+    margin: 0;
+  }
+
+  .info--desc {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .info--users {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .info--users .info--members {
+    margin-right: 2rem;
+  }
+
+  .info--users .info--lead {
+    margin-right: 2rem;
+  }
+}

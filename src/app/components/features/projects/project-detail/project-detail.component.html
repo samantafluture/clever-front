@@ -5,16 +5,18 @@
       {{ description }}
     </p>
   </div>
-  <div class="info info--members">
-    <h4><i class="fas fa-users"></i>Membros</h4>
-    <img src="https://hostmyimg.s3.amazonaws.com/members.png" />
-  </div>
-  <div class="info info--lead">
-    <h4><i class="fas fa-star"></i>Líder</h4>
-    <img class="member" src="https://github.com/samantafluture.png" />
-  </div>
-  <div class="info info--date">
-    <h4><i class="fas fa-calendar"></i>Prazo</h4>
-    <p>{{ dueDate | date: 'dd/MM/yy' }}</p>
+  <div class="info--users">
+    <div class="info info--members">
+      <h4><i class="fas fa-users"></i>Membros</h4>
+      <img src="https://hostmyimg.s3.amazonaws.com/members.png" />
+    </div>
+    <div class="info info--lead">
+      <h4><i class="fas fa-star"></i>Líder</h4>
+      <img class="member" src="https://github.com/samantafluture.png" />
+    </div>
+    <div class="info info--date">
+      <h4><i class="fas fa-calendar"></i>Prazo</h4>
+      <p>{{ dueDate | date: "dd/MM/yy" }}</p>
+    </div>
   </div>
 </section>

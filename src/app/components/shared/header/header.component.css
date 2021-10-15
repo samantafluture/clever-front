@@ -39,7 +39,7 @@ header .menu-mobile {
   opacity: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header {
     justify-content: space-between;
     margin-bottom: 1.5rem;
