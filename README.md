@@ -56,7 +56,7 @@ Os `components` concentram os elementos de interface (HTML, CSS e lógica em Typ
 
 Trabalho de conclusão da Pós-graduação Lato Sensu em **Engenharia de Software** pela PUC Minas Virtual. O pdf completo está disponível [aqui](https://github.com/samantafluture/clever-front/blob/main/info/clever-app-dissertation.pdf).
 
-### Features
+### Funcionalidades
 
 - Visualizar múltiplos projetos e seus progressos
 - Cadastrar novos projetos
