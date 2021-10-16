@@ -1,4 +1,5 @@
 <div
+  class="tasks-list"
   *ngIf="filteredTasks$ | async as tasks; else empty"
   cdkDropList
   [cdkDropListData]="tasks"

@@ -3,9 +3,20 @@
 }
 
 .divider h2 {
-  padding: 1.5rem 2rem;
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 500;
-  margin-left: 0;
   text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .divider h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }

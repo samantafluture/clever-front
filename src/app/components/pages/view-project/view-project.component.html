@@ -7,9 +7,10 @@
   >
   </app-header>
 
+  <h2>{{ project.title }}</h2>
   <div class="actions">
-    <a (click)="edit()"><i class="fas fa-pencil-alt"></i>Editar</a>
-    <a (click)="remove()"><i class="fas fa-trash"></i>Excluir</a>
+    <a (click)="edit()"><i class="fas fa-pencil-alt"></i><span class="actions-title">Editar</span></a>
+    <a (click)="remove()"><i class="fas fa-trash"></i><span class="actions-title">Excluir</span></a>
   </div>
 
   <app-project-detail
@@ -19,6 +20,7 @@
   ></app-project-detail>
 
   <app-sprint-list
+    class="sprints"
     [project]="project"
     [projectId]="project.id"
     (clickEvent)="newSprint()"

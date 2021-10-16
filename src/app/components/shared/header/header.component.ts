@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
   @Input() pageTitle: string | undefined;
   @Input() btnTitle: string = '';
   @Output() clickEvent = new EventEmitter<any>();
+  isMobile!: boolean;
 
   constructor() { }
 
@@ -19,4 +20,11 @@ export class HeaderComponent implements OnInit {
     this.clickEvent.emit();
   }
 
+  showMenu() {
+    this.isMobile = false;
+  }
+
+  closeMenu() {
+    this.isMobile = true;
+  }
 }

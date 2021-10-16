@@ -16,11 +16,16 @@ button:hover {
   color: var(--hover);
 }
 
+section h2 {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
 section .actions {
   margin: 0 1.5rem;
   position: absolute;
   top: 3%;
-  /* left: 37.5% */
   right: 15%;
 }
 
@@ -48,4 +53,28 @@ section .actions {
 
 .view-project {
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  section h2 {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    margin: 2rem 1.5rem 1rem 1.5rem;
+  }
+
+  section .actions {
+    margin: 3rem 1rem 1rem 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+  }
+
+  section .actions .actions-title {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
 }

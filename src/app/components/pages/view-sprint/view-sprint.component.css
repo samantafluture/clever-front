@@ -1,13 +1,18 @@
 .tasks__list {
-  /* border-top: 1px solid var(--border-light); */
   margin: 0;
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
 }
 
 section .actions {
   margin: 0 1.5rem;
   position: absolute;
   top: 6%;
-  /* left: 37.5% */
   right: 10%;
 }
 
@@ -31,7 +36,7 @@ section .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 0;
+  margin-left: 2rem;
   margin-right: 0;
 }
 
@@ -43,10 +48,6 @@ section .actions {
   margin-left: 0;
 }
 
-.tasks__list {
-  margin-bottom: 2rem;
-}
-
 .view-sprint {
   position: relative;
 }
@@ -55,4 +56,50 @@ section .actions {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 1024px) {
+  section h2 {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    margin: 2rem 1.5rem 1rem 1.5rem;
+  }
+
+  section .actions {
+    margin: 3rem 1rem 1rem 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+  }
+
+  section .actions .actions-title {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+
+  .tasks__list {
+    border-top: 1px solid var(--border-light);
+    padding-bottom: 1rem;
+  }
+
+  .tasks__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 1rem 0;
+  }
+
+  .tasks__header app-btn-border {
+    margin-right: 1.5rem;
+  }
+
+  .tasks__header app-divider {
+    margin-left: 1.5rem;
+  }
+
 }

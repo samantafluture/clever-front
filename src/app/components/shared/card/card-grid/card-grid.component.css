@@ -4,3 +4,13 @@
   gap: 1rem;
   margin-top: 0;
 }
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+
+}

@@ -180,3 +180,17 @@ button:disabled:hover {
 i {
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  form, fieldset {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    height: 100%;
+  }
+
+  fieldset {
+    padding: 0 1.5rem;
+  }
+
+}

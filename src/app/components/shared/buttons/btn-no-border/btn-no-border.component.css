@@ -17,3 +17,10 @@ button:hover {
 button i {
   margin-right: 0.75rem;
 }
+
+
+@media (max-width: 1024px) {
+  button {
+    padding: 0 0 1.5rem 0;
+  }
+}
