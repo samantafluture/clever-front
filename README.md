@@ -21,4 +21,4 @@
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-Feito com ❤️ &nbsp; :coffee: por Samanta Fluture. [Entre em contato!](https://www.linkedin.com/in/samantafluture/)
+Feito com ❤️ &nbsp; & :coffee: &nbsp; por Samanta Fluture. [Entre em contato!](https://www.linkedin.com/in/samantafluture/)
