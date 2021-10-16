@@ -167,7 +167,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 8,
-        title: 'Trocar bando de dados',
+        title: 'Trocar banco de dados',
         description: 'Refatoração e substituição do database secundário',
         status: Status.TO_DO,
         project: {
@@ -512,7 +512,7 @@ export class InMemoryDataService implements InMemoryDbService {
         isDone: false,
         sprint: {
           id: 8,
-          title: 'Trocar bando de dados',
+          title: 'Trocar banco de dados',
           description: 'Refatoração e substituição do database secundário',
           status: Status.TO_DO,
           project: {
@@ -535,7 +535,7 @@ export class InMemoryDataService implements InMemoryDbService {
         isDone: true,
         sprint: {
           id: 8,
-          title: 'Trocar bando de dados',
+          title: 'Trocar banco de dados',
           description: 'Refatoração e substituição do database secundário',
           status: Status.TO_DO,
           project: {
