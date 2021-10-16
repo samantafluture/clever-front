@@ -1,28 +1,25 @@
-# CleverFront
+<p align="center">
+  <a href="https://clever-app-puc.vercel.app/">
+    <img src="https://github.com/samantafluture/clever-front/blob/main/src/assets/logo.png?raw=true" height="36" width="137" alt="Clever App" />
+  </a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+<p align="center">Um aplicativo de gerenciamento de projetos 🚀 </p>
 
-## Development server
+<div align="center">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![GitHub issue/pull request detail](https://img.shields.io/github/issues/detail/state/samantafluture/clever-front/15?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/samantafluture/clever-front?style=for-the-badge)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/samantafluture/clever-front?style=for-the-badge)
+![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fclever-app-puc.vercel.app)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/samantafluture/clever-front?style=for-the-badge)
 
-## Code scaffolding
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Licença
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este projeto esta sobe a licença [MIT](./LICENSE).
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# clever-front
+Feito com ❤️ por Samanta Fluture 👋🏽 [Entre em contato!](https://www.linkedin.com/in/samantafluture/)
