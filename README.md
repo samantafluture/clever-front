@@ -16,11 +16,45 @@
 </div>
 ---
 
+## Tecnologias Principais
+
+- Angular
+- Angular CLI
+- angular-in-memory-web-api (mock para API)
+
+### Dependências dos Componentes UI 
+
+- Angular Material CDK (para construção de: drag and drop, autocomplete)
+- ngx-progressbar
+
+### Estrutura de Pastas
+
+A organização do front-end do sistema segue o padrão de projeto Angular.
+
+```bash
+├── src
+│   ├── app
+│   │   ├── components
+│   │   ├── models
+│   │   ├── services
+│   │   ├── utils
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.css
+│   │   ├── app.module.ts
+│   ├── assets
+│   ├── environments
+│   ├── main.ts
+│   ├── index.html
+│   ├── style.css
+```
+
 ## Overview
 
 Trabalho de conclusão da Pós-graduação Lato Sensu em **Engenharia de Software** pela PUC Minas Virtual. O pdf completo está disponível [aqui](https://github.com/samantafluture/clever-front/blob/main/info/clever-app-dissertation.pdf)
 
-Além do código de front-end feito em Angular, neste repositório é possível acessar alguns dos documentos criados para como preparação para o desenvolvimento.
+Além do código de front-end feito em **Angular**, neste repositório é possível acessar alguns dos documentos criados para como preparação para o desenvolvimento.
 
 - [Diagrama de casos de uso](https://github.com/samantafluture/clever-front/blob/main/info/uml-diagrams/use-cases.jpeg)
 - [Diagrama de classes de domínio](https://github.com/samantafluture/clever-front/blob/main/info/uml-diagrams/domain-classes.jpeg)
@@ -30,15 +64,25 @@ Além do código de front-end feito em Angular, neste repositório é possível 
 - [Site map](https://github.com/samantafluture/clever-front/blob/main/info/ux-ui-prototypes/site-map.jpg)
 - [Protótipo do sistema](https://github.com/samantafluture/clever-front/blob/main/info/ux-ui-prototypes/wireframe-navegation.jpg)
 
+O back-end será feito em **NestJS** e ainda está em desenvolvimento.
+
+## No Ar 
+
+✅ &nbsp; **Acesse o site no ar aqui: [https://clever-app-puc.vercel.app/](https://clever-app-puc.vercel.app/)**
+
 ## Demo 
 
-Abaixo está uma demonstração em vídeo do front-end do sistema.
+Abaixo está uma demonstração em vídeo do front-end do sistema. Clique na imagem abaixo para assiste, no [Youtube](https://www.youtube.com/watch?v=r9gBmMNxyPY).
 
 [![Demonstração em vídeo](https://hostmyimg.s3.amazonaws.com/Screen%20Shot%202021-10-16%20at%2015.24.04.png)](https://www.youtube.com/watch?v=r9gBmMNxyPY)
 
 O deploy atual foi feito na Vercel, para demonstração. 
 
-Acesse o site no ar aqui: [https://clever-app-puc.vercel.app/](https://clever-app-puc.vercel.app/)
+## Screenshots
+
+📷 &nbsp; Abaixo, algumas screenshots das páginas e recursos principais:
+
+
 
 ---
 
