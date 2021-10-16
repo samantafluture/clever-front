@@ -21,4 +21,11 @@
     margin-left: 1.5rem;
     text-align: left;
   }
+
+  aside {
+    float: none;
+    width: 80%;
+    position: fixed;
+    z-index: 9999999;
+  }
 }

@@ -1,5 +1,15 @@
-<header>
-  <span class="menu-mobile"><i class="fas fa-bars"></i></span>
-  <h1>{{ pageTitle }}</h1>
-  <a (click)="click()">{{ btnTitle }}</a>
-</header>
+<div [class.mobile]="isMobile">
+  <aside>
+    <img
+      src="https://hostmyimg.s3.amazonaws.com/Screen%20Shot%202021-10-15%20at%2022.03.11.png"
+    />
+    <app-sidebar (closeEvent)="closeMenu()"></app-sidebar>
+  </aside>
+  <header>
+    <span class="menu-mobile" (click)="showMenu()"
+      ><i class="fas fa-bars"></i
+    ></span>
+    <h1>{{ pageTitle }}</h1>
+    <a (click)="click()">{{ btnTitle }}</a>
+  </header>
+</div>

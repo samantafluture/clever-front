@@ -20,7 +20,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 2,
-        title: 'Refatoração do Sitema de Pagamento',
+        title: 'Refatoração do Sistema de Pagamento',
         description: 'Novo banco de dados e servidor',
         dueDate: "2021-10-05",
         createdAt: Date.now,
@@ -58,7 +58,7 @@ export class InMemoryDataService implements InMemoryDbService {
         status: Status.IN_PROGRESS,
         project: {
           id: 2,
-          title: 'Refatoração do Sitema de Pagamento',
+          title: 'Refatoração do Sistema de Pagamento',
           description: 'Novo banco de dados e servidor',
           dueDate: "2021-10-05",
           createdAt: Date.now,
@@ -118,7 +118,7 @@ export class InMemoryDataService implements InMemoryDbService {
           status: Status.IN_PROGRESS,
           project: {
             id: 2,
-            title: 'Refatoração do Sitema de Pagamento',
+            title: 'Refatoração do Sistema de Pagamento',
             description: 'Novo banco de dados e servidor',
             dueDate: "2021-10-05",
             createdAt: Date.now,

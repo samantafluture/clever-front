@@ -1,49 +1,53 @@
-<nav class="sidebar">
-  <div class="sidebar__nav">
-    <div class="nav__logo">
-      <app-logo></app-logo>
-    </div>
-    <div class="nav__menu">
-      <a [routerLink]="['/dashboard']" routerLinkActive="active-link">
-        <div><i class="fas fa-home"></i>Dashboard</div>
-      </a>
-      <a
-        [routerLink]="['/projetos']"
-        routerLinkActive="active-link"
-        class="menu__number"
-      >
-        <div><i class="fas fa-list"></i>Projetos</div>
-        <span *ngIf="projects$ | async as projects; else default">
-          <span>{{ projects.length }}</span>
-        </span>
-      </a>
-      <a [routerLink]="['/']"><i class="fas fa-calendar"></i>Cronograma</a>
-      <a [routerLink]="['/']"><i class="fas fa-chart-line"></i>Relatório</a>
-      <a
-        [routerLink]="['/novo-usuario']"
-        routerLinkActive="active-link"
-        class="divider"
-        ><i class="fas fa-users"></i>Cadastrar Membro</a
-      >
-      <a [routerLink]="['/']"><i class="fas fa-cog"></i>Configurações</a>
-      <a [routerLink]="['/']" class="menu__number">
-        <div><i class="fas fa-bell"></i>Notificações</div>
-        <span>2</span>
-      </a>
-    </div>
-  </div>
-  <div class="sidebar__user">
-    <a [routerLink]="['/']" class="user__profile">
-      <img class="user__photo" src="https://github.com/samantafluture.png" />
-      <div class="user__name">
-        <p>Samanta Fluture</p>
-        <p>Gerente de Projetos</p>
+<div [class.mobile]="isMobile">
+  <span (click)="close()" class="close-mobile"
+    ><i class="fas fa-times"></i
+  ></span>
+  <nav class="sidebar">
+    <div class="sidebar__nav">
+      <div class="nav__logo">
+        <app-logo></app-logo>
       </div>
-    </a>
-    <a [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i>Sair</a>
-  </div>
-</nav>
-
+      <div class="nav__menu">
+        <a [routerLink]="['/dashboard']" routerLinkActive="active-link">
+          <div><i class="fas fa-home"></i>Dashboard</div>
+        </a>
+        <a
+          [routerLink]="['/projetos']"
+          routerLinkActive="active-link"
+          class="menu__number"
+        >
+          <div><i class="fas fa-list"></i>Projetos</div>
+          <span *ngIf="projects$ | async as projects; else default">
+            <span>{{ projects.length }}</span>
+          </span>
+        </a>
+        <a [routerLink]="['/']"><i class="fas fa-calendar"></i>Cronograma</a>
+        <a [routerLink]="['/']"><i class="fas fa-chart-line"></i>Relatório</a>
+        <a
+          [routerLink]="['/novo-usuario']"
+          routerLinkActive="active-link"
+          class="divider"
+          ><i class="fas fa-users"></i>Cadastrar Membro</a
+        >
+        <a [routerLink]="['/']"><i class="fas fa-cog"></i>Configurações</a>
+        <a [routerLink]="['/']" class="menu__number">
+          <div><i class="fas fa-bell"></i>Notificações</div>
+          <span>2</span>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar__user">
+      <a [routerLink]="['/']" class="user__profile">
+        <img class="user__photo" src="https://github.com/samantafluture.png" />
+        <div class="user__name">
+          <p>Samanta Fluture</p>
+          <p>Gerente de Projetos</p>
+        </div>
+      </a>
+      <a [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i>Sair</a>
+    </div>
+  </nav>
+</div>
 <ng-template #default>
   <span>0</span>
 </ng-template>

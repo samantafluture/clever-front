@@ -1,6 +1,6 @@
 import { ProjectService } from '../../features/projects/project.service';
 import { Project } from '../../../models/interfaces/project';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -41,6 +41,7 @@ export class CreateProjectComponent implements OnInit {
     this.location.back();
     return false;
   }
+
 
   create(project: Project): void {
     this.projectService.createProject(project).subscribe(
