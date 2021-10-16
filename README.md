@@ -99,7 +99,17 @@ O deploy atual foi feito na Vercel, para demonstração.
 
 📷 &nbsp; Abaixo, algumas screenshots das páginas e recursos principais:
 
+**/dashboard**
+![Dashboard](https://github.com/samantafluture/clever-front/blob/main/info/screenshots/clever-app-dashboard.png?raw=true)
 
+**/novo-projeto**
+![Novo Projeto](https://github.com/samantafluture/clever-front/blob/main/info/screenshots/clever-app-new-project-form.png?raw=true)
+
+**/projeto/:id**
+![Projeto](https://github.com/samantafluture/clever-front/blob/main/info/screenshots/clever-app-view-project.png?raw=true)
+
+**/projeto/:id/sprint/:id**
+![Sprint de Projeto](https://github.com/samantafluture/clever-front/blob/main/info/screenshots/clever-app-view-sprint.png?raw=true)
 
 ---
 
