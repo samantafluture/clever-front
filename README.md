@@ -20,16 +20,18 @@
 
 - Angular
 - Angular CLI
-- angular-in-memory-web-api (mock para API)
+- [angular-in-memory-web-api (mock para API)](https://www.npmjs.com/package/angular-in-memory-web-api)
 
 ### Dependências dos Componentes UI 
 
 - Angular Material CDK (para construção de: drag and drop, autocomplete)
-- ngx-progressbar
+- [ngx-progressbar](https://www.npmjs.com/package/ngx-progressbar)
 
 ### Estrutura de Pastas
 
 A organização do front-end do sistema segue o padrão de projeto Angular.
+
+Os `components` concentram os elementos de interface (HTML, CSS e lógica em TypeScript). Os `models` são interfaces e enums, basedos no diagrama de classes linkado acima. Já os `services` são métodos que fazem o contato com a API, sendo que cada model tem seu próprio service, em seu `module`.
 
 ```bash
 ├── src
