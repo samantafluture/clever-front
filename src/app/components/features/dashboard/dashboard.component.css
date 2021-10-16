@@ -27,10 +27,19 @@ i {
   margin-right: 0.5rem;
 }
 
-.dashboard h2 {
+.dashboard .dashboard__title {
   visibility: hidden;
   opacity: 0;
   display: none;
+}
+
+.summary__title {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 0rem;
 }
 
 @media (max-width: 1024px) {
@@ -45,7 +54,7 @@ i {
     align-items: flex-start;
   }
 
-  .dashboard h2 {
+  .dashboard .dashboard__title {
     visibility: visible;
     opacity: 1;
     display: block;
@@ -77,8 +86,15 @@ i {
     padding-right: 0;
   }
 
-  .summary h2 {
+  .summary__title {
+    display: block;
+    opacity: 1;
+    visibility: visible;
     margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
   }
 
 }

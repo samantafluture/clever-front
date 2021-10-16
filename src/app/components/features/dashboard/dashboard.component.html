@@ -6,7 +6,7 @@
     (clickEvent)="newProject()"
   ></app-header>
 
-  <h2>Projetos</h2>
+  <h2 class="dashboard__title">Projetos</h2>
   <section class="projects">
     <app-project-list [showAll]="false"></app-project-list>
   </section>
@@ -18,7 +18,7 @@
   </a>
 
   <section class="summary">
-    <h2>Resumo</h2>
+    <h2 class="summary__title">Resumo</h2>
     <div class="summary__charts">
       <app-card-grid>
         <app-card-charts
