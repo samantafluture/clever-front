@@ -54,7 +54,20 @@ Os `components` concentram os elementos de interface (HTML, CSS e lógica em Typ
 
 ## Overview
 
-Trabalho de conclusão da Pós-graduação Lato Sensu em **Engenharia de Software** pela PUC Minas Virtual. O pdf completo está disponível [aqui](https://github.com/samantafluture/clever-front/blob/main/info/clever-app-dissertation.pdf)
+Trabalho de conclusão da Pós-graduação Lato Sensu em **Engenharia de Software** pela PUC Minas Virtual. O pdf completo está disponível [aqui](https://github.com/samantafluture/clever-front/blob/main/info/clever-app-dissertation.pdf).
+
+### Features
+
+- Visualizar múltiplos projetos e seus progressos
+- Cadastrar novos projetos
+- Adicionar membros e responsável pelo projeto
+- Visualizar sprints em kanban board
+- Cadastrar novos sprints em projeto existente
+- Visualizar tarefas por sprints
+- Cadastrar novas tarefas em sprint existente
+- Adicionar membro responsável pela tarefa
+
+### Arquitetura
 
 Além do código de front-end feito em **Angular**, neste repositório é possível acessar alguns dos documentos criados para como preparação para o desenvolvimento.
 
@@ -74,7 +87,9 @@ O back-end será feito em **NestJS** e ainda está em desenvolvimento.
 
 ## Demo 
 
-Abaixo está uma demonstração em vídeo do front-end do sistema. Clique na imagem abaixo para assiste, no [Youtube](https://www.youtube.com/watch?v=r9gBmMNxyPY).
+Abaixo está uma demonstração em vídeo do front-end do sistema. 
+
+Clique na imagem abaixo para assiste, no [Youtube](https://www.youtube.com/watch?v=r9gBmMNxyPY).
 
 [![Demonstração em vídeo](https://hostmyimg.s3.amazonaws.com/Screen%20Shot%202021-10-16%20at%2015.24.04.png)](https://www.youtube.com/watch?v=r9gBmMNxyPY)
 
