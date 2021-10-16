@@ -66,11 +66,16 @@ aside {
     opacity: 0;
   }
 
+  header span {
+    cursor: pointer;
+  }
+
   header .menu-mobile {
     margin-left: 0;
     display: block;
     opacity: 1;
     visibility: visible;
+    cursor: pointer;
   }
 
   i {
@@ -91,6 +96,7 @@ aside {
     display: block;
     float: none;
     width: 80%;
+    max-width: 300px;
     position: fixed;
     z-index: 9999999999;
     height: 100vh;
@@ -102,6 +108,6 @@ aside {
     left: 0;
     z-index: 9999999;
     margin: 0.5rem 0 0 0.5rem;
-    width: 50%;
+    width: 100px;
   }
 }
