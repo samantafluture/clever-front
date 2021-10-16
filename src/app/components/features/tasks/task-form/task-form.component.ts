@@ -5,8 +5,10 @@ import { Task } from 'src/app/models/interfaces/task';
 import { Observable } from 'rxjs';
 import { Sprint } from 'src/app/models/interfaces/sprint';
 import { ActivatedRoute } from '@angular/router';
+import { FormControl } from '@angular/forms';
 import { User } from 'src/app/models/interfaces/user';
 import { Role } from 'src/app/models/enums/role';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-task-form',
@@ -22,6 +24,7 @@ export class TaskFormComponent implements OnInit {
   @ViewChild('memberItem')
   private memberElement!: ElementRef;
 
+  myControl = new FormControl();
   options: User[] = [
     {
       name: 'Maria Julia',
@@ -54,24 +57,24 @@ export class TaskFormComponent implements OnInit {
     this.sprints$;
     this.id = this.activatedRoute.snapshot.params.id;
     this.sprint$ = this.sprintService.getSprintById(this.id);
-    // this.filteredOptions = this.myControl.valueChanges.pipe(
-    //   startWith(''),
-    //   map((value) => (typeof value === 'string' ? value : value.name)),
-    //   map((name) => (name ? this._filter(name) : this.options.slice()))
-    // );
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map((value) => (typeof value === 'string' ? value : value.name)),
+      map((name) => (name ? this._filter(name) : this.options.slice()))
+    );
   }
 
   displayFn(user: User): string {
     return user && user.name ? user.name : '';
   }
 
-  // private _filter(name: string): User[] {
-  //   const filterValue = name.toLowerCase();
+  private _filter(name: string): User[] {
+    const filterValue = name.toLowerCase();
 
-  //   return this.options.filter((option) =>
-  //     option.name.toLowerCase().includes(filterValue)
-  //   );
-  // }
+    return this.options.filter((option) =>
+      option.name.toLowerCase().includes(filterValue)
+    );
+  }
 
   cancel() {
     this.location.back();
