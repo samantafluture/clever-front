@@ -35,6 +35,15 @@
           Descrição é obrigatória e deve ter no máximo 300 caracteres
         </div>
       </div>
+
+      <div class="form-message">
+        <span class="alert"
+          ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
+          obrigatórios</span
+        >
+      </div>
+    </div>
+    <div class="fieldset__tasks">
       <div class="info">
         <label for="date">Prazo do sprint</label>
         <input
@@ -50,14 +59,6 @@
           Prazo do sprint é obrigatório
         </div>
       </div>
-      <div class="form-message">
-        <span class="alert"
-          ><i class="alert fas fa-exclamation-triangle fa-sm"></i>Campos
-          obrigatórios</span
-        >
-      </div>
-    </div>
-    <div class="fieldset__tasks">
       <div class="select__status">
         Status
         <select name="status" id="status" [(ngModel)]="sprint.status">
@@ -67,21 +68,6 @@
           </option>
         </select>
         <span><i class="fas fa-chevron-down"></i></span>
-      </div>
-      <!-- <div class="select__status">
-        Projeto atual
-        <select name="project" id="project" [(ngModel)]="sprint.project">
-          <option value="" disabled>Projeto a qual pertence</option>
-          <option [ngValue]="project.title">
-            {{ project.title }}
-          </option>
-        </select>
-        <span><i class="fas fa-chevron-down"></i></span>
-      </div> -->
-      <div class="tasks__list">
-        <h3>Tarefas do sprint</h3>
-        <p>Ainda não há tarefas.</p>
-        <p>Você poderá adicionar posteriormente.</p>
       </div>
     </div>
     <div class="fieldset__btns">
