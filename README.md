@@ -118,4 +118,4 @@ O deploy atual foi feito na Vercel, para demonstração.
 
 ## Licença
 
-Este projeto esta sob a licença [MIT](./LICENSE).
+Este projeto está sob a licença [MIT](./LICENSE).
