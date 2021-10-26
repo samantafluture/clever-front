@@ -119,5 +119,3 @@ O deploy atual foi feito na Vercel, para demonstração.
 ## Licença
 
 Este projeto esta sob a licença [MIT](./LICENSE).
-
-Feito com ❤️ & :coffee: por Samanta Fluture. [Entre em contato!](https://www.linkedin.com/in/samantafluture/)
