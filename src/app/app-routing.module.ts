@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginFormComponent } from './components/features/users/login-form/login-form.component';
 import { CreateUserComponent } from './components/pages/create-user/create-user.component';
+import { LoginUserComponent } from './components/pages/login-user/login-user.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginFormComponent
+    component: LoginUserComponent
   },
   {
     path: 'novo-usuario',
